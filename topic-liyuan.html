@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>专题 D · 利源分析三差（大一统公式与归因） · 寿险精算评估实务 · 科目F3</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<aside class="side">
+  <div class="brand"><b>寿险精算评估实务</b><span>科目F3 · 正精算师（寿险）</span></div>
+    <nav>
+    <a href="xihong.html">关于 · 西红精算</a>
+    <a href="index.html">首页 · 考试全景</a>
+    <a href="about.html">本库说明 · 编法与用法</a>
+    <div class="grp">五大篇章（考纲权重）</div>
+    <a href="ch1.html">CH.01 概念与原理<span class="w">5%</span></a>
+    <a href="ch2.html">CH.02 责任准备金<span class="w">20%</span></a>
+    <a href="ch3.html">CH.03 偿付能力监管<span class="w">30%</span></a>
+    <a href="ch4.html">CH.04 企业会计准则<span class="w">30%</span></a>
+    <a href="ch5.html">CH.05 报告与分析<span class="w">15%</span></a>
+    <div class="grp">拓展专题（不止于考纲）</div>
+    <a href="topic-solvency.html">专题·偿付能力实务</a>
+    <a href="topic-vnb.html">专题·新业务价值</a>
+    <a href="topic-ifrs17.html">专题·IFRS17与CSM</a>
+    <a href="topic-liyuan.html" class="on">专题·利源分析三差</a>
+    <a href="topic-ev.html">专题·内含价值</a>
+    <a href="topic-products.html">专题·产品精算与定价</a>
+    <div class="grp">真题 / 模拟 / 资料</div>
+    <a href="zhenti.html">真题馆</a>
+    <a href="moni-1.html">模拟卷一 · 筑基</a>
+    <a href="moni-2.html">模拟卷二 · 新则</a>
+    <a href="moni-3.html">模拟卷三 · 冲刺</a>
+    <a href="references.html">参考资料库</a>
+    <a href="cross-solvency.html">C-ROSS II 贯通页</a>
+  </nav>
+  <div class="prog-mini">学习进度 <b>0 / 13</b></div>
+</aside>
+
+<main class="main">
+  <div class="ch-head">
+    <div class="no">TOPIC D · SOURCE OF EARNINGS ANALYSIS</div>
+    <h1>利源分析三差：利润从哪里来，到哪里去</h1>
+    <div class="sub">CH.05 经验分析与利源分析的答题母版 · 框架取自「三差利润解构」系列（19 篇）</div>
+    <div class="meta"><span>对接 CH.05（15%）</span><span>真题 2014·4/19、2016·22</span><span>模拟卷三 · 简答大题</span></div>
+    <div class="wbar"><div class="lab"><span>考纲渗透度</span><span>简答 + 计算双题型</span></div><div class="bar"><i style="width:80%"></i></div></div>
+  </div>
+
+  <div class="toc"><b>本专题结构</b><ol>
+    <li>为什么利润会「凭空出现」</li>
+    <li>大一统公式</li>
+    <li>三差逐项：死差 / 费差 / 利差</li>
+    <li>SOE 报告的标准作答结构</li>
+    <li>久期缺口与利差敏感性</li>
+    <li>三条铁律与三个过滤器</li>
+    <li>考试怎么考 + 演算器</li>
+  </ol></div>
+
+  <section>
+    <h2><span class="sn">§1</span>为什么利润会「凭空出现」<span class="star s3">高频</span></h2>
+    <div class="lead">定价时假定死亡率 3‰、费用率 10%、利率 2.5%；一年过去，实际发生的数据几乎不可能与假定分毫不差。<b>假定与实际的差异，就是利润（或亏损）的来源</b>——利源分析回答的是「这笔利润究竟是谁创造的」。</div>
+    <div class="tip"><b>准备金的角色：</b>定价时把未来的赔付、费用、利息都「预存」进准备金；期末实际发生额与预存额的差额，逐项退回利润表。所以利源分析的每一条都是「<b>准备金中假定释放值 − 实际发生值</b>」的格式。</div>
+  </section>
+
+  <section>
+    <h2><span class="sn">§2</span>大一统公式<span class="star s3">高频</span></h2>
+    <div class="formula">
+      <div class="fx">利润 = 死差益 + 费差益 + 利差益 + 退保差益 + 其他利源<br>其中每项 = −（实际发生值）+（准备金中假定释放值）</div>
+      <div class="note">「大一统」的含义：不管旧准则还是新准则、不管公司怎么设科目，利源恒等于这五块。准则改变的是「在哪个科目确认」，不改变「利润从哪来」。</div>
+    </div>
+    <div class="tbl-scroll"><table>
+      <tr><th>利源</th><th>公式</th><th>正负号含义</th><th>驱动部门</th></tr>
+      <tr><td>死差益</td><td>(预定死亡率 − 实际死亡率) × 危险保额</td><td>实际死亡 fewer → 正（益）</td><td>核保 / 再保</td></tr>
+      <tr><td>费差益</td><td>预定费用 − 实际费用</td><td>实际花得更少 → 正（益）</td><td>运营 / 行政</td></tr>
+      <tr><td>利差益</td><td>(实际投资收益率 − 预定利率) × 责任准备金均值</td><td>投资跑赢预定 → 正（益）</td><td>投资 / 资产配置</td></tr>
+      <tr><td>退保差益</td><td>(预定退保率 − 实际退保率) 对应的盈余</td><td>实际退更少 → 正（益）</td><td>继续率管理</td></tr>
+      <tr><td>其他利源</td><td>分红特储释放、税差、再保摊回等</td><td>视项目而定</td><td>精算 / 财务</td></tr>
+    </table></div>
+    <div class="tip"><b>要点一句话：</b>四差皆益则利润生——实际死亡低于预定、实际费用低于预定、实际投资跑赢预定、客户留存稳定；退保差为第五利源，最终在利润大一统公式中勾稽。</div>
+  </section>
+
+  <section>
+    <h2><span class="sn">§3</span>三差逐项细看</h2>
+    <h3>死差：危险的生意，稳定的利润</h3>
+    <div class="tbl-scroll"><table>
+      <tr><th>要点</th><th>内容</th></tr>
+      <tr><td>计算基础</td><td>危险保额（= 保额 − 准备金），不是保额本身——随着准备金积累，危险保额递减，死差贡献自然衰减</td></tr>
+      <tr><td>经验基础</td><td>生命表（CL2010—2016 系列）+ 公司自身经验分析（CH.05 的暴露数 / 95%CI 工具）</td></tr>
+      <tr><td>改善路径</td><td>核保收紧、逆选择控制、再保分出高危体</td></tr>
+    </table></div>
+    <h3>费差：短跑冲刺</h3>
+    <p>获取费用（佣金）集中在首年，维持费用贯穿全程。费差益往往<b>首年大亏、次年转正</b>——与新业务价值的首年 Strain（<a href="topic-vnb.html">VNB 专题 §5</a>）互为镜像。<b>降本增效的每一块钱几乎全部落入费差</b>，这是 AI / 大数据在精算视角下最直接的利润入口。</p>
+    <h3>利差：资产负债表的生意<span class="star s3">高频</span></h3>
+    <div class="tbl-scroll"><table>
+      <tr><th>拆分</th><th>含义</th><th>责任归属</th></tr>
+      <tr><td>基础利差</td><td>负债成本（预定利率）之上的无风险利得</td><td>负债端定价（预定利率定得越低，未来越从容）</td></tr>
+      <tr><td>配置利差</td><td>主动配置（久期 / 信用 / 另类）创造的超出部分</td><td>资产端投资能力</td></tr>
+    </table></div>
+    <div class="warn"><b>利差是双刃剑：</b>预定利率定高了，利差倒挂（利差损）会持续多年——高预定利率保单的「利差损毒资产」是上一轮行业出清的教训。利率下行期，负债成本刚性 + 资产收益下行 = 利差被两头挤压。</div>
+  </section>
+
+  <section>
+    <h2><span class="sn">§4</span>SOE 报告的标准作答结构<span class="star s2">中频</span></h2>
+    <div class="lead">Source of Earnings（利源分析报告）是考纲 CH.05 的常考简答。作答按五段式，缺一段丢一段的分：</div>
+    <table>
+      <tr><th>段落</th><th>内容</th><th>常见追问</th></tr>
+      <tr><td class="ctr">①</td><td>说明分析对象与期间（产品组 / 业务单元，年度/季度）</td><td>分组依据</td></tr>
+      <tr><td class="ctr">②</td><td>列示四差 + 其他利源的金额与方向（表格化）</td><td>正负号含义</td></tr>
+      <tr><td class="ctr">③</td><td>逐项归因：预期变化还是实际经验偏离</td><td>经验偏离 → 假设是否需要更新</td></tr>
+      <tr><td class="ctr">④</td><td>结论：利润质量判读（可持续 / 一次性）</td><td>本期利差由一次性处置资产贡献 → 不可持续</td></tr>
+      <tr><td class="ctr">⑤</td><td>建议：假设调整、定价反馈、管理动作</td><td>反馈到下一轮定价（CH.01 闭环）</td></tr>
+    </table>
+    <div class="prac"><b>实务视角：</b>SOE 每季一报，真正的读者不是监管而是管理层——它回答「今年利润好，明年还会好吗」。归因时最忌把一次性收益（资产处置、准备金一次性释放）混入经常性利源，粉饰利润质量。</div>
+  </section>
+
+  <section>
+    <h2><span class="sn">§5</span>久期缺口与利差敏感性<span class="star s2">中频</span></h2>
+    <div class="formula">
+      <div class="fx">经济价值变动 ≈ −(资产久期 − 负债久期) × Δr × 资产规模<br>案例：缺口 1 年 × 利率下行 100bp × 1,000 亿 ≈ <b>10 亿损失</b></div>
+      <div class="note">资产久期 &lt; 负债久期（行业常态）时，利率下行资产增值不如负债增值快，净头寸缩水。这就是利差背后的「结构性利差风险」。</div>
+    </div>
+    <div class="tbl-scroll"><table>
+      <tr><th>情景</th><th>传导</th><th class="num">净价值影响</th></tr>
+      <tr><td>利率 −100bp</td><td>负债现值上升快于资产</td><td class="num neg">约 −10 亿</td></tr>
+      <tr><td>利率 +100bp</td><td>反向，但幅度受凸性影响不对称</td><td class="num pos">约 +9 亿</td></tr>
+      <tr><td>信用利差走阔</td><td>资产端折价，负债不动</td><td class="num neg">视持仓信用等级</td></tr>
+    </table></div>
+    <div class="tip"><b>串联考点：</b>这条公式同时是 <a href="topic-solvency.html">偿付能力专题 §5</a> 利率压力（−100bp → 核心充足率 233%→201%）的底层机制——一个算经济价值、一个算监管资本，同一根久期缺口。</div>
+  </section>
+
+  <section>
+    <h2><span class="sn">§6</span>三条铁律与三个过滤器<span class="star s2">中频</span></h2>
+    <div class="tip"><b>三条铁律：</b>
+      <ul>
+        <li><b>保费不是收入</b>——保费是负债的对价，收入只按履约进度确认（对接 <a href="topic-ifrs17.html">IFRS17 专题 §4</a> 的保险服务收入 736）。</li>
+        <li><b>利润好 ≠ 利润质量好</b>——归因结构比利润总额重要：利差占比过高的利润在利率下行期是「看天吃饭」。</li>
+        <li><b>公司的未来靠新业务</b>——存量利润终会释放完毕，NBV（<a href="topic-vnb.html">VNB 专题</a>）才是增量引擎。</li>
+      </ul>
+    </div>
+    <div class="tbl-scroll"><table>
+      <tr><th>三个过滤器</th><th>问题</th><th>指标落点</th></tr>
+      <tr><td>可复制性</td><td>这个利差益明年还有吗？</td><td>利源结构中经常性占比 / 经验稳定性</td></tr>
+      <tr><td>资本效率</td><td>每元利润占用多少资本？</td><td>ROE、要求资本回报（对接 <a href="topic-solvency.html">偿付能力专题</a>）</td></tr>
+      <tr><td>时间箭头</td><td>利润是前置释放还是后置释放？</td><td>CSM 摊销节奏 / 新业务 Strain</td></tr>
+    </table></div>
+  </section>
+
+  <section>
+    <h2><span class="sn">§7</span>考试怎么考 + 演算器</h2>
+    <div class="exam"><b>真题痕迹：</b><span class="yr">2014</span>第4/19题、<span class="yr">2016</span>第22题均考利源分析框架。命题套路：给「定价假定 vs 实际经验」对照表 → 算三差 → 归因 → 判读利润质量。新准则下会加一问「实际/预期差异在新准则下进哪个科目」。</div>
+    <div class="calc" id="calc-ly">
+      <h4>演算器 · 三差拆解</h4>
+      <div class="row"><label>预定死亡率(‰)</label><input class="calc-in" id="ly-qm" value="3"><label>实际死亡率(‰)</label><input class="calc-in" id="ly-am" value="2.5"><label>危险保额(万)</label><input class="calc-in" id="ly-sa" value="10000"></div>
+      <div class="row"><label>预定费用(万)</label><input class="calc-in" id="ly-qe" value="900"><label>实际费用(万)</label><input class="calc-in" id="ly-ae" value="870"></div>
+      <div class="row"><label>预定利率(%)</label><input class="calc-in" id="ly-qr" value="2.5"><label>实际投资收益率(%)</label><input class="calc-in" id="ly-ar" value="3.8"><label>准备金均值(万)</label><input class="calc-in" id="ly-res" value="50000"></div>
+      <button class="calc-run">计算三差拆解</button>
+      <div class="verdict" id="ly_out"></div>
+    </div>
+    <script>
+    (function(){
+      var box=document.getElementById('calc-ly');
+      box.__run=function(){
+        var qm=(+document.getElementById('ly-qm').value||0)/1000,am=(+document.getElementById('ly-am').value||0)/1000,sa=+document.getElementById('ly-sa').value||0;
+        var qe=+document.getElementById('ly-qe').value||0,ae=+document.getElementById('ly-ae').value||0;
+        var qr=(+document.getElementById('ly-qr').value||0)/100,ar=(+document.getElementById('ly-ar').value||0)/100,res=+document.getElementById('ly-res').value||0;
+        var m=(qm-am)*sa,e=qe-ae,i=(ar-qr)*res,s=m+e+i;
+        ly_out.innerHTML='';
+        var li='<li>死差（益）=（预定−实际）死亡率 × 危险保额 = ('+qm.toFixed(4)+'‰ − '+am.toFixed(4)+'‰) × '+sa+' 万 = <span class="fin">'+m.toFixed(1)+' 万</span></li>';
+        li+='<li>费差（益）= 预定费用 − 实际费用 = '+qe+' 万 − '+ae+' 万 = <span class="fin">'+e.toFixed(1)+' 万</span></li>';
+        li+='<li>利差（益）=（实际投资收益率 − 预定利率）× 准备金均值 = ('+(ar*100).toFixed(2)+'% − '+(qr*100).toFixed(2)+'%) × '+res+' 万 = <span class="fin">'+i.toFixed(1)+' 万</span></li>';
+        li+='<li>三差合计 = '+m.toFixed(1)+' + '+e.toFixed(1)+' + '+i.toFixed(1)+' = <span class="fin">'+s.toFixed(1)+' 万</span>'+(sa+res>0?'（占比：死差 '+(m/s*100).toFixed(1)+'% / 费差 '+(e/s*100).toFixed(1)+'% / 利差 '+(i/s*100).toFixed(1)+'%）':'')+'</li>';
+        ly_out.innerHTML='<div class="calc-steps"><b>计算步骤（定价假定 vs 实际经验）</b><ol>'+li+'</ol></div>'
+          +'结论：死差 = <span class="out">'+m.toFixed(1)+' 万</span>，费差 = <span class="out">'+e.toFixed(1)+' 万</span>，利差 = <span class="out">'+i.toFixed(1)+' 万</span>，合计 = <span class="out">'+s.toFixed(1)+' 万</span>'+(s>0?'（三差合计为益）':'（三差合计为损）')+'。';
+      };
+    })();
+    </script>
+    <div class="prac"><b>跨库延伸：</b>三差利润解构系列（19 篇，含费差/利差/死差各自的专题深拆、SOE 实操模板与 60+ 真实归因案例）见公众号「西红精算」系列文章。站内延伸：<a href="ch5.html">CH.05</a>（经验分析工具）、<a href="topic-ev.html">内含价值专题</a>（利润与价值的口径之辨）。</div>
+    <button class="done-btn" data-id="topic-liyuan">○ 标记本页已完成</button>
+  </section>
+
+  <div class="pager">
+    <a href="topic-ifrs17.html">← 专题 C · IFRS17 与 CSM</a>
+    <a href="topic-ev.html">专题 E · 内含价值 →</a>
+  </div>
+  <footer class="colophon">寿险精算评估实务 · 科目F3 · 框架源自三差利润解构系列 · 知识星球「西红精算」</footer>
+</main>
+<script src="js/kb.js"></script>
+</body>
+</html>
