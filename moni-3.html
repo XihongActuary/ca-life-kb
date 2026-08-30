@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>模拟卷三 · 冲刺（经验分析·再保险·ALM·VNB） · 寿险精算评估实务 · 科目F3</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<aside class="side">
+  <div class="brand"><b>寿险精算评估实务</b><span>科目F3 · 正精算师（寿险）</span></div>
+    <nav>
+    <a href="xihong.html">关于 · 西红精算</a>
+    <a href="index.html">首页 · 考试全景</a>
+    <a href="about.html">本库说明 · 编法与用法</a>
+    <div class="grp">五大篇章（考纲权重）</div>
+    <a href="ch1.html">CH.01 概念与原理<span class="w">5%</span></a>
+    <a href="ch2.html">CH.02 责任准备金<span class="w">20%</span></a>
+    <a href="ch3.html">CH.03 偿付能力监管<span class="w">30%</span></a>
+    <a href="ch4.html">CH.04 企业会计准则<span class="w">30%</span></a>
+    <a href="ch5.html">CH.05 报告与分析<span class="w">15%</span></a>
+    <div class="grp">拓展专题（不止于考纲）</div>
+    <a href="topic-solvency.html">专题·偿付能力实务</a>
+    <a href="topic-vnb.html">专题·新业务价值</a>
+    <a href="topic-ifrs17.html">专题·IFRS17与CSM</a>
+    <a href="topic-liyuan.html">专题·利源分析三差</a>
+    <a href="topic-ev.html">专题·内含价值</a>
+    <a href="topic-products.html">专题·产品精算与定价</a>
+    <div class="grp">真题 / 模拟 / 资料</div>
+    <a href="zhenti.html">真题馆</a>
+    <a href="moni-1.html">模拟卷一 · 筑基</a>
+    <a href="moni-2.html">模拟卷二 · 新则</a>
+    <a href="moni-3.html" class="on">模拟卷三 · 冲刺</a>
+    <a href="references.html">参考资料库</a>
+    <a href="cross-solvency.html">C-ROSS II 贯通页</a>
+  </nav>
+  <div class="prog-mini">学习进度 <b>0 / 13</b></div>
+</aside>
+
+<main class="main">
+  <div class="ch-head">
+    <div class="no">MOCK EXAM 03 / 03</div>
+    <h1>模拟卷三 · 冲刺</h1>
+    <div class="sub">科目F3《寿险精算评估实务》· 卷三（全混合 · 大题导向）</div>
+    <div class="meta">
+      <span>题型：单选×5 · 多选×3 · 简答×2 · 计算×2</span>
+      <span>覆盖：经验分析 · 再保险纯益 · 久期匹配 · VNB 大题</span>
+      <span>答案支持一键展开</span>
+    </div>
+    <div class="wbar"><div class="lab"><span>本卷覆盖考纲主题</span><span>全科目混合冲刺</span></div><div class="bar"><i style="width:100%"></i></div></div>
+  </div>
+
+  <p class="lead">本页为<b>练习页</b>，不计入学习进度（无「标记完成」按钮）。卷三全混合冲刺：经验分析与再保 ALM 之后，附一道 VNB 压轴计算大题（对接新业务价值专题）。 计算题均复用 2014–2015 真题真实数据种子，可独立演算。三套卷一气呵成：卷一筑基 → 卷二新则 → 卷三冲刺。</p>
+
+  <button class="js-toggle-answers">展开/收起全部答案</button>
+
+  <section id="m3">
+    <h2><span class="sn">卷三</span>冲刺 · 经验分析·再保险·ALM <span class="star s3">高频</span></h2>
+    <div class="lead">覆盖：经验分析（暴露数·95% 置信区间·选择性退保）、再保险纯益返还、资产负债管理久期匹配、责任准备金评估利率。</div>
+
+    <h3 id="m3-single">一、单项选择题（每题标注答案）</h3>
+
+    <p><b>1.</b> 经验分析中「暴露数」（Exposure）是指：</p>
+    <p>A. 保单件数<br>B. 风险暴露的衡量单位（如保单年、保额×年），用于计算经验发生率<br>C. 死亡人数<br>D. 保费收入</p>
+    <div class="ans-skel"><b>答案：B</b>。暴露数是经验分析的「分母」，如「保单年」「人年」或加权暴露，用以将事件发生数换算为发生率。</div>
+
+    <p><b>2.</b> 95% 置信区间的主要作用是：<span class="src src-jiao">教</span></p>
+    <p>A. 给出点估计<br>B. 量化经验估计的不确定性范围（有 95% 把握真值落于区间内）<br>C. 计算保费<br>D. 确定预定利率</p>
+    <div class="ans-skel"><b>答案：B</b>。置信区间表达「估计精度」，样本越小区间越宽，提示经验数据可靠性。</div>
+
+    <p><b>3.</b> 选择性退保（Selective Withdrawal）通常指：</p>
+    <p>A. 随机退保<br>B. 健康状况较好（死亡率更低）的保单持有人更倾向退保，导致留存群体死亡率偏高<br>C. 死亡率高者退保<br>D. 强制退保</p>
+    <div class="ans-skel"><b>答案：B</b>。健康者退保 → 留存者更「不健康」→ <b>退保逆选择偏差</b>，使继续有效群体死亡率被高估。</div>
+
+    <p><b>4.</b> 再保险「纯益返还」（Profit Commission）是指：<span class="src src-jiao">教</span></p>
+    <p>A. 分入人向分出人返还部分承保利润<br>B. 分出人向分入人返还保费<br>C. 再保佣金固定不变<br>D. 分出人承担全部投资风险</p>
+    <div class="ans-skel"><b>答案：A</b>。纯益返还＝分入人在承保盈利时，按约定比例把部分利润返还分出人，激励并共享再保盈余。</div>
+
+    <p><b>5.</b> 资产负债管理（ALM）中「久期匹配」的目标是：</p>
+    <p>A. 使资产久期远大于负债久期以博取收益<br>B. 使资产与负债久期（及现金流）匹配，降低利率风险、实现免疫<br>C. 仅关注资产收益<br>D. 忽略负债</p>
+    <div class="ans-skel"><b>答案：B</b>。久期匹配（免疫）使净值对利率小幅变动不敏感，是利率风险管理的核心工具。<span class="src src-jiao">教</span></div>
+
+    <h3 id="m3-multi">二、多项选择题（标注正确选项及理由）</h3>
+
+    <p><b>1.</b> 再保险纯益返还的计算通常涉及：</p>
+    <p>A. 分入人承保利润<br>B. 约定的返还比例<br>C. 费用与再保佣金扣减<br>D. 投资收益率保证<br>E. 损失吸收调整</p>
+    <div class="ans-skel"><b>答案：A、B、C</b></div>
+    <div class="ans-detail">理由：纯益返还 = 返还比例 ×（分入账户承保利润 − 约定扣减项，如费用、分保佣金、税费）。D（投资收益保证）、E（损失吸收）非标准纯益返还要素。</div>
+
+    <p><b>2.</b> 经验分析常用指标包括：</p>
+    <p>A. 经验死亡率<br>B. 经验退保率/失效率<br>C. 经验费用率<br>D. 资产收益率<br>E. 公司股价</p>
+    <div class="ans-skel"><b>答案：A、B、C、D</b></div>
+    <div class="ans-detail">理由：经验分析聚焦承保经验（死/退/费）与投资经验（资产收益率）；公司股价属市场表现，非精算经验指标（E 错）。</div>
+
+    <p><b>3.</b> 关于 ALM 久期匹配/利率风险免疫，正确的有：</p>
+    <p>A. 通过匹配资产与负债久期，减少净值对利率的敏感度<br>B. 凸性匹配可进一步提升免疫效果<br>C. 仅适用于固定收益资产<br>D. 是偿付能力利率风险管理的重要手段<br>E. 久期匹配后利率风险完全消除</p>
+    <div class="ans-skel"><b>答案：A、B、D</b></div>
+    <div class="ans-detail">理由：久期匹配降低（非完全消除）利率风险，仍有凸性/再投资/基差风险（E 错）；久期管理也适用于浮息/含权工具的修正久期，非仅固定收益（C 错）。<span class="src src-gui">规</span>C-ROSSⅡ 利率风险</div>
+
+    <h3 id="m3-short">三、简答题（每题 6–8 分）</h3>
+
+    <h4>简答 1　简述经验分析（Experience Study）的流程、暴露数概念与选择性偏差处理。</h4>
+    <div class="ans-skel"><b>骨架答案：</b>
+      <p>① <b>流程</b>：明确目标与数据 → 计算暴露数 → 计算经验发生率 → 区间估计 → 与预期/定价假设对比（A/E 比）；<br>
+      ② <b>暴露数</b>：风险暴露的度量分母（保单年、人年、保额年等）；<br>
+      ③ <b>选择性偏差</b>：退保群体与留存群体风险特征不同 → 用分层/多重退保模型或 Cox 回归校正；<br>
+      ④ <b>用途</b>：修订死亡率/退保率假设、定价与准备金评估。</p>
+    </div>
+    <details class="answer"><summary>展开详尽答案</summary><div class="body ans-detail">
+      <p><b>暴露数</b>：经验发生率 = 事件数 / 暴露数。常见暴露：<b>保单年</b>（一张保单存续一年=1 保单年）、<b>人年</b>、<b>保额年</b>（用于与保额挂钩的假设）。暴露需按年龄、性别、保单年度分层，避免结构偏差。<span class="src src-jiao">教</span></p>
+      <p><b>选择性偏差</b>：退保并非随机——健康者更可能退保（去竞争对手或停保），导致<b>留存群体死亡率偏高</b>（退保逆选择）。直接以「留存者」经验估计死亡率会高估。处理：① 区分「死亡暴露」与「退保暴露」分别计量；② 对退保人按再核保死亡率（通常更低）单独建模；③ 用生存模型（如 Cox 比例风险）同时估计死亡与退保，分离选择性效应。</p>
+      <div class="formula">
+        <div class="fx">A/E 比 = 实际事件数 ÷ (暴露数 × 预期发生率)；A/E&gt;1 表示实际差于预期</div>
+      </div>
+    </div></details>
+
+    <h4>简答 2　简述再保险纯益返还机制及其对分出/分入双方的意义。</h4>
+    <div class="ans-skel"><b>骨架答案：</b>
+      <p>① <b>定义</b>：分入人在承保盈利时，按约定比例向分出人返还部分利润；<br>
+      ② <b>计算基础</b> = 返还比例 ×（分入账户承保利润 − 费用/佣金扣减），常设封顶/止损；<br>
+      ③ <b>对分出人</b>：共享再保盈利、降低净分保成本、激励优质业务；<br>
+      ④ <b>对分入人</b>：绑定长期合作、平滑分出人行为、提升续约率；<br>
+      ⑤ <b>注意</b>：税务处理与返还上限需事先约定。</p>
+    </div>
+    <details class="answer"><summary>展开详尽答案</summary><div class="body ans-detail">
+      <p>纯益返还（Profit Commission）是比例再保/非比例再保中常见的「利润分享」条款，本质是<b>将分入人账户的经验盈余回吐一部分给分出人</b>，使再保定价更公平、双方利益一致。<span class="src src-jiao">教</span></p>
+      <div class="formula">
+        <div class="fx">纯益返还 = 约定比例 × max( 0, 分入账户承保利润 − 约定扣减项 )</div>
+        <div class="note">扣减项常含分保佣金、管理费用、再保人资本成本；多设封顶（cap）与追溯期（通常 3–5 年滚动）。</div>
+      </div>
+      <div class="tbl-scroll"><table>
+        <tr><th>主体</th><th>获得</th><th>承担/约束</th></tr>
+        <tr><td>分出人</td><td>再保盈利返还、净成本下降</td><td>需维持业务质量以持续获返</td></tr>
+        <tr><td>分入人</td><td>长期账户、稳定保费流</td><td>盈利年份让渡部分利润</td></tr>
+      </table></div>
+      <div class="tip"><b>提示：</b>纯益返还与「损失吸收效应」可协同——分红/再保安排让保单持有人或再保交易对手吸收部分风险，降低股东资本占用。</div>
+    </div></details>
+
+    <h3 id="m3-calc">四、计算题（每题 8–10 分，含真实数值与完整演算）</h3>
+
+    <h4>计算 1　经验死亡率（2014 真题种子）　<span class="star s3">高频</span></h4>
+    <div class="prac"><b>已知：</b>（a）观察 8000 人，期内死亡 10 人；（b）某组合 1000 张全年有效保单 + 14 张部分暴露保单，合计暴露 1014 保单年，组合总保额 12 亿，预期死亡率 3‰，实际观察死亡 4 人；其中选择性退保 4 例，其再核保死亡率仅 1.5‰。　<span class="src src-ti">题</span>2014</div>
+    <div class="ans-skel"><b>骨架答案：</b>
+      <p>① 点估计 q̂ = 10/8000 = 1.25‰；95% CI ≈ <b>[0.48‰, 2.02‰]</b>；<br>
+      ② 暴露 1014，预期死亡 = 1014×3‰ = 3.042；A/E = 4/3.042 ≈ <b>1.31</b>（实际高 31%）；<br>
+      ③ 选择性退保再核保死亡率 1.5‰ &lt; 3‰ → 退保群体更健康，存在<b>退保逆选择偏差</b>，需校正。</p>
+    </div>
+    <details class="answer"><summary>展开详尽答案（置信区间+偏差校正）</summary><div class="body ans-detail">
+      <p><b>（a）千人死亡率 95% 置信区间（正态近似 / 泊松近似）</b></p>
+      <div class="formula">
+        <div class="fx">q̂ = 10 / 10000 = 0.00125（即 <b>1.25‰</b>）<br>
+        SE = √( q̂(1−q̂)/n ) = √(0.00125×0.99875/8000) = 0.000395<br>
+        95% CI = 0.00125 ± 1.96×0.000395 = [0.000476, 0.002024]<br>
+        ⇒ 千人死亡率 <b>[0.48‰, 2.02‰]</b></div>
+        <div class="note">泊松法：死亡数 λ=10，CI=[10−1.96√10, 10+1.96√10]=[3.80,16.20] → 每千人 [0.475‰,2.025‰]，结论一致。</div>
+      </div>
+      <p><b>（b）实际/预期比（A/E）</b></p>
+      <div class="tbl-scroll"><table>
+        <tr><th>项目</th><th class="num">数值</th><th>说明</th></tr>
+        <tr><td>暴露数（保单年）</td><td class="num">1014</td><td>1000 全年 + 14 部分暴露</td></tr>
+        <tr><td>预期死亡率</td><td class="num">3‰</td><td>定价/基准假设</td></tr>
+        <tr><td>预期死亡数</td><td class="num">3.042</td><td>1014 × 3‰</td></tr>
+        <tr><td>实际死亡数</td><td class="num">4</td><td>观察值</td></tr>
+        <tr><td><b>A/E 比</b></td><td class="num"><b>1.31</b></td><td>4 / 3.042，实际高于预期 31%</td></tr>
+      </table></div>
+      <p><b>（c）选择性退保偏差</b>：4 例选择性退保的再核保死亡率仅 1.5‰（&lt; 基准 3‰），说明<b>退保群体更健康</b>。若直接以留存群体估计死亡率，会把「健康者离场」造成的结构变化误读为「死亡率上升」，即<b>退保逆选择偏差</b>。校正方法：将退保人按 1.5‰（而非 3‰）计入其暴露的「未死亡」经验，或采用多减因（死亡+退保）模型分离选择性效应。<span class="src src-ti">题</span>2014</p>
+      <div class="warn"><b>易错：</b>置信区间宽窄取决于样本量；8000 人仅 10 死，区间相对宽，提示经验估计不确定性较大，不宜直接用于大幅修订假设。</div>
+    </div></details>
+
+    <h4>计算 2　资产负债管理久期匹配　<span class="star s2">中频</span></h4>
+    <div class="prac"><b>已知：</b>负债现值 L=1000、负债久期 D_L=7.5 年；资产组合市值 A=1000，由债券 X（市值 600、久期 5）与债券 Y（市值 400、久期 11）构成。</div>
+    <div class="ans-skel"><b>骨架答案：</b>
+      <p>① 当前资产久期 D_A = (600×5+400×11)/1000 = <b>7.4</b> 年；<br>
+      ② 久期缺口 = D_A − D_L = <b>−0.1</b> 年（资产略短）；<br>
+      ③ 为匹配 D_L=7.5，需债券 X 权重 w 满足 5w+11(1−w)=7.5 ⇒ w≈<b>58.3%</b>（X 市值 583、Y 417）。</p>
+    </div>
+    <details class="answer"><summary>展开详尽答案（匹配与利率冲击）</summary><div class="body ans-detail">
+      <div class="formula">
+        <div class="fx">D<sub>A</sub> = (600×5 + 400×11) / 1000 = (3000+4400)/1000 = <b>7.4 年</b><br>
+        久期缺口 Gap = D<sub>A</sub> − D<sub>L</sub> = 7.4 − 7.5 = <b>−0.1 年</b></div>
+        <div class="note">净值对利率变动 ≈ −Gap × (Δy) × 净资产；Gap≈0 即近似免疫。</div>
+      </div>
+      <p><b>求解匹配权重：</b>设债券 X 权重 w、Y 权重 1−w，则 5w + 11(1−w) = 7.5 ⇒ −6w = −3.5 ⇒ <b>w ≈ 58.3%</b>。即 X 市值 583、Y 市值 417 时 D_A=7.5，实现久期匹配。</p>
+      <div class="tbl-scroll"><table>
+        <tr><th>情形</th><th class="num">资产久期</th><th class="num">缺口</th><th>利率 +1% 时净值近似变动</th></tr>
+        <tr><td>当前</td><td class="num">7.4</td><td class="num">−0.1</td><td>≈ −(−0.1)×1%×1000 = +0.10（轻微受益）</td></tr>
+        <tr><td>匹配后</td><td class="num">7.5</td><td class="num">0.0</td><td>≈ 0（免疫，仅余凸性/再投资风险）</td></tr>
+      </table></div>
+      <p><b>结论：</b>久期匹配可将利率小幅变动下的净值波动压至最低；但<b>凸性不匹配、再投资风险和基差风险</b>仍存，故需结合凸性管理与现金流测试。该匹配直接降低 C-ROSSⅡ 利率风险最低资本。<span class="src src-gui">规</span>C-ROSSⅡ<span class="src src-jiao">教</span></p>
+      <div class="tip"><b>提示：</b>寿险负债久期长（常 8–15 年），资产侧长久期工具稀缺 → 久期缺口为正（资产短于负债）是行业常态，需以衍生工具或长久期债补充。</div>
+    </div></details>
+  </section>
+
+  <!-- ================= 压轴 · VNB 计算大题 ================= -->
+  <section id="m3-vnb">
+    <h2><span class="sn">压轴</span>计算大题 · 新业务价值 VNB 五步链（对接 <a href="topic-vnb.html">专题 B</a>）<span class="star s3">高频</span></h2>
+    <div class="lead">产品定价与新业务价值是近年常考大题的黄金搭档。本题按「真题给数据 → 逐步演算 → 结论判读」全流程命题。</div>
+
+    <div class="q-item"><span class="pts">（15 分）</span>
+      <p class="q"><b>题目：</b>某公司销售一款 3 年缴费、6 年满期的分红两全保险。精算部按如下假设编制新业务评估：</p>
+      <ul>
+        <li>年缴保费 10,000 元，首年现金流：保费 10,000 − 预期赔付 300 − 获取费用 2,500 − 维持费用 150 = 7,050；投资收益按期初负债与资本余额的 4% 计（首年 390）；</li>
+        <li>第 1 年期末负债：准备金 RES₁ = 8,200，递延保费负债 DPL₁ = 1,300；第 1 年期初负债为 0；</li>
+        <li>最低资本 MC₁ = 1,050，递延税负债 DTL₁ = 120；第 1 年期末要求资本 = max( MC₁ − (DPL₁ − DTL₁), 0 )；</li>
+        <li>所得税率 25%，风险贴现率 RDR = 12.5%；</li>
+        <li>第 2–6 年的可分配盈余 DE（已扣税、已含资本释放与资本投资收益）依次为：138、272、371、496、680（万元口径换算前按千元计）；</li>
+        <li>公司管理层问：这笔新业务是否创造价值？新业务价值率多少？首年压力（Strain）多大？</li>
+      </ul>
+      <p><b>要求：（1）</b>计算第 1 年的税后利润、要求资本与可分配盈余 DE₁；<b>（2）</b>写出 NBV 的贴现公式并计算 NBV；<b>（3）</b>计算新业务价值率与首年 Strain，并给出结论。</p>
+    </div>
+
+    <details class="answer"><summary>答案速查（核心结论）</summary><div class="body">
+      <div class="ans-skel"><b>骨架：</b>① Profit₁ = (CF + Inv − ΔLiab)×(1−Tax) = <b>−1,545</b>；② RC₁ = max(1,050 − 1,180, 0) = <b>0</b>；③ DE₁ = Profit₁ − ΔRC + RC·i·(1−Tax) = <b>−1,545</b>；④ NBV = Σ DE<sub>t</sub>/(1+RDR)<sup>t</sup> ≈ <b>+521</b>；⑤ 价值率 ≈ <b>5.21%</b>，Strain ≈ <b>−15.45%</b>，结论：价值创造为正，首年侵蚀属正常节奏。</div>
+    </div></details>
+
+    <details class="answer big"><summary>完整答题过程（表格化 · 可跟算）</summary><div class="body">
+      <h3>第（1）问：第 1 年三量</h3>
+      <table>
+        <tr><th>步骤</th><th>公式</th><th>代入</th><th class="num">结果</th></tr>
+        <tr><td class="ctr">税后利润</td><td>(CF + Inv − ΔLiab) × (1 − Tax)</td><td>(7,050 + 390 − 9,500) × 0.75</td><td class="num"><b>−1,545</b></td></tr>
+        <tr><td class="ctr">要求资本</td><td>max( MC − (DPL − DTL), 0 )</td><td>max(1,050 − (1,300 − 120), 0)</td><td class="num"><b>0</b></td></tr>
+        <tr><td class="ctr">可分配盈余</td><td>Profit − ΔRC + RC×i×(1−Tax)</td><td>−1,545 − 0 + 0</td><td class="num"><b>−1,545</b></td></tr>
+      </table>
+      <div class="tip"><b>得分点：</b>负债口径必须写 Liab = RES + DPL（9,500）；DPL 对要求资本的抵扣（1,300 − 120 = 1,180 &gt; MC 1,050，故 RC = 0）是本题最易漏的考点。</div>
+      <h3>第（2）问：NBV 贴现</h3>
+      <div class="formula"><div class="fx">NBV = Σ<sub>t=1..6</sub> DE<sub>t</sub> / (1 + 12.5%)<sup>t</sup></div></div>
+      <table>
+        <tr><th>t</th><th class="num">DE</th><th class="num">贴现因子</th><th class="num">现值</th></tr>
+        <tr><td class="ctr">1</td><td class="num">−1,545</td><td class="num">0.889</td><td class="num">−1,373</td></tr>
+        <tr><td class="ctr">2</td><td class="num">138</td><td class="num">0.790</td><td class="num">109</td></tr>
+        <tr><td class="ctr">3</td><td class="num">272</td><td class="num">0.702</td><td class="num">191</td></tr>
+        <tr><td class="ctr">4</td><td class="num">371</td><td class="num">0.624</td><td class="num">232</td></tr>
+        <tr><td class="ctr">5</td><td class="num">496</td><td class="num">0.555</td><td class="num">275</td></tr>
+        <tr><td class="ctr">6</td><td class="num">680</td><td class="num">0.493</td><td class="num">335</td></tr>
+        <tr class="note-td"><td class="ctr"><b>合计</b></td><td class="num">—</td><td class="num">—</td><td class="num"><b>+521 ≈ NBV</b></td></tr>
+      </table>
+      <h3>第（3）问：价值率、Strain 与结论</h3>
+      <table>
+        <tr><th>指标</th><th>公式</th><th>结果</th><th>判读</th></tr>
+        <tr><td>新业务价值率</td><td>NBV ÷ 首年保费 = 521 ÷ 10,000</td><td class="num">≈ 5.21%</td><td>每 100 元保费产出约 5.2 元价值</td></tr>
+        <tr><td>首年 Strain</td><td>DE₁ ÷ 保费 = −1,545 ÷ 10,000</td><td class="num">≈ −15.45%</td><td>首年侵蚀，获取费用前置所致</td></tr>
+      </table>
+      <p><b>结论句（背下来直接用）：</b>该业务 NBV 为正（约 521），说明在 RDR 12.5% 的股东资本成本要求下仍创造价值；首年可分配盈余为负（Strain −15.45%）源于获取费用前置与准备金计提，属新业务利润释放滞后于价值创造的固有节奏，不构成否定该业务的理由。可继续用 <a href="topic-vnb.html">专题 B 演算器</a> 变动 RDR 做敏感性复核。</p>
+      <div class="src-note"><span class="src src-ti">题</span>本题数据骨架源自新业务价值完整案例（3 年交 6 年分红险），公式链与真题 2014·15/20、2016·2 的 VNB 考点同源。完整推导见 <a href="topic-vnb.html">专题 B · 新业务价值</a>。</div>
+    </div></details>
+  </section>
+<div class="pager">
+  <a href="moni-2.html">← 模拟卷二 · 新则</a>
+  <a href="references.html">参考资料库 →</a>
+</div>
+<footer class="colophon">寿险精算评估实务 · 科目F3 · 模拟卷三（冲刺） · 知识星球「西红精算」</footer>
+</main>
+<script src="js/kb.js"></script>
+</body>
+</html>
