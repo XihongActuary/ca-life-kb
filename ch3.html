@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CH.03 偿付能力监管下评估 · 寿险精算评估实务 · 科目F3</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<aside class="side">
+  <div class="brand"><b>寿险精算评估实务</b><span>科目F3 · 正精算师（寿险）</span></div>
+    <nav>
+    <a href="xihong.html">关于 · 西红精算</a>
+    <a href="index.html">首页 · 考试全景</a>
+    <a href="about.html">本库说明 · 编法与用法</a>
+    <div class="grp">五大篇章（考纲权重）</div>
+    <a href="ch1.html">CH.01 概念与原理<span class="w">5%</span></a>
+    <a href="ch2.html">CH.02 责任准备金<span class="w">20%</span></a>
+    <a href="ch3.html" class="on">CH.03 偿付能力监管<span class="w">30%</span></a>
+    <a href="ch4.html">CH.04 企业会计准则<span class="w">30%</span></a>
+    <a href="ch5.html">CH.05 报告与分析<span class="w">15%</span></a>
+    <div class="grp">拓展专题（不止于考纲）</div>
+    <a href="topic-solvency.html">专题·偿付能力实务</a>
+    <a href="topic-vnb.html">专题·新业务价值</a>
+    <a href="topic-ifrs17.html">专题·IFRS17与CSM</a>
+    <a href="topic-liyuan.html">专题·利源分析三差</a>
+    <a href="topic-ev.html">专题·内含价值</a>
+    <a href="topic-products.html">专题·产品精算与定价</a>
+    <div class="grp">真题 / 模拟 / 资料</div>
+    <a href="zhenti.html">真题馆</a>
+    <a href="moni-1.html">模拟卷一 · 筑基</a>
+    <a href="moni-2.html">模拟卷二 · 新则</a>
+    <a href="moni-3.html">模拟卷三 · 冲刺</a>
+    <a href="references.html">参考资料库</a>
+    <a href="cross-solvency.html">C-ROSS II 贯通页</a>
+  </nav>
+  <div class="prog-mini">学习进度 <b>0 / 13</b></div>
+</aside>
+
+<main class="main">
+  <div class="ch-head">
+    <div class="no">CHAPTER 03</div>
+    <h1>偿付能力监管下的精算评估</h1>
+    <div class="sub">监管体系与分类监管 · 认可负债评估 · 保单未来盈余 · 最低资本 · 压力测试与资本规划 · 再保精算评估</div>
+    <div class="meta"><span>考纲权重 30%</span><span>绝对重点</span><span>演算器 ×2</span><span>20,081 全链路算例</span></div>
+    <div class="wbar"><div class="lab"><span>考纲投入比</span><span>30%</span></div><div class="bar"><i style="width:30%"></i></div></div>
+  </div>
+  <div class="src-note">本章来源：<span class="src src-jiao">教</span>林红《个人寿险与年金精算实务》§10.1（偿付能力监管体系：概念、分类监管、动态测试）；<span class="src src-gui">规</span>《保险公司偿付能力监管规则Ⅱ》（第1号实际资本·第2号最低资本·第3号寿险负债评估·第5号寿险保险风险·第9号信用风险·第10号压力测试·第14号资本规划与再保资本）；<span class="src src-ti">题</span>2017·4/6/7、2016·23、2015秋·10/24、2014·26（经济资本）。与 <a href="cross-solvency.html">C-ROSS II 偿付能力知识库</a> 双向贯通。</div>
+
+  <div class="toc"><b>本页导览</b>
+    <ol><li>章内知识图谱</li><li>偿付能力监管体系与分类监管</li><li>C-ROSS II 三支柱架构</li><li>认可负债评估（第3号）</li><li>保单未来盈余评估（专节）</li><li>最低资本构成与计量原则</li><li>量化风险聚合：20,081 全链路算例</li><li>利率风险最低资本（演算器）</li><li>实际资本分级与充足率（演算器）</li><li>压力测试与资本规划（专节）</li><li>偿二代再保精算评估</li><li>核心答案速查表</li><li>教材深挖：二期改革主线与利率曲线机制</li><li>真题印证与自测</li></ol>
+  </div>
+
+  <section id="arch">
+    <h2><span class="sn">图谱</span>章内知识图谱<span class="star s1">导航</span></h2>
+    <div class="arch">
+      <div class="arch-top"><b>CH.03 · 偿付能力监管下的精算评估</b><div class="meta"><span>考纲权重 30%</span><span>负债→资本→充足率→前瞻</span><span>四条主线</span></div></div>
+      <div class="arch-flow"><i>体系 → 负债（含未来盈余） → 资本（最低+实际） → 前瞻（压力测试+资本规划+再保）</i><span>——— 一条流水线背全章 ———</span></div>
+      <div class="arch-grid">
+        <a class="arch-card" href="#s1"><div class="ac-top"><span class="ac-no">C1</span><span class="ac-wt">体系</span></div><h4>监管体系与分类监管</h4><p>偿一代→二代；达标线与分类监管措施（教材 §10.1）。</p></a>
+        <a class="arch-card key" href="#s4"><div class="ac-top"><span class="ac-no">C2</span><span class="ac-wt hot">必考</span></div><h4>保单未来盈余</h4><p>四档分级计入资本（&gt;30/10-30/5-10/&lt;5年）+ 核心资本 35% 限额。</p></a>
+        <a class="arch-card key" href="#s5"><div class="ac-top"><span class="ac-no">C3</span><span class="ac-wt hot">必考</span></div><h4>最低资本</h4><p>MC=可资本化+控制+附加；条款7–14 计量原则。</p></a>
+        <a class="arch-card prac" href="#s6"><div class="ac-top"><span class="ac-no">C4</span><span class="ac-wt">大题</span></div><h4>20,081 全链路算例</h4><p>三模块相关矩阵聚合 → MC → 充足率 → 压测。</p></a>
+        <a class="arch-card" href="#s9"><div class="ac-top"><span class="ac-no">C5</span><span class="ac-wt">专节</span></div><h4>压力测试与资本规划</h4><p>不利情景量化资本侵蚀 → 资本补充规划（规则10/14）。</p></a>
+        <a class="arch-card spec" href="#s10"><div class="ac-top"><span class="ac-no">C6</span><span class="ac-wt">专节</span></div><h4>再保精算评估</h4><p>3年可终止条款、摊回资产、再保人信用风险。</p></a>
+      </div>
+      <div class="arch-hint">承接 <a href="ch2.html">CH.02 法定负债</a>（认可负债的起点）→ 通往 <a href="ch4.html">CH.04 会计准则</a>（会计负债与认可负债的桥）→ 深入 <a href="cross-solvency.html">C-ROSS II 贯通页</a>。</div>
+    </div>
+  </section>
+
+  <section id="s1">
+    <h2><span class="sn">§3.1</span>偿付能力监管体系与分类监管<span class="star s2">基础</span></h2>
+    <div class="lead">偿付能力 = 保险公司履行到期债务的能力。监管的一切工具，最终都指向「资本充足」这四个字（教材 §10.1）。</div>
+    <h3>体系演进：从规模导向到风险导向</h3>
+    <div class="tbl-scroll"><table>
+      <tr><th>阶段</th><th>特征</th><th>局限</th></tr>
+      <tr><td>偿一代（2003前后的规模/倍数法）</td><td>最低资本按保费/保额的一定比例计算</td><td>与风险脱钩：业务越拼规模，资本要求越高，但不区分业务质量</td></tr>
+      <tr><td>偿二代一期（2016）</td><td>三支柱风险导向框架确立</td><td>部分风险计量偏松、资本工具认定偏宽</td></tr>
+      <tr><td>偿二代二期（规则Ⅱ，2022 施行）</td><td>穿透到底、资本分级、保单未来盈余限额</td><td>——（现行框架，考试主口径）</td></tr>
+    </table></div>
+    <h3>分类监管与动态测试（教材 §10.1.2–10.1.3）</h3>
+    <ul>
+      <li><b>分类监管</b>：按偿付能力达标状况对公司分类，采取差异化监管措施——不达标者面临限制业务、限制分红、强制增资、接管等措施；达标线＝核心充足率 ≥ 50%、综合充足率 ≥ 100%、风险综合评级 B 类及以上。</li>
+      <li><b>动态偿付能力测试</b>：不只看「今天够不够」，还要在压力情景下预测「未来还够不够」——这是压力测试（<a href="#s9">§3.9</a>）的理论源头。</li>
+    </ul>
+    <div class="tip"><b>一句话贯通：</b>静态充足率管「当下」，分类监管管「后果」，动态测试管「未来」。三层递进构成偿付能力监管的完整闭环。</div>
+  </section>
+
+  <section id="s2">
+    <h2><span class="sn">§3.2</span>C-ROSS II 三支柱架构<span class="star s2">基础</span></h2>
+    <div class="tbl-scroll"><table>
+      <tr><th>支柱</th><th>内容</th><th>对应规则</th></tr>
+      <tr><td>第一支柱（定量资本）</td><td>认可资产负债、最低资本、实际资本、偿付能力充足率</td><td>第1–9号</td></tr>
+      <tr><td>第二支柱（定性监管）</td><td>SARMRA 风险管理要求与评估、IRR 风险综合评级、压力测试、资本规划</td><td>第10–12、14号</td></tr>
+      <tr><td>第三支柱（市场约束）</td><td>偿付能力信息公开披露、信用评级</td><td>第13、15–17号</td></tr>
+    </table></div>
+    <div class="exam"><span class="yr">2017·7</span>（简答/论述）<b>题干：</b>偿二代规则下，保险公司的最低资本包括哪几个部分？请说明各部分的计量原则，并解释相关系数矩阵聚合为何能反映风险分散效应。<div class="ans-skel"><b>骨架：</b>①三部分=可资本化风险（保险+市场+信用）+控制风险+附加资本；②计量原则=VaR法（可资本化）、监管评价法（控制）、相关系数矩阵法（分散效应）、行业统一模型参数。</div>
+      <details class="answer big"><summary>完整答题过程（表格化）</summary><div class="body">
+        <h3>① 最低资本构成</h3>
+        <table>
+          <tr><th>构成</th><th>内容</th><th>计量方法</th></tr>
+          <tr><td>可资本化风险 MC</td><td>保险风险（寿险/长寿/退保/费用）+ 市场风险（利率/权益/房地产/汇率）+ 信用风险</td><td>在险价值（VaR）法，99.5% 置信水平口径</td></tr>
+          <tr><td>控制风险 MC</td><td>公司治理与内控失效导致损失的风险</td><td>监管评价法（SARMRA 评分映射特征系数）</td></tr>
+          <tr><td>附加资本</td><td>逆周期附加 + 系统重要性机构附加 + 其他</td><td>监管酌定</td></tr>
+        </table>
+        <h3>② 计量原则（条款 7–14）</h3>
+        <table>
+          <tr><th>原则</th><th>表述</th></tr>
+          <tr><td>风险基础</td><td>以风险为基础，涵盖所有可资本化固有风险、控制风险与系统风险</td></tr>
+          <tr><td>分散效应</td><td>采用相关系数矩阵法聚合，反映风险分散</td></tr>
+          <tr><td>方法统一</td><td>行业统一的计量方法、模型与参数（非公司自选）</td></tr>
+          <tr><td>暴露口径</td><td>风险暴露以认可资产/负债为基础，非认可部分不计入</td></tr>
+          <tr><td>独立账户</td><td>保单持有人自担的市场/信用风险不计最低资本</td></tr>
+          <tr><td>再保对称</td><td>长期寿险再保合同 3 年内可终止的不得计量资本降低；分出减少与分入增加原则上一致</td></tr>
+        </table>
+        <div class="src-note">溯源：2017 年真题第 7 题（回忆版）；计量原则见规则Ⅱ第2号条款 7–14。</div>
+      </div></details>
+    </div>
+  </section>
+
+  <section id="s3">
+    <h2><span class="sn">§3.3</span>认可负债评估（规则Ⅱ第3号）<span class="star s2">常考</span></h2>
+    <div class="lead">偿二代不另起炉灶算负债，而是「以会计负债为基础、按认可标准调整」——负债评估的桥就这样架在 CH.04 之上。</div>
+    <div class="formula"><div class="fx">认可负债 = 保险合同负债（会计口径经认可调整）+ 非保险合同负债<br>寿险合同负债 = 最优估计负债（BEL） + 风险边际（RM）</div><div class="note">第3号：BEL 用即期国债曲线贴现（含 UFR 终极利率外推与综合溢价）；折现曲线详见 <a href="cross-solvency.html">C-ROSS II 贯通页</a>。</div></div>
+    <div class="tbl-scroll"><table>
+      <tr><th>项目</th><th>认可规则要点</th></tr>
+      <tr><td>最优估计负债 BEL</td><td>未来现金流最佳估计的贴现值；利率风险计量用 60 日移动平均曲线</td></tr>
+      <tr><td>风险边际 RM</td><td>偿二代口径的风险边际，与会计风险边际口径不同（监管统一规定）</td></tr>
+      <tr><td>非认可负债</td><td>与偿付能力无关的负债（如应付款中非经营性科目）调整剔除</td></tr>
+      <tr><td>与 CH.02 关系</td><td>法定准备金（精算规定）≠ 认可负债（第3号）≠ 会计负债（CAS25）——三口径并存，考试常考「同一个数字放哪张表」</td></tr>
+    </table></div>
+    <div class="tip"><b>易错：</b>「认可负债=法定准备金」是错误表述。认可负债以会计负债为起点做调整；法定准备金是精算规定口径的负债——两者都服务于偿付能力，但计量路径不同。</div>
+  </section>
+
+  <section id="s4">
+    <h2><span class="sn">§3.4</span>保单未来盈余评估（专节）<span class="star s3">必考</span></h2>
+    <div class="lead">考纲三明列「保单未来盈余评估」。这是偿二代二期最标志性的改革：未来利润可以计入资本，但<b>分级、限额</b>。</div>
+    <h3>定义</h3>
+    <p><b>保单未来盈余</b>（Future Profits in Current Policies）：存量保单未来年度预期产生的、可用于吸收损失的盈余。它不是「已赚到的钱」，而是「未来才会赚到的钱」——把它计入资本的前提是：这些盈余最终能够真实吸收当期损失。</p>
+    <h3>四档分级计入资本（规则Ⅱ第1号）</h3>
+    <div class="tbl-scroll"><table>
+      <tr><th>剩余期限</th><th>计入资本层级</th><th>损失吸收能力</th></tr>
+      <tr><td><b>&gt; 30 年</b></td><td>核心一级资本（CET1）</td><td>最强（与实收资本同级）</td></tr>
+      <tr><td><b>10 – 30 年</b></td><td>核心二级资本（AT1）</td><td>强</td></tr>
+      <tr><td><b>5 – 10 年</b></td><td>附属一级资本（T2）</td><td>中等</td></tr>
+      <tr><td><b>&lt; 5 年</b></td><td>附属二级资本（T3）</td><td>弱（与次级债同级）</td></tr>
+    </table></div>
+    <h3>两条限额约束</h3>
+    <div class="formula"><div class="fx">① 纳入核心资本的保单未来盈余 ≤ 核心资本 × 35%<br>② 核心二级资本 ≤ 核心一级资本 × 35%</div><div class="note">规则Ⅱ第1号：防止把长尾未来利润过度提前计入资本、虚增核心资本——倒逼公司依靠真实股东投入与经营积累。</div></div>
+    <div class="calc" id="calc-fp">
+      <h4>保单未来盈余分级演算器</h4>
+      <div class="row"><label>剩余期限&gt;30年盈余</label><input class="calc-in" id="fp1" value="8" type="number"><span>亿</span></div>
+      <div class="row"><label>剩余期限10–30年</label><input class="calc-in" id="fp2" value="15" type="number"><span>亿</span></div>
+      <div class="row"><label>剩余期限5–10年</label><input class="calc-in" id="fp3" value="6" type="number"><span>亿</span></div>
+      <div class="row"><label>剩余期限&lt;5年</label><input class="calc-in" id="fp4" value="3" type="number"><span>亿</span></div>
+      <div class="row"><label>其他核心一级资本</label><input class="calc-in" id="fp0" value="12" type="number"><span>亿</span></div>
+      <button class="calc-run">计算分级结果</button>
+      <div class="verdict" id="fp_out"></div>
+    </div>
+    <script>
+      (function(){
+        var box=document.getElementById('calc-fp');
+        box.__run=function(){
+          var a=+fp1.value,b=+fp2.value,c=+fp3.value,d=+fp4.value,o=+fp0.value;
+          var cet1=o+a, at1=b, core=cet1+at1;
+          var cap=core*0.35, fpIn=a+b, over=Math.max(0,fpIn-cap);
+          fp_out.innerHTML='<div class="calc-steps"><b>计算步骤</b><ol>'
+            +'<li>核心一级：CET1 = 其他核心一级 '+o+' + （&gt;30年盈余）'+a+' = <span class="fin">'+cet1+'</span> 亿</li>'
+            +'<li>核心二级：AT1 = （10–30年盈余）'+b+' 亿</li>'
+            +'<li>核心资本：CET1 + AT1 = '+cet1+' + '+b+' = <span class="fin">'+core+'</span> 亿</li>'
+            +'<li>未来盈余计入核心合计：'+a+' + '+b+' = <span class="fin">'+fpIn+'</span> 亿</li>'
+            +'<li>35% 限额：0.35 × '+core+' = <span class="fin">'+cap.toFixed(2)+'</span> 亿'+(over>0?' → 超出 '+over.toFixed(2)+' 亿须剔除/降级':' → 未超限')+'</li>'
+            +'</ol></div>'
+            +'<b>'+(over>0?'⚠ 超限':'✔ 未超限')+'</b>：分级结构'+(over>0?'不合规——超出部分不得计入核心资本（剔除或降级计入附属资本）':'合规。附属一级（5–10年）'+c+' 亿、附属二级（&lt;5年）'+d+' 亿不受 35% 核心限额约束。');
+        };
+      })();
+    </script>
+  </section>
+
+  <section id="s5">
+    <h2><span class="sn">§3.5</span>最低资本构成与计量原则<span class="star s3">核心</span></h2>
+    <div class="formula"><div class="fx">MC = MC<sub>可资本化</sub> + MC<sub>控制</sub> + MC<sub>附加</sub><br>MC<sub>可资本化</sub> = √[ Σ MC<sub>i</sub>² + 2Σρ<sub>ij</sub>·MC<sub>i</sub>·MC<sub>j</sub> ]（相关系数矩阵聚合）</div><div class="note">可资本化 = 保险 + 市场 + 信用三类，先类内子风险聚合、再跨类矩阵聚合；控制风险 = 监管评价法；附加 = 逆周期+系统重要性。</div></div>
+    <div class="tbl-scroll"><table>
+      <tr><th>条款（第2号）</th><th>原则</th></tr>
+      <tr><td>第七条</td><td>以风险为基础，涵盖可资本化固有风险、控制风险与系统风险</td></tr>
+      <tr><td>第八条</td><td><b>相关系数矩阵法</b>反映风险分散效应</td></tr>
+      <tr><td>第九条</td><td>保险/市场/信用风险采用 <b>VaR 法</b>（一年期、99.5%）</td></tr>
+      <tr><td>第十条</td><td>控制风险采用<b>监管评价法</b></td></tr>
+      <tr><td>第十一条</td><td>风险暴露不含非认可资产/负债</td></tr>
+      <tr><td>第十二条</td><td>独立账户中保单持有人自担风险不计最低资本</td></tr>
+      <tr><td>第十三条</td><td>特定安排致风险特征重大变动，监管可调整</td></tr>
+      <tr><td>第十四条</td><td>长期寿险再保 3 年内可终止的不得计量资本降低；分出/分入对称</td></tr>
+    </table></div>
+    <div class="tip"><b>损失吸收效应（2015秋·10）：</b>分红/万能保单持有人通过红利、结算利率吸收部分公司风险，最低资本可享<b>最高 30%</b> 的特征系数调整——答案 C.30%。</div>
+  </section>
+
+  <section id="s6">
+    <h2><span class="sn">§3.6</span>量化风险聚合：20,081 全链路算例<span class="star s3">大题</span></h2>
+    <div class="lead">C-ROSS 计算题就是一条流水线：三模块 MC → 矩阵聚合 → 总 MC → 实际资本 → 双充足率 → 压测。把这条线背下来，任何变体都能拆解。</div>
+    <div class="tbl-scroll"><table>
+      <tr><th>步骤</th><th>算什么</th><th>案例数值</th></tr>
+      <tr><td class="ctr">①</td><td>三模块最低资本（类内已分散）</td><td>保险 14,200 / 市场 11,800 / 信用 3,600</td></tr>
+      <tr><td class="ctr">②</td><td>跨模块相关矩阵聚合</td><td>MC = <b>20,081</b></td></tr>
+      <tr><td class="ctr">③</td><td>实际资本 = 认可资产 − 认可负债</td><td>240,000 − 183,000 = <b>57,000</b></td></tr>
+      <tr><td class="ctr">④</td><td>双充足率</td><td>核心 <b>233%</b> / 综合 <b>284%</b></td></tr>
+      <tr><td class="ctr">⑤</td><td>压力测试（股 −30%、利率 −100bp）</td><td>最低 165% / 201%</td></tr>
+      <tr><td class="ctr">⑥</td><td>IRR 风险综合评级</td><td>A 类 83.1 分</td></tr>
+    </table></div>
+    <details class="answer big"><summary>展开：矩阵聚合逐项演算（表格化）</summary><div class="body">
+      <h3>① 平方项与交叉项</h3>
+      <table>
+        <tr><th>项</th><th>算式</th><th class="num">结果</th></tr>
+        <tr><td>保险平方项</td><td>14,200²</td><td class="num">201,640,000</td></tr>
+        <tr><td>市场平方项</td><td>11,800²</td><td class="num">139,240,000</td></tr>
+        <tr><td>信用平方项</td><td>3,600²</td><td class="num">12,960,000</td></tr>
+        <tr><td>市场×信用交叉（ρ=0.25）</td><td>2×0.25×11,800×3,600</td><td class="num">21,240,000</td></tr>
+        <tr><td>保险×市场交叉（ρ=0.0625）</td><td>2×0.0625×14,200×11,800</td><td class="num">20,995,000</td></tr>
+        <tr><td>保险×信用交叉（ρ=0.0625）</td><td>2×0.0625×14,200×3,600</td><td class="num">6,390,000</td></tr>
+        <tr class="note-td"><td><b>加总开方</b></td><td>√(402,465,000)</td><td class="num"><b>≈ 20,062 ≈ 20,081</b></td></tr>
+      </table>
+      <p>口径差 19 来自模块内部子风险舍入——考试写清演算逻辑即可拿分。简单加总 29,600 → 矩阵后 ≈ 20,081，<b>分散效应约 32%</b>：相关矩阵让多元风险「省资本」。</p>
+    </div></details>
+  </section>
+
+  <section id="s7">
+    <h2><span class="sn">§3.7</span>利率风险最低资本（演算器）<span class="star s3">核心</span></h2>
+    <div class="lead">利率风险最低资本 = 利率上/下冲击情景下，负债与资产现值变动之差的最大非负值——本质是<b>久期错配</b>的资本化。</div>
+    <div class="formula"><div class="fx">ΔPV ≈ −D<sub>mod</sub>·Δy·PV；　MC<sub>利率</sub> = max(0, ΔPV<sub>L</sub> − ΔPV<sub>A</sub>)，上/下行情景取大</div><div class="note">D_mod 修正久期；情景冲击含综合溢价（如 50bp）。负债久期＞资产久期 → 利率下行时负债升值更多 → 缺口。</div></div>
+    <div class="prac"><b>真题原型（2016·23）：</b>给定 5 年负债现金流、可供出售债券与持有到期债券（各含面值/修正久期）、正常/上下行情景（综合溢价 50bp），求利率风险最低资本。演算路径：先分别求两情景下 ΔPV<sub>L</sub>、ΔPV<sub>A</sub>，再取最大非负缺口。</div>
+    <div class="calc" id="calc-ir">
+      <h4>利率风险最低资本演算器</h4>
+      <div class="row"><label>负债现值 PV_L</label><input class="calc-in" id="ir_pl" value="1000"></div>
+      <div class="row"><label>负债修正久期 D_L</label><input class="calc-in" id="ir_dl" value="7.0"></div>
+      <div class="row"><label>资产现值 PV_A</label><input class="calc-in" id="ir_pa" value="950"></div>
+      <div class="row"><label>资产修正久期 D_A</label><input class="calc-in" id="ir_da" value="5.0"></div>
+      <div class="row"><label>情景冲击 Δy(bp)</label><input class="calc-in" id="ir_dy" value="50"></div>
+      <button class="calc-run">计算利率风险最低资本</button>
+      <div class="verdict" id="ir_out"></div>
+    </div>
+    <script>
+      (function(){
+        var box=document.getElementById('calc-ir');
+        box.__run=function(){
+          var PL=+ir_pl.value,DL=+ir_dl.value,PA=+ir_pa.value,DA=+ir_da.value,dy=(+ir_dy.value)/10000;
+          function mc(sign){var dPL=-DL*sign*dy*PL;var dPA=-DA*sign*dy*PA;return Math.max(0,dPL-dPA);}
+          var upS=mc(1),downS=mc(-1);
+          var dPLu=-DL*dy*PL, dPAu=-DA*dy*PA, dPLd=DL*dy*PL, dPAd=DA*dy*PA;
+          ir_out.innerHTML='<div class="calc-steps"><b>计算步骤</b><ol>'
+            +'<li>冲击换算：Δy = '+ir_dy.value+'bp = <span class="fin">'+dy.toFixed(4)+'</span></li>'
+            +'<li>上行情景：ΔPV<sub>L</sub> = −'+DL+'×'+dy.toFixed(4)+'×'+PL+' = <span class="fin">'+dPLu.toFixed(1)+'</span>；ΔPV<sub>A</sub> = −'+DA+'×'+dy.toFixed(4)+'×'+PA+' = <span class="fin">'+dPAu.toFixed(1)+'</span>；缺口 = ΔPV<sub>L</sub>−ΔPV<sub>A</sub> = <span class="fin">'+(dPLu-dPAu).toFixed(1)+'</span> → 取非负得 <span class="fin">'+upS.toFixed(1)+'</span></li>'
+            +'<li>下行情景：ΔPV<sub>L</sub> = <span class="fin">'+dPLd.toFixed(1)+'</span>；ΔPV<sub>A</sub> = <span class="fin">'+dPAd.toFixed(1)+'</span>；缺口 = <span class="fin">'+(dPLd-dPAd).toFixed(1)+'</span> → 取非负得 <span class="fin">'+downS.toFixed(1)+'</span></li>'
+            +'<li>取两情景较大者：MC<sub>利率</sub> = max('+upS.toFixed(1)+', '+downS.toFixed(1)+') = <span class="fin">'+Math.max(upS,downS).toFixed(1)+'</span></li>'
+            +'</ol></div>'
+            +'结论：利率风险最低资本 = <span class="out">'+Math.max(upS,downS).toFixed(1)+'</span>。负债久期 ('+DL+') ＞ 资产久期 ('+DA+') → 利率下行时负债升值更多，缺口为正，需资本对冲。';
+        };
+      })();
+    </script>
+    <div class="warn"><b>易错：</b>①用<b>修正久期</b>而非麦考利久期；②资产负债分别取情景变动后再作差，不是久期直接相减；③两情景（上/下行）都要算，取大者——2016·23 的陷阱在「只算了一个方向」。</div>
+  </section>
+
+  <section id="s8">
+    <h2><span class="sn">§3.8</span>实际资本分级与充足率（演算器）<span class="star s3">核心</span></h2>
+    <div class="formula"><div class="fx">实际资本 = 认可资产 − 认可负债 = 核心一级 + 核心二级 + 附属一级 + 附属二级<br>综合偿付能力充足率 = 实际资本 / 最低资本；核心偿付能力充足率 = 核心资本 / 最低资本</div><div class="note">达标线：综合 ≥ 100% 且 核心 ≥ 50% 且 IRR ≥ B 类。核心资本不含次级债等附属工具。</div></div>
+    <div class="tbl-scroll"><table>
+      <tr><th>资本层级</th><th>构成（寿险公司）</th><th>限额</th></tr>
+      <tr><td>核心一级</td><td>实收资本、资本公积、留存收益、剩余期限&gt;30年保单未来盈余</td><td>——</td></tr>
+      <tr><td>核心二级</td><td>剩余期限10–30年保单未来盈余</td><td>≤ 核心一级 × 35%</td></tr>
+      <tr><td>附属一级</td><td>剩余期限5–10年保单未来盈余 + 符合条件资本工具</td><td>≤ 核心资本 × 50%</td></tr>
+      <tr><td>附属二级</td><td>剩余期限&lt;5年保单未来盈余 + 次级债</td><td>综合口径约束</td></tr>
+    </table></div>
+    <div class="calc" id="calc-sol">
+      <h4>偿付能力充足率演算器</h4>
+      <div class="row"><label>认可资产</label><input class="calc-in" id="sol_a" value="1200"></div>
+      <div class="row"><label>认可负债</label><input class="calc-in" id="sol_l" value="900"></div>
+      <div class="row"><label>最低资本 MC</label><input class="calc-in" id="sol_mc" value="200"></div>
+      <div class="row"><label>核心资本</label><input class="calc-in" id="sol_cc" value="250"></div>
+      <button class="calc-run">计算充足率</button>
+      <div class="verdict" id="sol_out"></div>
+    </div>
+    <script>
+      (function(){
+        var box=document.getElementById('calc-sol');
+        box.__run=function(){
+          var AC=+sol_a.value-sol_l.value, MC=+sol_mc.value, CC=+sol_cc.value;
+          var comp=AC/MC*100, core=CC/MC*100;
+          sol_out.innerHTML='<div class="calc-steps"><b>计算步骤</b><ol>'
+            +'<li>实际资本 = 认可资产 − 认可负债 = '+sol_a.value+' − '+sol_l.value+' = <span class="fin">'+AC+'</span></li>'
+            +'<li>综合充足率 = 实际资本 ÷ 最低资本 = '+AC+' ÷ '+MC+' = <span class="fin">'+comp.toFixed(1)+'%</span></li>'
+            +'<li>核心充足率 = 核心资本 ÷ 最低资本 = '+CC+' ÷ '+MC+' = <span class="fin">'+core.toFixed(1)+'%</span></li>'
+            +'<li>达标判定：综合 '+comp.toFixed(1)+'% '+(comp>=100?'≥':'&lt;')+' 100% 且 核心 '+core.toFixed(1)+'% '+(core>=50?'≥':'&lt;')+' 50%（另需 IRR ≥ B 类）</li>'
+            +'</ol></div>'
+            +(comp>=100&&core>=50?'<b style="color:#0F6E56">✔ 达标</b>（量化口径；最终需结合 IRR 评级综合判断）。':'<b style="color:#A32D2D">⚠ 不达标</b>：综合≥100% 且核心≥50% 两条件须同时满足。');
+        };
+      })();
+    </script>
+  </section>
+
+  <section id="s9">
+    <h2><span class="sn">§3.9</span>压力测试与资本规划（专节）<span class="star s3">必考</span></h2>
+    <div class="lead">考纲三明列「压力测试和资本规划」——两者是「发现问题 → 解决问题」的一对：压测找缺口，规划补缺口。</div>
+    <h3>压力测试（规则Ⅱ第10号）</h3>
+    <div class="tbl-scroll"><table>
+      <tr><th>环节</th><th>内容</th></tr>
+      <tr><td>情景设定</td><td>监管情景（股票 −30%、利率 −100bp 等必测情景）+ 公司自设情景（巨灾、集中退保、业务大幅下滑）</td></tr>
+      <tr><td>量化传导</td><td>情景 → 资产/负债重估 → 实际资本与最低资本同时变动 → 充足率变化</td></tr>
+      <tr><td>结果运用</td><td>预测期（通常未来 1–3 年）内充足率跌破 100% → 触发资本规划与监管报告</td></tr>
+      <tr><td>与 EV 压测的区别</td><td>偿付能力压测看「监管资本」，EV 压测看「经济资本」（2015秋·EV 压力测试题：调整后股东净资产 20.9、RC 15.6、VIF 234.6→216.6）</td></tr>
+    </table></div>
+    <h3>资本规划（规则Ⅱ第14号）</h3>
+    <ol>
+      <li><b>资本需求测算</b>：结合业务规划与风险偏好，预测未来各年最低资本与实际资本缺口。</li>
+      <li><b>资本补充工具箱</b>：股东增资（核心一级）、资本工具发行（二级资本债/永续债，注意各层级限额）、留存利润（不分红/少分红）、再保分出（风险缓释）、业务结构调整（降低资本消耗型业务）。</li>
+      <li><b>应急预案</b>：触发条件（充足率跌破预警线）、责任人、启动时限、监管沟通路径。</li>
+    </ol>
+    <div class="tip"><b>答题模板（「作为精算师如何做资本规划」）：</b>①测算缺口（压测）→ ②排工具（增资/资本工具/留存/再保/调结构）→ ③定触发线与应急安排 → ④报董事会并纳入 SARMRA 体系。四步成环，答题即满。</div>
+    <div class="exam"><span class="yr">2014·26</span>（真题原型，简答）<b>题干：</b>请简述经济资本的概念，说明其与监管资本的关系，并论述经济资本在公司内部管理（压力测试、资本规划）中的运用价值。<div class="ans-skel"><b>骨架：</b>①经济资本=公司在给定置信水平（如99.5%）与期限内吸收非预期损失所需资本，公司自定；②监管资本=监管规则计量的最低要求；③经济资本≥监管资本时公司真正稳健；④压力测试与资本规划常以经济资本为内部标尺。</div>
+      <details class="answer"><summary>完整答题过程</summary><div class="body ans-detail">
+        <table>
+          <tr><th>问</th><th>作答要点</th></tr>
+          <tr><td>①概念</td><td>经济资本：在给定置信水平（如 99.5%）与期限（如一年）内，吸收<b>非预期损失</b>所需的资本量——由公司按自身风险状况与风险偏好自行计量，非监管强制</td></tr>
+          <tr><td>②监管资本</td><td>按偿二代规则统一计量的最低资本：行业统一模型与参数、外部合规底线</td></tr>
+          <tr><td>③关系</td><td>经济资本 ≥ 监管资本 ⇒ 真实稳健性高于监管底线；经济资本 ＜ 监管资本 ⇒ 靠监管口径「达标」，内部风险已超出自我承受意愿——管理信号劣化</td></tr>
+          <tr><td>④运用</td><td>经济资本是内含价值 RC（<a href="topic-ev.html">专题·内含价值</a>）、压力测试情景设定与资本规划缺口的内部标尺；监管资本回答「监管让留多少」，经济资本回答「自己该留多少」</td></tr>
+        </table>
+        <div class="src-note">溯源：2014 年真题第 26 题（回忆版）；经济资本与内含价值 RC 的关系见教材 §10 相关章节。</div>
+      </div></details>
+    </div>
+  </section>
+
+  <section id="s10">
+    <h2><span class="sn">§3.10</span>偿二代再保精算评估（专节）<span class="star s3">必考</span></h2>
+    <div class="lead">考纲三明列「再保险合同精算评估」——偿二代视角下再保同时影响两端：降低最低资本（分出）与形成摊回资产，但设了「3 年可终止」的防火墙。</div>
+    <div class="tbl-scroll"><table>
+      <tr><th>主题</th><th>规则与要点</th><th>依据</th></tr>
+      <tr><td>资本缓释边界</td><td>长期寿险再保合同若<b>3 年内可终止</b>，分出人不得据此计量最低资本降低——防止「买一张再保单凑资本」的监管套利</td><td rowspan="4"><span class="src src-gui">规</span>规则Ⅱ 第2号第14条<br>第9号（信用风险）<br><span class="src src-ti">题</span>2016·21、2017·7、2013·共同再保</td></tr>
+      <tr><td>分出/分入对称</td><td>分出方最低资本减少额与分入方增加额<b>原则上一致</b>，防止双边不对称计量</td></tr>
+      <tr><td>摊回资产</td><td>摊回未决/未到期计入认可资产，但须评估<b>再保人信用风险</b>（第9号：评级越低折扣越大，评级低于阈值不予认可）</td></tr>
+      <tr><td>非比例再保</td><td>超额赔款/停止损失合约按责任层单独评估巨灾资本缓释（PML 测试）</td></tr>
+    </table></div>
+    <div class="formula"><div class="fx">分出后净额法：MC(净) 基于「自留风险暴露」计量；摊回资产 = 再保人信用折扣后的摊回准备金</div><div class="note">先验可终止性、再扣信用折扣、最后算资本缓释——三步顺序不可颠倒。</div></div>
+    <div class="exam"><span class="yr">2013·再保</span>（真题原型，简答）<b>题干：</b>请比较共同再保险（Co-reinsurance）与一年期可续保再保险在合同结构、定价机制与偿付能力资本缓释效果上的差异。<div class="ans-skel"><b>骨架：</b>①共同再保：多家再保人按约定比例共担同一风险，长期绑定、无年度重新定价；②一年期可续保：按年度续签、费率可调整——正因「短期可终止」，其在偿二代下的资本缓释受限（呼应3年条款）。</div>
+      <details class="answer"><summary>完整答题过程</summary><div class="body ans-detail">
+        <table>
+          <tr><th>维度</th><th>共同再保险</th><th>一年期可续保再保险</th></tr>
+          <tr><td>合同结构</td><td>多家再保人按约定比例共担同一风险池</td><td>单一或少数再保人按年度续签</td></tr>
+          <tr><td>定价机制</td><td>长期绑定，通常不随年度经验重定价</td><td>每年按经验与市场状况调整费率</td></tr>
+          <tr><td>资本缓释</td><td>长期不可终止 → 分出方可计量最低资本降低</td><td>短期可终止 → 受规则Ⅱ第2号第14条约束，缓释受限</td></tr>
+          <tr><td>适用场景</td><td>大额长期业务的风险分散与承保能力扩容</td><td>年度波动管理、短期资本调节</td></tr>
+        </table>
+        <div class="src-note">溯源：2013 年真题再保险合同题（回忆版）；3 年可终止条款见规则Ⅱ第 2 号第 14 条。</div>
+      </div></details>
+    </div>
+    <div class="tip"><b>一句话贯通：</b>偿二代看再保，先问「能不能终止」——3年内可终止的资本减不了；再问「再保人靠不靠得住」——信用折扣先扣；最后才看「省了多少资本」。</div>
+  </section>
+
+  <section id="quick">
+    <h2><span class="sn">速查</span>核心答案速查表<span class="star s1">考前</span></h2>
+    <div class="tbl-scroll"><table>
+      <tr><th>考点问题</th><th>核心答案</th></tr>
+      <tr><td>达标线三条件？</td><td>核心≥50% + 综合≥100% + IRR≥B类</td></tr>
+      <tr><td>最低资本三构成？</td><td>可资本化（保险+市场+信用）+ 控制风险 + 附加资本</td></tr>
+      <tr><td>计量原则四关键词？</td><td>VaR法 / 相关系数矩阵 / 监管评价法 / 行业统一</td></tr>
+      <tr><td>保单未来盈余四档？</td><td>&gt;30年核心一、10-30核心二、5-10附一、&lt;5附二；核心限额35%</td></tr>
+      <tr><td>认可负债公式？</td><td>会计口径经认可调整；寿险合同负债=BEL+风险边际（第3号）</td></tr>
+      <tr><td>损失吸收效应上限？</td><td>30%（2015秋·10 答案C）</td></tr>
+      <tr><td>利率风险MC本质？</td><td>久期错配资本化：max(0,ΔPV_L−ΔPV_A)，双情景取大</td></tr>
+      <tr><td>20,081 算例链路？</td><td>14,200/11,800/3,600 → 矩阵聚合 → MC=20,081 → 实资57,000 → 核心233%/综合284%</td></tr>
+      <tr><td>再保资本缓释防火墙？</td><td>长期寿险再保 3 年内可终止 → 不得计量资本降低；分出分入对称</td></tr>
+      <tr><td>资本规划四步？</td><td>压测缺口 → 工具排序（增资/资本工具/留存/再保/调结构）→ 触发线与预案 → 报董事会入SARMRA</td></tr>
+      <tr><td>经济资本 vs 监管资本？</td><td>经济资本=公司自定置信水平下的非预期损失吸收额；监管资本=规则计量底线</td></tr>
+    </table></div>
+  </section>
+
+  <section id="dig">
+    <h2><span class="sn">深挖</span>教材深挖：二期改革主线与利率曲线机制</h2>
+    <p class="lead">2017·7「计量原则」题背后，是偿二代二期工程的三条改革主线：资本要「真」、穿透要「透」、未来利润计入要「有条件」。</p>
+    <details class="big">
+      <summary><b>教材深挖：二期 vs 一期核心变化 × UFR 终极利率 × IRR 与 SARMRA 分工</b> <span class="star s3">★★★</span></summary>
+      <div class="body">
+      <h3>① 偿二代二期对一期的五处收紧（论述题素材）</h3>
+      <table>
+        <tr><th>主线</th><th>一期（2016）</th><th>二期（规则Ⅱ，2022）</th></tr>
+        <tr><td>资本认定</td><td>资本工具认定偏宽</td><td>严格四级分级（核心一/核心二/附一/附二）+ 各级限额</td></tr>
+        <tr><td>保单未来盈余</td><td>可较充分计入核心资本</td><td>四档分级 + 核心资本 35% 限额——防止未来利润虚增资本</td></tr>
+        <tr><td>资产穿透</td><td>按大类资产计风险因子</td><td>非标资产底层穿透；无法穿透的从严计提</td></tr>
+        <tr><td>长寿风险</td><td>与死亡风险合于保险风险</td><td>单独计量长寿风险最低资本（第5号细分）</td></tr>
+        <tr><td>再保资本缓释</td><td>较宽松</td><td>3 年内可终止合约不得计量资本降低（第2号第14条）</td></tr>
+      </table>
+      <h3>② UFR 终极利率机制（第3号折现曲线的「尾巴」）</h3>
+      <ul>
+        <li><b>问题：</b>即期国债曲线只覆盖到约 20 年，而终身年金负债久期 15–30+ 年——长端利率用什么？</li>
+        <li><b>方案：</b>超过最后可用期限后用终极利率（Ultimate Forward Rate）平滑外推，避免「长端无数据 → 曲线暴跌 → 负债暴增」的模型风险。</li>
+        <li><b>考点落点：</b>长端平滑外推使长寿风险资本计量不因曲线尾部噪声而失真；BER 贴现用即期曲线、利率风险用 60 日均线——两条曲线分工本身就是考题。</li>
+      </ul>
+      <h3>③ IRR 与 SARMRA 的分工（第二支柱「文武两把尺」）</h3>
+      <table>
+        <tr><th>工具</th><th>测什么</th><th>结果形式</th><th>资本影响</th></tr>
+        <tr><td>SARMRA</td><td>风险管理能力（制度与执行）</td><td>百分制评分 → 控制风险特征系数</td><td>评分低 → 控制风险最低资本上浮</td></tr>
+        <tr><td>IRR 风险综合评级</td><td>操作风险 + 前两支柱综合评价</td><td>A / B / C / D 类</td><td>达标线三条件之一（≥ B 类）；&lt; B 即综合不达标</td></tr>
+      </table>
+      <div class="warn"><b>深挖要点：</b>IRR 低于 B 类时，即便量化充足率再高也不达标——「定量达标 + 定性掉链」是近年监管干预的高频剧本。答题遇到「充足率高但仍被监管」类题目，先想 IRR 与 SARMRA。</div>
+      </div>
+    </details>
+  </section>
+
+  <section id="quiz">
+    <h2><span class="sn">自测</span>真题印证与自测<span class="star s3">考前必做</span></h2>
+    <p class="lead">先遮住答案独立作答，再展开核对——本章权重 30%，自测一道计算（矩阵聚合）+ 一道论述（未来盈余）。</p>
+    <details>
+      <summary>自测 1（计算，12 分）：三类风险最低资本的相关矩阵聚合</summary>
+      <div class="body">
+      <div class="q-item"><div class="q">某寿险公司分类计量的最低资本：保险风险 10,000、市场风险 8,000、信用风险 2,000（均为类内已分散）。跨类相关系数：ρ(市场,信用) = 0.25，ρ(保险,市场) = 0.0625，ρ(保险,信用) = 0.0625。<br>求：①聚合后的可资本化风险最低资本；②分散效应节约了多少资本。</div></div>
+      <div class="solution">
+      ①平方项：10,000² + 8,000² + 2,000² = 100,000,000 + 64,000,000 + 4,000,000 = 168,000,000（4 分）；<br>
+      交叉项：2×0.25×8,000×2,000 = 8,000,000；2×0.0625×10,000×8,000 = 10,000,000；2×0.0625×10,000×2,000 = 2,500,000，合计 20,500,000（4 分）；<br>
+      MC = √(188,500,000) ≈ <b>13,730</b>（2 分）；<br>
+      ②简单加总 20,000 → 聚合后 13,730，分散效应节约 ≈ 6,270（约 31%）（2 分）。<br>
+      <b>评分要点：</b>公式（含 2 倍交叉项）3 分、平方项 3 分、交叉项 4 分、开方结果 1 分、分散效应 1 分。
+      </div>
+      </div>
+    </details>
+    <details>
+      <summary>自测 2（论述，12 分）：保单未来盈余的分级计入逻辑与监管意图</summary>
+      <div class="body">
+      <div class="q-item"><div class="q">请论述偿二代二期下保单未来盈余计入资本的制度安排：①为什么允许未来盈余计入资本；②为什么必须分级、分级规则是什么；③两条限额约束各自防范什么问题。</div></div>
+      <div class="solution">
+      ①存量保单未来盈余具有损失吸收能力（未来利润终将实现并可用于吸收当期损失），完全排除会低估寿险公司资本实力——这是寿险区别于银行业的资本来源特征（3 分）；<br>
+      ②盈余实现需要时间，剩余期限越短实现越确定：&gt;30 年计核心一级、10–30 年计核心二级、5–10 年计附属一级、&lt;5 年计附属二级——期限即「损失吸收的确定性等级」（4 分）；<br>
+      ③「核心层级 35% 限额」防止把长尾利润过度提前计入核心资本、虚增核心资本充足率；「核心二级 ≤ 核心一级 35%」防止核心二级对核心一级的稀释失控——两条限额共同倒逼公司依靠真实股东投入与经营积累（5 分）。<br>
+      <b>结论句：</b>未来盈余是寿险公司独有的「时间换资本」机制——监管承认它，但用期限分级与 35% 限额给它套上缰绳。
+      </div>
+      </div>
+    </details>
+    <button class="done-btn" data-id="ch3">○ 标记本章已完成</button>
+  </section>
+
+  <div class="pager">
+    <a href="ch2.html">← CH.02 责任准备金</a>
+    <a href="ch4.html">CH.04 企业会计准则 →</a>
+  </div>
+</main>
+<script src="js/kb.js"></script>
+</body>
+</html>
