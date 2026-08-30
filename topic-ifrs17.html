@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>专题 C · IFRS17 与 CSM（定寿案例 + 滚存 + 三大报表） · 寿险精算评估实务 · 科目F3</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<aside class="side">
+  <div class="brand"><b>寿险精算评估实务</b><span>科目F3 · 正精算师（寿险）</span></div>
+    <nav>
+    <a href="xihong.html">关于 · 西红精算</a>
+    <a href="index.html">首页 · 考试全景</a>
+    <a href="about.html">本库说明 · 编法与用法</a>
+    <div class="grp">五大篇章（考纲权重）</div>
+    <a href="ch1.html">CH.01 概念与原理<span class="w">5%</span></a>
+    <a href="ch2.html">CH.02 责任准备金<span class="w">20%</span></a>
+    <a href="ch3.html">CH.03 偿付能力监管<span class="w">30%</span></a>
+    <a href="ch4.html">CH.04 企业会计准则<span class="w">30%</span></a>
+    <a href="ch5.html">CH.05 报告与分析<span class="w">15%</span></a>
+    <div class="grp">拓展专题（不止于考纲）</div>
+    <a href="topic-solvency.html">专题·偿付能力实务</a>
+    <a href="topic-vnb.html">专题·新业务价值</a>
+    <a href="topic-ifrs17.html" class="on">专题·IFRS17与CSM</a>
+    <a href="topic-liyuan.html">专题·利源分析三差</a>
+    <a href="topic-ev.html">专题·内含价值</a>
+    <a href="topic-products.html">专题·产品精算与定价</a>
+    <div class="grp">真题 / 模拟 / 资料</div>
+    <a href="zhenti.html">真题馆</a>
+    <a href="moni-1.html">模拟卷一 · 筑基</a>
+    <a href="moni-2.html">模拟卷二 · 新则</a>
+    <a href="moni-3.html">模拟卷三 · 冲刺</a>
+    <a href="references.html">参考资料库</a>
+    <a href="cross-solvency.html">C-ROSS II 贯通页</a>
+  </nav>
+  <div class="prog-mini">学习进度 <b>0 / 13</b></div>
+</aside>
+
+<main class="main">
+  <div class="ch-head">
+    <div class="no">TOPIC C · IFRS17 / CAS25 &amp; CSM</div>
+    <h1>IFRS17 与 CSM：从初始计量到三大报表</h1>
+    <div class="sub">CH.04 双 30% 主战场的计算弹药库 · 案例取自 <a href="https://xihongactuary.github.io/ifrs17-kb/" target="_blank" style="color:#cfe2f7">IFRS17·CAS25 双语知识库 ↗</a>（含《IFRS17 报表与 CSM 计算案例》）</div>
+    <div class="meta"><span>对接 CH.04（30%）</span><span>真题 2017·9/10</span><span>模拟卷二 · 计算大题</span></div>
+    <div class="wbar"><div class="lab"><span>考纲渗透度</span><span>新准则下会计计量主战场</span></div><div class="bar"><i style="width:90%"></i></div></div>
+  </div>
+
+  <div class="toc"><b>本专题结构</b><ol>
+    <li>模型五要素与三账户</li>
+    <li>初始计量：3 年定寿 CSM 案例</li>
+    <li>CSM 滚存表：2,240 → 2,219 亿</li>
+    <li>利润表重构：保险服务收入 736</li>
+    <li>资产负债表重构与 OCI 桥</li>
+    <li>RA 三法 + 分组 + 摊销</li>
+    <li>考试怎么考 + 演算器</li>
+  </ol></div>
+
+  <section>
+    <h2><span class="sn">§1</span>模型五要素与三账户<span class="star s3">高频</span></h2>
+    <div class="lead">IFRS17 / CAS25 的一切计算题都在五要素上打转：未来现金流（FCF）、折现、风险边际（RA）、合同服务边际（CSM）、可变费用法（VFA）。先建三个账户的直觉。</div>
+    <table>
+      <tr><th>账户</th><th>内容</th><th>对应旧准则</th></tr>
+      <tr><td>履约义务账户</td><td>BEL（未来现金流现值）+ RA</td><td>未到期责任准备金（弹性/风险部分）</td></tr>
+      <tr><td>未赚利润账户</td><td>CSM：未来利润的「未赚」部分，逐期摊入利润</td><td>剩余边际（不再直接曝光，但换算关系仍在）</td></tr>
+      <tr><td>损益/OCI 账户</td><td>保险服务收入 + 保险服务费用 + 投资成分拆分；折现率变动进 OCI（选择权）</td><td>—</td></tr>
+    </table>
+    <div class="formula">
+      <div class="fx">CSM₀ = max( 0, −(FCF₀ + RA₀) )</div>
+      <div class="note">首日：若 FCF₀+RA₀ &lt; 0（保费现值超过履约义务），差额形成 CSM，<b>首日不确认利润</b>；若 &gt; 0，立即确认亏损（亏损部分测试，onerous contract）。</div>
+    </div>
+    <div class="tip"><b>要点一句话：</b>履约现金流看 BEL，非金融风险加 RA；首日利润不确认、进 CSM 逐期释放；折现率变动走 OCI、当期损益不夸大。</div>
+  </section>
+
+  <section>
+    <h2><span class="sn">§2</span>初始计量：3 年期定期寿险 CSM 案例<span class="star s3">高频</span></h2>
+    <div class="lead">案例：3 年期定寿，年缴保费 120,000 元（3 年合计现值 349,620），精算折现后未来赔款与费用现值（BEL）56,552，RA 3,393。</div>
+    <h3>完整演算表（考试作答模板）</h3>
+    <div class="tbl-scroll"><table>
+      <tr><th>步骤</th><th>项目</th><th>算式</th><th class="num">数值</th></tr>
+      <tr><td class="ctr">①</td><td>保费收入现值</td><td>PV(120,000 × 3 年，折现)</td><td class="num">349,620</td></tr>
+      <tr><td class="ctr">②</td><td>履约义务现值 BEL</td><td>PV(预期赔款 + 维持费用)</td><td class="num">56,552</td></tr>
+      <tr><td class="ctr">③</td><td>风险边际 RA</td><td>CoC 法（非金融风险 6%）</td><td class="num">3,393</td></tr>
+      <tr><td class="ctr">④</td><td>履约义务合计</td><td>56,552 + 3,393</td><td class="num">59,945</td></tr>
+      <tr class="note-td"><td class="ctr">⑤</td><td><b>CSM₀</b></td><td><b>349,620 − 59,945</b></td><td class="num"><b>289,675</b></td></tr>
+    </table></div>
+    <div class="tip"><b>判分点：</b>①写出 CSM₀ = max(0, −(FCF₀+RA₀)) 公式；②三个输入量逐一列示；③结论句「首日确认 CSM 289,675 元，不确认利润」。数字对不对是次要的，<b>链条完整才是主要得分点</b>。</div>
+  </section>
+
+  <section>
+    <h2><span class="sn">§3</span>CSM 滚存表：2,240 → 2,219 亿<span class="star s3">高频</span></h2>
+    <div class="lead">后续计量的核心是 CSM 滚存（roll-forward）——期初 CSM 经过五笔调整滚到期末。</div>
+    <div class="formula">
+      <div class="fx">期末 CSM = 期初 CSM + 新业务 CSM + 利息增长<br>&nbsp;&nbsp;− 与未来服务相关的亏损吸收 − 其他重估 − 本期摊销</div>
+    </div>
+    <div class="tbl-scroll"><table>
+      <tr><th>滚存项</th><th>方向</th><th class="num">案例金额（亿元）</th><th>含义</th></tr>
+      <tr><td>期初 CSM</td><td class="ctr">—</td><td class="num">2,240</td><td>上期末未赚利润存量</td></tr>
+      <tr><td>+ 新业务</td><td class="ctr">增</td><td class="num">+143</td><td>本年新单按首日法计量进入</td></tr>
+      <tr><td>+ 利息增长</td><td class="ctr">增</td><td class="num">+30</td><td>CSM 随折现率利息增长</td></tr>
+      <tr><td>− 亏损吸收</td><td class="ctr">减</td><td class="num">−15</td><td>履约义务恶化时 CSM 吸收（体现弹性缓冲）</td></tr>
+      <tr><td>− 其他调整</td><td class="ctr">减</td><td class="num">−12</td><td>模型/假设重估等</td></tr>
+      <tr><td>− 本期摊销</td><td class="ctr">减</td><td class="num">−167</td><td>按保障责任单元比例释放进利润</td></tr>
+      <tr class="note-td"><td><b>期末 CSM</b></td><td class="ctr">—</td><td class="num"><b>2,219</b></td><td>2,240 + 143 + 30 − 15 − 12 − 167</td></tr>
+    </table></div>
+    <div class="prac"><b>实务视角：</b>滚存表是新准则下最值得盯的一张表——「新业务 +143 而摊销 −167」说明存量 CSM 正在净消耗，若新业务持续跟不上摊销，未来利润释放的「水库」会逐年变浅。这就是从「利润表公司」变成「资产负债表公司」的含义。</div>
+  </section>
+
+  <section>
+    <h2><span class="sn">§4</span>利润表重构：保险服务收入 736</h2>
+    <div class="lead">新准则利润表的「保险服务业绩」口径：收入不再等于保费，而是把保费还原成服务。</div>
+    <div class="tbl-scroll"><table>
+      <tr><th>保险服务收入构成（案例）</th><th class="num">金额</th><th>与旧口径的区别</th></tr>
+      <tr><td>预期赔款及利益</td><td class="num">320</td><td>预计负债口径，实际与预期的差异进当期损益（利源分析的接口）</td></tr>
+      <tr><td>维持费用（不可随投资变化）</td><td class="num">90</td><td>服务成本显性化</td></tr>
+      <tr><td>获取费用摊销</td><td class="num">70</td><td>获取成本资本化随收入释放，首年利润不再被佣金重创</td></tr>
+      <tr><td>CSM 摊销（释放）</td><td class="num">167</td><td>与滚存表「−167」一一对应（两表勾稽点）</td></tr>
+      <tr><td>RA 释放</td><td class="num">89</td><td>风险边际随履约释放</td></tr>
+      <tr class="note-td"><td><b>保险服务收入合计</b></td><td class="num"><b>736</b></td><td>320 + 90 + 70 + 167 + 89</td></tr>
+    </table></div>
+    <div class="tip"><b>勾稽关系是命题富矿：</b>CSM 摊销 167 同时出现在「滚存表减项」与「利润表收入加项」——考「新准则如何实现收支匹配」就答这条链。</div>
+  </section>
+
+  <section>
+    <h2><span class="sn">§5</span>资产负债表重构与 OCI 桥</h2>
+    <div class="tbl-scroll"><table>
+      <tr><th>资产负债表（案例）</th><th class="num">金额</th><th>说明</th></tr>
+      <tr><td>资产合计</td><td class="num">24,835</td><td>含底层投资组合</td></tr>
+      <tr><td>保险合同负债合计</td><td class="num">16,837</td><td>BEL 11,200 + RA 3,400 + CSM 2,237</td></tr>
+      <tr class="note-td"><td><b>净头寸（资产 − 保险负债）</b></td><td class="num"><b>7,998</b></td><td>股东权益的主要构成</td></tr>
+    </table></div>
+    <h3>OCI 桥：折现率变动的去处</h3>
+    <table>
+      <tr><th>路径</th><th>机制</th><th>效果</th></tr>
+      <tr><td>P&amp;L 路径</td><td>折现率变动即时进损益</td><td>利润波动大</td></tr>
+      <tr><td>OCI 路径（选择权）</td><td>折现率变动先计入其他综合收益，之后随 CSM 摊销或利息增长逐步转出</td><td>利润平滑，但权益波动仍在</td></tr>
+    </table>
+    <div class="warn"><b>易错点：</b>OCI 选择权<b>一经选定不可变更</b>，且仅适用于折现率变动；金融假设（死亡率/发生率）变动必须调整 CSM（未来适用），不进 OCI。</div>
+  </section>
+
+  <section>
+    <h2><span class="sn">§6</span>RA 三法 + 分组 + 摊销<span class="star s2">中频</span></h2>
+    <div class="tbl-scroll"><table>
+      <tr><th>RA 计量方法</th><th>思路</th><th>案例参数</th></tr>
+      <tr><td>资本成本法 CoC</td><td>RA = 持有非金融风险所需的资本 × 资本成本率，逐期释放</td><td>成本率 6%</td></tr>
+      <tr><td>置信区间法</td><td>负债取置信区间（如 75%）分位数</td><td>75% 分位</td></tr>
+      <tr><td>条件尾部期望 CTE</td><td>尾部场景均值，更审慎</td><td>—</td></tr>
+    </table></div>
+    <h3>分组与摊销（两步分组法）</h3>
+    <ul>
+      <li><b>第一步盈利性分组：</b>亏损组 / 无重大可能性变亏组 / 其他组——亏损组的亏损立即确认（onerous），不得用其他组的 CSM 对冲。</li>
+      <li><b>第二步同质风险分组：</b>合同边界内、同类型（如定期寿险 vs 终身寿险）方可并入一组。</li>
+      <li><b>摊销基础：</b>按<b>保障责任单元</b>（coverage units）比例摊销——保障风险高、期限长的年份摊得多；生存金类责任则随生存责任单元释放。</li>
+    </ul>
+    <div class="tip"><b>对比考点：</b>C-ROSS 的风险边际（偿付能力专题 §6）与 IFRS17 的 RA 都审慎，但前者服务于<b>资本计量</b>、后者服务于<b>会计计量</b>；方法上 C-ROSS 允许情景概率法，IFRS17 三法中 CoC 最常用。考试若问「同一家公司两个口径的 RA 为何不同」就答这条。</div>
+  </section>
+
+  <section>
+    <h2><span class="sn">§7</span>考试怎么考 + 演算器</h2>
+    <div class="exam"><b>真题痕迹：</b><span class="yr hot">2017</span>第9题考重大保险风险测试（分组的判定前端）；<span class="yr">2017</span>第10题考剩余边际/CSM 摊销。新准则全面实施后，CAS25 口径（财会〔2020〕20号）成为命题主线：<a href="moni-2.html">模拟卷二计算大题</a>直接复用本案例。</div>
+    <div class="calc" id="calc-csm">
+      <h4>演算器 · CSM 初始计量 + 滚存</h4>
+      <div class="row"><label>保费现值 PV(P)</label><input class="calc-in" id="c-pv" value="349620"><label>BEL</label><input class="calc-in" id="c-bel" value="56552"><label>RA</label><input class="calc-in" id="c-ra" value="3393"></div>
+      <div class="row"><label>期初 CSM</label><input class="calc-in" id="c-begin" value="2240"><label>新业务</label><input class="calc-in" id="c-new" value="143"><label>利息增长</label><input class="calc-in" id="c-int" value="30"></div>
+      <div class="row"><label>亏损吸收</label><input class="calc-in" id="c-lab" value="15"><label>其他调整</label><input class="calc-in" id="c-oth" value="12"><label>本期摊销</label><input class="calc-in" id="c-amort" value="167"></div>
+      <button class="calc-run">计算 CSM₀ 与期末 CSM</button>
+      <div class="verdict" id="c_out"></div>
+    </div>
+    <script>
+    (function(){
+      var box=document.getElementById('calc-csm');
+      box.__run=function(){
+        var pv=+document.getElementById('c-pv').value||0,bel=+document.getElementById('c-bel').value||0,ra=+document.getElementById('c-ra').value||0;
+        var b=+document.getElementById('c-begin').value||0,n=+document.getElementById('c-new').value||0,i=+document.getElementById('c-int').value||0;
+        var l=+document.getElementById('c-lab').value||0,o=+document.getElementById('c-oth').value||0,a=+document.getElementById('c-amort').value||0;
+        var c0b=Math.max(0,pv-(bel+ra));
+        var end=b+n+i-l-o-a;
+        c_out.innerHTML='<div class="calc-steps"><b>计算步骤（初始计量 + 滚存）</b><ol>'
+          +'<li>履约现金流 = BEL + RA = '+bel+' + '+ra+' = <span class="fin">'+(bel+ra).toFixed(0)+'</span></li>'
+          +'<li>首日差 = PV(保费) − 履约现金流 = '+pv+' − '+(bel+ra).toFixed(0)+' = <span class="fin">'+(pv-bel-ra).toFixed(0)+'</span> ⇒ '+(pv-bel-ra>0?'为正 ⇒ 合同边际，进 CSM（首日不确认利润）':'为负 ⇒ 亏损合同，首日即确认亏损 '+Math.abs(pv-bel-ra).toFixed(0))+'</li>'
+          +'<li>CSM₀ = max(首日差, 0) = <span class="fin">'+c0b.toFixed(0)+'</span></li>'
+          +'<li>滚存：期末 CSM = 期初 '+b+' + 新业务 '+n+' + 利息增长 '+i+' − 亏损吸收 '+l+' − 其他调整 '+o+' − 本期摊销 '+a+' = <span class="fin">'+end.toFixed(0)+'</span></li>'
+          +'</ol></div>'
+          +'结论：CSM₀ = <span class="out">'+c0b.toFixed(0)+'</span>'+(c0b>0?'（首日不确认利润，边际留待未来释放）':'（亏损合同）')+'；期末 CSM = <span class="out">'+end.toFixed(0)+'</span>（摊销 '+a+' 为当期利润来源之一，见利源分析专题）。';
+      };
+    })();
+    </script>
+    <div class="prac"><b>跨库延伸：</b>逐条对照 CAS25 与 IFRS17 条文的双语精讲（13 篇）及完整的《IFRS17 报表与 CSM 计算案例》，见 <a href="https://xihongactuary.github.io/ifrs17-kb/" target="_blank">IFRS17·CAS25 知识库 ↗</a>；本专题为其考试化浓缩。站内延伸：<a href="ch4.html">CH.04</a>（准则体系）、<a href="topic-liyuan.html">利源分析专题</a>（实际/预期差异的归因去向）。</div>
+    <button class="done-btn" data-id="topic-ifrs17">○ 标记本页已完成</button>
+  </section>
+
+  <div class="pager">
+    <a href="topic-vnb.html">← 专题 B · 新业务价值</a>
+    <a href="topic-liyuan.html">专题 D · 利源分析三差 →</a>
+  </div>
+  <footer class="colophon">寿险精算评估实务 · 科目F3 · 案例数据源自 IFRS17·CAS25 知识库 · 知识星球「西红精算」</footer>
+</main>
+<script src="js/kb.js"></script>
+</body>
+</html>
