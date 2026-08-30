@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CH.05 精算报告与分析 · 寿险精算评估实务 · 科目F3</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<aside class="side">
+  <div class="brand"><b>寿险精算评估实务</b><span>科目F3 · 正精算师（寿险）</span></div>
+    <nav>
+    <a href="xihong.html">关于 · 西红精算</a>
+    <a href="index.html">首页 · 考试全景</a>
+    <a href="about.html">本库说明 · 编法与用法</a>
+    <div class="grp">五大篇章（考纲权重）</div>
+    <a href="ch1.html">CH.01 概念与原理<span class="w">5%</span></a>
+    <a href="ch2.html">CH.02 责任准备金<span class="w">20%</span></a>
+    <a href="ch3.html">CH.03 偿付能力监管<span class="w">30%</span></a>
+    <a href="ch4.html">CH.04 企业会计准则<span class="w">30%</span></a>
+    <a href="ch5.html" class="on">CH.05 报告与分析<span class="w">15%</span></a>
+    <div class="grp">拓展专题（不止于考纲）</div>
+    <a href="topic-solvency.html">专题·偿付能力实务</a>
+    <a href="topic-vnb.html">专题·新业务价值</a>
+    <a href="topic-ifrs17.html">专题·IFRS17与CSM</a>
+    <a href="topic-liyuan.html">专题·利源分析三差</a>
+    <a href="topic-ev.html">专题·内含价值</a>
+    <a href="topic-products.html">专题·产品精算与定价</a>
+    <div class="grp">真题 / 模拟 / 资料</div>
+    <a href="zhenti.html">真题馆</a>
+    <a href="moni-1.html">模拟卷一 · 筑基</a>
+    <a href="moni-2.html">模拟卷二 · 新则</a>
+    <a href="moni-3.html">模拟卷三 · 冲刺</a>
+    <a href="references.html">参考资料库</a>
+    <a href="cross-solvency.html">C-ROSS II 贯通页</a>
+  </nav>
+  <div class="prog-mini">学习进度 <b>0 / 13</b></div>
+</aside>
+
+<main class="main">
+  <div class="ch-head">
+    <div class="no">CHAPTER 05</div>
+    <h1>精算报告与分析</h1>
+    <div class="sub">精算报告编报 · 经验分析（死亡率/退保率） · 利源分析三差 · 分红账户与红利分配 · 万能结算</div>
+    <div class="meta"><span>考纲权重 15%</span><span>分析输出篇</span><span>演算器 ×3 · 章内知识图谱 + 核心答案速查</span></div>
+    <div class="wbar"><div class="lab"><span>考纲投入比</span><span>15%</span></div><div class="bar"><i style="width:15%"></i></div></div>
+  </div>
+  <div class="src-note">本章来源：<span class="src src-jiao">教</span>第6章6.6节（经验分析八步与死亡率/退保率）、第9章9.4节（利源与红利分配）、第12章（利源分析·分红账户·红利三方案）；<span class="src src-gui">规</span>银保监办发〔2018〕45号（精算报告编报规则）、保监发〔2015〕93号（分红保险精算规定：演示/特储）、保监发〔2015〕19号（万能结算与非账户准备金）；<span class="src src-ti">题</span>2014·4/19/20/21、2016·4/22、2013·3、2017·5/8。EV 与风险贴现率详见 <a href="topic-ev.html">专题·内含价值</a>。</div>
+
+  <div class="toc"><b>本页导览</b>
+    <ol><li>章内知识图谱</li><li>精算报告编报规则（45号）</li><li>报告结构与总精算师职责</li><li>经验分析总论：八步流程</li><li>死亡率经验分析：暴露数 · A/E · 95%CI</li><li>退保率经验分析：两套口径 · 持续率</li><li>利源分析：法定四差与万能三差</li><li>分红账户与红利分配</li><li>万能险结算与非账户准备金</li><li>核心答案速查表</li><li>教材深挖：经验统计学与平滑机制三处对照</li><li>真题印证与自测</li></ol>
+  </div>
+
+  <section id="arch">
+    <h2><span class="sn">图谱</span>章内知识图谱<span class="star s1">导航</span></h2>
+    <div class="arch">
+      <div class="arch-top"><b>CH.05 · 精算报告与分析</b><div class="meta"><span>考纲权重 15%</span><span>评估的输出端</span><span>教材 §6.6 / §9.4 / §12</span></div></div>
+      <div class="arch-flow"><i>报告（载体） → 经验（数据） → 利源（拆解） → 红利与结算（分配）</i><span>——— 四层递进：先有报告框架，再用经验数据拆利源，最后落到分配 ———</span></div>
+      <div class="arch-grid">
+        <a class="arch-card" href="#s1"><div class="ac-top"><span class="ac-no">A1</span><span class="ac-wt">框架</span></div><h4>精算报告编报规则</h4><p>45号文六大编报规则 + 季度/年度报送 + 总精算师签批。</p></a>
+        <a class="arch-card" href="#s2"><div class="ac-top"><span class="ac-no">A2</span><span class="ac-wt">职责</span></div><h4>报告结构与签署</h4><p>正文 + 附表 + 精算声明书；审慎、一致、可追溯三原则。</p></a>
+        <a class="arch-card spec" href="#s3"><div class="ac-top"><span class="ac-no">A3</span><span class="ac-wt">方法</span></div><h4>经验分析八步</h4><p>决定范围 → 建方法 → 取数 → 调数 → 得假设 → 推测 → 审阅 → 费用控制。</p></a>
+        <a class="arch-card key" href="#s4"><div class="ac-top"><span class="ac-no">A4</span><span class="ac-wt hot">必考</span></div><h4>死亡率经验分析</h4><p>暴露数 E · A/E 三形式 · 95%CI（二项/Poisson）· 修匀。2014·19/20/21。</p></a>
+        <a class="arch-card" href="#s5"><div class="ac-top"><span class="ac-no">A5</span><span class="ac-wt hot">高频</span></div><h4>退保率经验分析</h4><p>保单年度法 vs 日历年度法 · 持续率 k<sub>t</sub>=2PP+½EP · 万能月度法。</p></a>
+        <a class="arch-card key" href="#s6"><div class="ac-top"><span class="ac-no">A6</span><span class="ac-wt hot">必考</span></div><h4>利源分析</h4><p>法定四差（死/费/利/退保）+ 万能三差；三差 SOE 表结构。</p></a>
+        <a class="arch-card" href="#s7"><div class="ac-top"><span class="ac-no">A7</span><span class="ac-wt hot">高频</span></div><h4>分红账户与红利分配</h4><p>三种账户设立 · 两差/三差/全差 · 红利三方案 · 特储 7:3。</p></a>
+        <a class="arch-card spec" href="#s8"><div class="ac-top"><span class="ac-no">A8</span><span class="ac-wt">专节</span></div><h4>万能结算与非账户</h4><p>结算利率 = 投资回报 − 利息差额；非账户准备金递推公式（19号）。</p></a>
+      </div>
+      <div class="arch-hint">往下走向：本章是五大篇收官 → 延伸 <a href="topic-liyuan.html">专题·利源三差</a> / <a href="topic-ev.html">专题·内含价值</a> / <a href="topic-solvency.html">专题 A · 偿付能力实务</a>（本页 pager 直达）</div>
+    </div>
+  </section>
+
+  <section id="s1">
+    <h2><span class="sn">§5.1</span>精算报告编报规则（45号）<span class="star s2">常考</span></h2>
+    <div class="lead">人身保险公司须按 <span class="src src-gui">规</span>银保监办发〔2018〕45号《关于人身保险公司精算报告编报规则的通知》编制并报送《精算报告》，将原本分散的精算编报要求整合为统一体系，由<b>总精算师</b>对报告内容负责并<b>签批</b>——监管与市场了解公司负债与资本的核心载体。</div>
+    <div class="tbl-scroll"><table>
+      <tr><th>编报规则模块</th><th>核心内容</th><th>对应本库</th></tr>
+      <tr><td><b>责任准备金评估</b></td><td>评估基础（生命表/利率/方法）、各类业务准备金结果、万能险<b>非账户</b>准备金评估专报、准备金充足性（GPV）测试</td><td><a href="ch2.html">CH.02</a> + 本章 §5.8</td></tr>
+      <tr><td><b>偿付能力报告</b></td><td>认可资产/认可负债、实际资本与最低资本、压力测试（规则Ⅱ口径）</td><td><a href="ch3.html">CH.03</a></td></tr>
+      <tr><td><b>利源分析报告</b></td><td>利差/死差/费差/退保差拆解、利差损监控（含分红与万能结算账户）</td><td>本章 §5.6</td></tr>
+      <tr><td><b>再保险精算报告</b></td><td>分出/分入安排、摊回与信用评估、纯益返还预提</td><td><a href="ch2.html">CH.02 §2.7</a></td></tr>
+      <tr><td><b>分红保险红利报告</b></td><td>分红账户盈余、红利分配方案、特别储备计提与平滑（93号口径）</td><td>本章 §5.7</td></tr>
+      <tr><td><b>万能结算报告</b></td><td>结算利率确定过程、实际投资收益支撑、平滑与持续奖金影响（19号口径）</td><td>本章 §5.8</td></tr>
+      <tr class="note-td"><td colspan="3">报送频率：季度报告（偿付能力口径）+ 年度精算报告（全模块）；重大精算假设变动须专项报告。判分点：①「总精算师签批」②「非账户准备金专报」③「利差损监控」。</td></tr>
+    </table></div>
+    <div class="tip"><b>一句话贯通：</b>45号 = 把「准备金、偿付能力、利源、再保、分红、万能」六件精算事装进一份报告、由一个人（总精算师）签字负责。</div>
+    <div class="exam"><span class="yr">2013·12</span>（简答+计算）<b>题干：</b>现行企业会计准则对精算报告准备金的计量提出了哪些主要要求？设某定期寿险产品在精算报告日的未来给付现值为 4,200 万元、未来维持费用现值 300 万元、未来净保费现值 3,600 万元，请计算该产品在报告日的准备金，并说明所用口径。<div class="ans-skel"><b>骨架：</b>①计量要求：计量单元、合理估计金额、边际单独计量、折现率（不锁定/750日国债曲线）、不得平滑；②准备金=PV(未来给付+费用)−PV(未来保费)；③结合产品现金流与折现率计算。</div>
+      <details class="answer"><summary>完整答题过程</summary><div class="body ans-detail">
+        <table>
+          <tr><th>部分</th><th>作答要点</th></tr>
+          <tr><td>①计量要求（简答）</td><td>计量单元（单项或同质组合，各期一致）；合理金额（未来流出−未来流入）；边际单独计量（风险边际+剩余边际，不确认首日利得）；折现率不锁定（当前市场信息，国债750日均线+溢价）；原再保分别估计；不得平滑</td></tr>
+          <tr><td>②计算</td><td>准备金 = PV(给付+维持费用) − PV(净保费) = (4,200 + 300) − 3,600 = <b>900 万元</b></td></tr>
+          <tr><td>③口径说明</td><td>此为合理估计口径的净负债；会计口径还需叠加风险边际与剩余边际，法定口径则按精算规定另算——三口径不可混答</td></tr>
+        </table>
+        <div class="src-note">溯源：2013 年真题第 12 题（回忆版）；计量要求见 <a href="ch4.html">CH.04 §4.4</a> 六要求。</div>
+      </div></details>
+    </div>
+  </section>
+
+  <section id="s2">
+    <h2><span class="sn">§5.2</span>报告结构与总精算师职责<span class="star s1">基础</span></h2>
+    <div class="lead">精算报告 = 报告正文 + 附表 + <b>精算声明书</b>。声明书由总精算师签署，声明评估方法与假设符合精算原理与监管规定、数据来源可靠、结果真实反映公司负债状况。</div>
+    <div class="tbl-scroll"><table>
+      <tr><th>构成</th><th>内容</th><th>判分点</th></tr>
+      <tr><td>报告正文</td><td>评估范围与基础、方法与假设变动说明、结果分析与敏感性、结论与建议</td><td>假设变动必须「前后对比」披露</td></tr>
+      <tr><td>附表</td><td>分险种/分年度准备金明细、利源分析表、分红账户收支表、万能非账户现金流表</td><td>口径与财务报表勾稽一致</td></tr>
+      <tr><td>精算声明书</td><td>总精算师对方法、假设、数据的职业声明与签批</td><td>「负责」二字落在总精算师个人</td></tr>
+    </table></div>
+  </section>
+
+  <section id="s3">
+    <h2><span class="sn">§5.3</span>经验分析总论：八步流程<span class="star s3">核心</span></h2>
+    <div class="lead">经验分析回答「实际经验与预期差多少、为什么差、下一步怎么办」——它是定价假设、准备金评估假设与分红决策共同的<b>数据底座</b>。教材 §6.6 给出八步标准流程（费用分析为原型，死亡率/退保率同构）：</div>
+    <div class="tbl-scroll"><table>
+      <tr><th>步骤</th><th>动作</th><th>关键细节</th></tr>
+      <tr><td>① 决定分析范围</td><td>明确研究哪类业务、哪个假设、哪个口径</td><td>范围决定数据颗粒度与成本</td></tr>
+      <tr><td>② 建立分析方法</td><td>选择保单年度法/日历年度法、加权方式</td><td>口径不同结果不可直接比较</td></tr>
+      <tr><td>③ 获取数据</td><td>从保单管理系统、理赔系统、财务系统抽取</td><td>注意系统间主键对齐</td></tr>
+      <tr><td>④ 调整数据</td><td>剔除异常、补齐缺失、按可比口径归一</td><td>大额赔案、数据错误单独说明</td></tr>
+      <tr><td>⑤ 得出经验假设</td><td>计算观察期经验率（死亡率/退保率/费用率）</td><td>点估计 + 置信区间</td></tr>
+      <tr><td>⑥ 推测未来经验</td><td>由历史外推未来：加信度、趋势外推、修匀</td><td>经验≠未来，需判别趋势与一次性因素</td></tr>
+      <tr><td>⑦ 审阅结果</td><td>与定价假设、行业表、上期结果对比，解释差异</td><td>差异要能「讲故事」</td></tr>
+      <tr><td>⑧ 费用控制</td><td>将结论应用于定价、准备金评估、分红与费用管控</td><td>经验分析闭环落地</td></tr>
+    </table></div>
+    <div class="prac"><b>经验分析结果的三大用途：</b>①<b>定价</b>——更新新业务假设（死亡率、退保率、费用率）；②<b>评估</b>——更新准备金与偿付能力假设（经监管报备程序）；③<b>分红</b>——利源分析三差的可分配盈余认定。</div>
+    <div class="warn"><b>易错：</b>第⑥步常被忽略——考试问「经验分析之后还要做什么」，答案是<b>推测未来经验（外推+修匀+信度）</b>，而非直接把历史观察值塞进定价假设。</div>
+  </section>
+
+  <section id="s4">
+    <h2><span class="sn">§5.4</span>死亡率经验分析：暴露数 · A/E · 95%CI<span class="star s3">核心</span></h2>
+    <div class="lead">死亡率经验 = 实际死亡数 ÷ 风险暴露数。三件武器：<b>暴露数</b>（分母口径）、<b>A/E 比</b>（实际/预期）、<b>置信区间</b>（判断差异是否显著）。</div>
+
+    <h3>一、暴露数：保单年度法 vs 日历年度法</h3>
+    <div class="tbl-scroll"><table>
+      <tr><th>维度</th><th>保单年度法</th><th>日历年度法</th></tr>
+      <tr><td>分组方式</td><td>按保单生效日对齐，同一「保单年龄」一组</td><td>按自然年对齐，同一「到达年龄」一组</td></tr>
+      <tr><td>优点</td><td>反映选择效应（核保后死亡率随保单年度递增）</td><td>与财务年度一致，数据获取容易</td></tr>
+      <tr><td>缺点</td><td>同一年数据散落多个保单年度组</td><td>混合了不同保单年度的选择效应</td></tr>
+      <tr><td>暴露数算法</td><td>每张保单按「本年度实际有效月数/12」计入</td><td>同左，但按到达年龄归组</td></tr>
+    </table></div>
+    <div class="formula"><div class="fx">暴露数 E = Σ（每张保单在观察期内的有效时长）；　整体法：P(x,θ+1) = P(x,θ)·(1−q<sub>x</sub><sup>(θ)</sup>) 逐保单年度递推</div><div class="note">保单年初生效满一年计 1；年中生效/年中终止按月折算。教材 §6.6 原式。</div></div>
+
+    <h3>二、A/E 比：三种加权形式</h3>
+    <div class="tbl-scroll"><table>
+      <tr><th>形式</th><th>分子/分母</th><th>适用</th></tr>
+      <tr><td>按保单数</td><td>实际死亡保单数 / 预期死亡保单数</td><td>件数口径，简单直观</td></tr>
+      <tr><td>按保额</td><td>实际死亡保额 / 预期死亡保额</td><td>大额件影响大，接近金额损益</td></tr>
+      <tr><td>按年龄</td><td>分年龄 A/E 后再综合</td><td>暴露结构变化时最稳健</td></tr>
+    </table></div>
+
+    <h3>三、置信区间：二项近似与 Poisson 近似</h3>
+    <div class="formula"><div class="fx">二项：95%CI ≈ p̂ ± 1.96·√(p̂(1−p̂)/E)；　Poisson：95%CI ≈ (d ± 1.96·√d) / E</div><div class="note">d 小（如&lt;30）时 Poisson 近似即够用；1.96 来自标准正态 97.5% 分位。</div></div>
+    <div class="calc" id="calc-ci">
+      <h4>经验死亡率 95% 置信区间演算器（Poisson 近似）</h4>
+      <div class="row"><label>观察死亡数 d</label><input class="calc-in" id="ci_d" value="10"></div>
+      <div class="row"><label>风险暴露 E（保单年）</label><input class="calc-in" id="ci_e" value="8000"></div>
+      <button class="calc-run">计算死亡率与 95%CI</button>
+      <div class="verdict" id="ci_out"></div>
+    </div>
+    <script>
+      (function(){
+        var box=document.getElementById('calc-ci');
+        box.__run=function(){
+          var d=+ci_d.value,E=+ci_e.value;
+          if(E<=0){ci_out.innerHTML='暴露数须为正';return;}
+          var m=d/E;
+          var lo=(d-1.96*Math.sqrt(d))/E, hi=(d+1.96*Math.sqrt(d))/E;
+          ci_out.innerHTML='<div class="calc-steps"><b>计算步骤（Poisson 近似）</b><ol>'
+            +'<li>点估计死亡率：p̂ = d ÷ E = '+d+' ÷ '+E+' = <span class="fin">'+(m*1e6).toFixed(2)+'×10⁻⁶</span>（即 '+(m*1000).toFixed(3)+'‰）</li>'
+            +'<li>死亡数标准差：√d = √'+d+' = <span class="fin">'+Math.sqrt(d).toFixed(3)+'</span>（注意：对死亡数 d 开根号，不是对暴露 E）</li>'
+            +'<li>95% 死亡数区间：d ± 1.96√d = '+d+' ± '+(1.96*Math.sqrt(d)).toFixed(2)+' = <span class="fin">['+(d-1.96*Math.sqrt(d)).toFixed(2)+', '+(d+1.96*Math.sqrt(d)).toFixed(2)+']</span></li>'
+            +'<li>除以暴露得区间：['+(d-1.96*Math.sqrt(d)).toFixed(2)+', '+(d+1.96*Math.sqrt(d)).toFixed(2)+'] ÷ '+E+' = <span class="fin">['+(lo*1000).toFixed(3)+'‰, '+(hi*1000).toFixed(3)+'‰]</span></li>'
+            +'</ol></div>'
+            +'结论：点估计 <span class="out">'+(m*1000).toFixed(3)+'‰</span>，95%CI = <span class="out">['+(lo*1000).toFixed(3)+'‰, '+(hi*1000).toFixed(3)+'‰]</span>——样本小则区间宽；判断与定价假设差异是否显著，看定价值是否落在区间之外。';
+        };
+      })();
+    </script>
+
+    <h3>四、修匀与趋势</h3>
+    <div class="lead">观察期短、样本少时逐年龄经验率波动大，需<b>修匀</b>（如三阶移动平均：q̂<sub>x</sub> 用 x−1、x、x+1 加权）后再外推；加<b>信度</b>（Z = n/(n+k)）在公司经验与行业表之间加权。</div>
+
+    <div class="exam"><span class="yr hot">2014·19/20/21</span>组合大题：(1) 不同公司死亡率经验差异的原因；(2) 8000 人观察期死亡 10 人，求千人死亡率 95%CI；(3) 14 张保单（含生效/终止明细）+1000 张全年有效保单（保额 12 亿、预期死亡率 3‰），求保单数与保额口径暴露数及 A/E；(4) 其中 4 张为选择性退保（再核保死亡率 1.5‰），求调整后死亡率。
+      <details class="big"><summary>完整答题过程（四问全解）</summary><div class="body ans-detail">
+        <table>
+          <tr><th>问</th><th>作答要点</th></tr>
+          <tr><td>① 差异原因</td><td>目标客户群（职业/地域/健康状况）、销售渠道构成（核保严格程度不同）、公司管理风格（理赔调查力度）——教材 P190 原文三点</td></tr>
+          <tr><td>② 95%CI</td><td>p̂=10/8000=1.25‰；Poisson：10±1.96√10 = 10±6.20 → [3.80, 16.20]/8000 = <b>[0.475‰, 2.025‰]</b>；千人死亡率区间 [0.48, 2.03]</td></tr>
+          <tr><td>③ 暴露数与 A/E</td><td>14 张保单按「有效月数/12」逐张折算（年中生效/年中退保或死亡按月扣减）；保额口径暴露数=Σ(保额×有效时长)；A/E = 实际死亡保额 / (保额暴露×3‰)；两口径分别算、结论分别报</td></tr>
+          <tr><td>④ 选择性退保调整</td><td>退保者整体健康状况较好（预期死亡率低于平均）→ 留存群体死亡率被高估。处理：以再核保死亡率 1.5‰ 估计退保者贡献，用「整体法」将退保者从暴露中移出或按 1.5‰ 回推总体，得到调整后经验死亡率（低于未调整值）</td></tr>
+          <tr class="note-td"><td colspan="2">判分点：②开根号对象是<b>死亡数 d</b>；③「保单数/保额」两个口径各算一遍；④答出「选择性退保使留存者死亡率偏高、需再核保死亡率回推」即得分。</td></tr>
+        </table>
+      </div></details>
+    </div>
+    <div class="warn"><b>易错：</b>置信区间用<b>死亡数 d</b> 而非暴露 E 开根号；暴露 E 用「保单年」而非「保单数」——观察期不足一年要按时间比例折算。</div>
+  </section>
+
+  <section id="s5">
+    <h2><span class="sn">§5.5</span>退保率经验分析：两套口径 · 持续率<span class="star s3">核心</span></h2>
+    <div class="lead">退保率是寿险最「行为化」的假设：受产品形态、销售质量、利率环境三重驱动。教材 §6.6 给出三套测度方法。</div>
+    <div class="tbl-scroll"><table>
+      <tr><th>方法</th><th>定义/公式</th><th>适用</th></tr>
+      <tr><td><b>保单年度法</b></td><td>q<sup>w</sup><sub>t</sub> = t 年退保保单数 / 年初有效保单数（按保单年度 t 分组）</td><td>新业务定价、逆选择与持续奖金分析</td></tr>
+      <tr><td><b>日历年度法</b></td><td>q<sup>w</sup> = 本年退保保单数 /（年初有效 + ½×新单）等近似分母</td><td>与财务/监管年度报表口径衔接</td></tr>
+      <tr><td><b>保费持续率</b></td><td><b>k<sub>t</sub> = 2PP<sub>t</sub> + ½EP<sub>t</sub></b>（PP=续期保费实收，EP=应收）——t 年持续率综合指标</td><td>缴费期产品、期缴业务质量监控（教材 P209 原式）</td></tr>
+      <tr><td><b>万能月度法</b></td><td>月退保率 = 当月退保账户价值 / 月初账户价值（按账户价值加权）；年化 (1−q<sub>m</sub>)<sup>12</sup></td><td>万能/投连账户类产品（教材 P209）</td></tr>
+    </table></div>
+    <div class="formula"><div class="fx">持续率：k<sub>t</sub> = 2·PP<sub>t</sub> + ½·EP<sub>t</sub>　（PP<sub>t</sub> = t 时点续期保费实收比例）</div><div class="note">k 越接近 1 表示缴费持续越好；退保与失效在数据上须先区分（退保有现金价值流出，失效多为欠费中止）。</div></div>
+
+    <h3>三类特殊处理（教材 §6.6 原文）</h3>
+    <div class="tbl-scroll"><table>
+      <tr><th>情形</th><th>处理</th></tr>
+      <tr><td><b>选择性退保</b></td><td>健康体主动退保 → 留存群体死亡率经验偏低；退保率与死亡率经验要<b>联合分析</b></td></tr>
+      <tr><td><b>保单抵押贷款后退保</b></td><td>贷款余额冲抵现金价值；退保金 = 现金价值 − 贷款本息，需在退保经验中单列</td></tr>
+      <tr><td><b>复效</b></td><td>复效经历核保/观察期，复效件与正常件分别统计；失效保单可重新进入暴露</td></tr>
+    </table></div>
+    <div class="prac"><b>真题原型（2013·3）：</b>账户退保率计算——万能账户按「当月退保账户价值/月初账户价值」月度计量后年化；分子分母均用账户价值而非保单数，反映金额层面的流失。</div>
+  </section>
+
+  <section id="s6">
+    <h2><span class="sn">§5.6</span>利源分析：法定四差与万能三差<span class="star s3">核心</span></h2>
+    <div class="lead">利源分析把利润拆成「哪类假设偏差赚的钱」——定价检验、分红可分配盈余认定、经验分析闭环三件事都靠它。教材 §12 分三条线：预期利润 / 经验损益 / 其他利润。</div>
+
+    <h3>一、法定会计：四差分解（教材 §12.1–12.2）</h3>
+    <div class="tbl-scroll"><table>
+      <tr><th>利源</th><th>来源</th><th>公式内核</th></tr>
+      <tr><td><b>死差益</b></td><td>实际死亡率 &lt; 预期</td><td>（预期死亡给付 − 实际死亡给付）+ 相应准备金释放</td></tr>
+      <tr><td><b>费差益</b></td><td>实际费用 &lt; 预期</td><td>（预期费用 − 实际费用），含获取费用摊回偏差</td></tr>
+      <tr><td><b>利差益</b></td><td>实际投资收益 &gt; 预期</td><td>（实际投资收益率 − 预定/评估利率）× 责任准备金等资产基数</td></tr>
+      <tr><td><b>退保差益</b></td><td>退保经验偏离</td><td>退保时<b>释放的准备金 − 支付的退保金</b>；早期常为负差（准备金尚未累积）</td></tr>
+    </table></div>
+    <div class="formula"><div class="fx">总利源 = 死差 + 费差 + 利差 + 退保差（+ 其他：费差损转回、再保纯益等）</div><div class="note">四差加总应与「利润表税前利润 − 期初预期利润」勾稽；不勾稽即假设或口径有误。</div></div>
+
+    <h3>二、万能/投连：三差公式（教材 §12.2 原式）</h3>
+    <div class="tbl-scroll"><table>
+      <tr><th>利源</th><th>公式</th><th>说明</th></tr>
+      <tr><td><b>死差</b></td><td>风险保费收入 − 账户外身故给付（账户价值以外的净风险保额成本）</td><td>净风险保额 = 保额 − 账户价值</td></tr>
+      <tr><td><b>利差</b></td><td>账户投资收益 − 支付的结算利息</td><td>利差 = 实际投资回报 − 结算利率（最低保证利率为其下限）</td></tr>
+      <tr><td><b>退保差</b></td><td>退保时释放的单位（非账户）准备金 − 退保金（≈ 退保费用收入）</td><td>退保费用 α% 用于弥补未摊销获取成本</td></tr>
+    </table></div>
+    <div class="formula"><div class="fx">万能非账户现金流 = 保单初始费用 + 风险保费 + 保单管理费 − 账户外身故给付 − 公司管理费用 + 账户投资回报 − 账户结算利息</div><div class="note">教材 §9.4/19号口径：非账户准备金 = 对上述净现金流按现金流折现法递推计提（见 §5.8）。</div></div>
+
+    <h3>三、三差 SOE：Statement of Earnings 表结构（内嵌）</h3>
+    <div class="tbl-scroll"><table>
+      <tr><th colspan="2">三差损益表（SOE · 结构示意，金额单位：万元）</th></tr>
+      <tr><th>项目</th><th>公式口径</th></tr>
+      <tr><td>① 死差益</td><td>预期死亡给付 − 实际死亡给付（+ 准备金释放）</td></tr>
+      <tr><td>② 利差益</td><td>（实际投资收益 − 结算/预定利息）× 基数</td></tr>
+      <tr><td>③ 费差益</td><td>预期费用 − 实际费用</td></tr>
+      <tr><td>④ 退保差</td><td>释放准备金 − 退保金</td></tr>
+      <tr><td>⑤ 其他</td><td>再保纯益、持续奖金偏差、税金调整等</td></tr>
+      <tr class="note-td"><td>合计 = 税前经验利润</td><td>与利润表、期初 SOE 预算对比 → 偏差归因报告</td></tr>
+    </table></div>
+    <div class="calc" id="calc-ly">
+      <h4>利源分析演算器</h4>
+      <div class="row"><label>死差益</label><input class="calc-in" id="ly_d" value="30"></div>
+      <div class="row"><label>费差益</label><input class="calc-in" id="ly_f" value="15"></div>
+      <div class="row"><label>利差益</label><input class="calc-in" id="ly_l" value="40"></div>
+      <div class="row"><label>退保差益</label><input class="calc-in" id="ly_t" value="-10"></div>
+      <button class="calc-run">计算总利源与占比</button>
+      <div class="verdict" id="ly_out"></div>
+    </div>
+    <script>
+      (function(){
+        var box=document.getElementById('calc-ly');
+        box.__run=function(){
+          var d=+ly_d.value,f=+ly_f.value,l=+ly_l.value,t=+ly_t.value;
+          var tot=d+f+l+t;
+          if(tot===0){ly_out.innerHTML='总利源为 0，无法计算占比。';return;}
+          ly_out.innerHTML='<div class="calc-steps"><b>计算步骤</b><ol>'
+            +'<li>总利源 = 死差 + 费差 + 利差 + 退保差 = '+d+' + '+f+' + '+l+' + ('+t+') = <span class="fin">'+tot+'</span></li>'
+            +'<li>死差占比 = '+d+' ÷ '+tot+' = <span class="fin">'+(d/tot*100).toFixed(1)+'%</span>；费差占比 = <span class="fin">'+(f/tot*100).toFixed(1)+'%</span></li>'
+            +'<li>利差占比 = '+l+' ÷ '+tot+' = <span class="fin">'+(l/tot*100).toFixed(1)+'%</span>；退保差占比 = <span class="fin">'+(t/tot*100).toFixed(1)+'%</span></li>'
+            +'<li>勾稽校验：四差占比合计 = '+((d+f+l+t)/tot*100).toFixed(0)+'%（应恒为 100%）</li>'
+            +'</ol></div>'
+            +'结论：总利源 = <span class="out">'+tot+'</span>。退保差为负时拖累整体；分红口径下「可分配盈余」再按 7:3 与特储规则切分（§5.7）。';
+        };
+      })();
+    </script>
+    <div class="exam"><span class="yr">2014·4</span>（计算）<b>题干：</b>某公司本年度税前利润 5,600 万元；利源分析已确认死差益 1,200 万元、利差益 2,800 万元、费差益 900 万元（其他利源为 0）。请由利源分解倒挤退保差益，并判断其符号的经济含义。<div class="ans-skel"><b>骨架：</b>总利润 − 死差益 − 利差益 − 费差益 = 退保差益；或直接由退保相关实际/预期给付差求得。</div>
+      <details class="answer"><summary>完整答题过程</summary><div class="body ans-detail">
+        <table>
+          <tr><th>步骤</th><th>计算</th></tr>
+          <tr><td>①倒挤公式</td><td>退保差益 = 税前利润 − 死差益 − 利差益 − 费差益 − 其他</td></tr>
+          <tr><td>②代入</td><td>= 5,600 − 1,200 − 2,800 − 900 − 0 = <b>700 万元</b>（正退保差益）</td></tr>
+          <tr><td>③经济含义</td><td>退保差益 = 退保时释放的准备金 − 支付的退保金 ＞ 0 ⇒ 退保金设定低于释放的负债，公司从退保中获益；早期保单通常相反（准备金尚未累积，退保差为负）</td></tr>
+        </table>
+        <div class="src-note">溯源：2014 年真题第 4 题（回忆版）；倒挤法要求四差+其他与利润表税前利润完全勾稽。</div>
+      </div></details>
+    </div>
+    <div class="tip"><b>利源分析与资产份额法的关系：</b>资产份额法（<a href="ch2.html">CH.02 §2.9</a>）是事前逐利源的定价模型，SOE 是事后逐利源的复盘报表——一前一后、公式同构，考题常互换考。</div>
+  </section>
+
+  <section id="s7">
+    <h2><span class="sn">§5.7</span>分红账户与红利分配<span class="star s2">常考</span></h2>
+    <div class="lead">分红险的利源与红利分配是「经验 → 利源 → 分配」闭环的终点：三差先归集到分红账户，再按政策与规则在<b>保单持有人与股东</b>之间切分，特别储备负责跨年度平滑。</div>
+
+    <h3>一、分红账户的三种设立方式（教材 §12.3）</h3>
+    <div class="tbl-scroll"><table>
+      <tr><th>方式</th><th>含义</th><th>利源归集</th></tr>
+      <tr><td><b>名义账户</b></td><td>仅在精算/财务口径上划分分红业务，资产混同管理</td><td>按投资收益率与定价假设差额归集</td></tr>
+      <tr><td><b>完全独立账户</b></td><td>资产实际单独投资运作</td><td>按账户实际投资收益归集利差</td></tr>
+      <tr><td><b>非完全独立账户</b></td><td>部分资产独立、部分混同（实务主流）</td><td>独立部分按实际、混同部分按<b>现金流分摊方法</b>归集</td></tr>
+    </table></div>
+    <div class="prac"><b>现金流分摊方法（教材 §12.3）：</b>将混同资产的现金流（保费流入、给付流出、投资收益）按分红/非分红业务的负债或保额比例分摊，再分别计算两账户的利源——判分点在「分摊基准要一贯」。</div>
+
+    <h3>二、红利分配：参与维度 × 政策原则 × 三方案</h3>
+    <div class="tbl-scroll"><table>
+      <tr><th>维度</th><th>选项</th><th>要点</th></tr>
+      <tr><td><b>参与利源</b></td><td>两差（死+利）/ 三差（+费）/ 全差（+退保及其他）</td><td>参与利源越宽，客户分享越多、平滑难度越大</td></tr>
+      <tr><td><b>政策原则</b></td><td>①红利来源真实（非演示）；②平滑年度波动；③兼顾股东与客户；④保单间公平（同组同待遇）</td><td>教材 §12.4 四原则，简答题直接默写</td></tr>
+      <tr><td><b>红利方案</b></td><td>①演示水平基础；②市场水平基础；③资产负债匹配法</td><td>资产负债匹配法：红利水平由账户资产支撑能力倒推，最审慎</td></tr>
+      <tr><td><b>领取方式</b></td><td>现金领取 / 累积生息 / 抵交保费 /（购买缴清增额）</td><td>累积生息利率须公司宣告</td></tr>
+    </table></div>
+
+    <h3>三、红利演示与特别储备（93号 · 24号）</h3>
+    <div class="tbl-scroll"><table>
+      <tr><th>主题</th><th>规定</th><th>依据</th></tr>
+      <tr><td>红利演示</td><td>按<b>利差水平</b>设低、中、高三档：分别不得高于 0、4.5%−预定利率、6%−预定利率（非名义利率）；银保监规〔2022〕24号简化为两档（0 与 4.5%−预定利率），不得误导</td><td><span class="src src-gui">规</span>保监发〔2015〕93号、银保监规〔2022〕24号 / <span class="src src-ti">题</span>2014·10</td></tr>
+      <tr><td>分红特储</td><td>分红保险特别储备：分红账户中未分配的盈余池，用于平滑未来红利；客户/股东分配比例通常为 <b>7:3</b>；特储不得为负（为负须转回并说明）</td><td><span class="src src-gui">规</span>93号 / <span class="src src-ti">题</span>2016·22</td></tr>
+    </table></div>
+    <div class="formula"><div class="fx">期末特别储备 ≈ 期初特储 + 本年归属保户的可分配盈余 − 本年已宣告红利</div><div class="note">归保户盈余 = 账户盈余 − 非保单持有者（股东）分配；7:3 在「归保户部分」与「归股东部分」之间切分。</div></div>
+
+    <div class="exam"><span class="yr hot">2016·22</span>分红险新规三问 + 计算：①红利演示规定？②评估利率规定？③分红特储规定？④年初分红特储 80 万、本年业务盈余 300 万、本年非保单持有者分红 280 万、年末准备金计提 400 万、客户股东 7:3 → 年末计提多少分红特储？
+      <details class="big"><summary>完整答题过程（四问全解）</summary><div class="body ans-detail">
+        <table>
+          <tr><th>问</th><th>作答要点</th></tr>
+          <tr><td>① 演示规定</td><td>按<b>利差水平</b>三档演示（93号）：低档 ≤ 0、中档 ≤ 4.5% − 预定利率、高档 ≤ 6% − 预定利率；是「利差」而非名义投资利率；24号后简化为两档（0 与 4.5% − 预定利率）</td></tr>
+          <tr><td>② 评估利率</td><td>分红险法定准备金按分红险精算规定评估利率执行（750日国债均线 + 综合溢价，溢价低于传统险——红利可吸收部分投资波动，详见 <a href="ch2.html">CH.02 §2.4</a>）</td></tr>
+          <tr><td>③ 特储规定</td><td>分红保险特别储备是分红账户未分配盈余池，用于平滑各年度红利水平；不得为负；计提与释放须在红利报告中披露</td></tr>
+          <tr><td>④ 计算链</td><td>第一步：归保户口径可分配盈余 = 本年盈余 − 非保单持有者分红 = 300 − 280 = <b>20 万</b>；第二步：按 7:3 切分 → 保户应得 20 × 70% = <b>14 万</b>，股东 6 万（已含在 280 万内的不再重复计）；第三步：期末特储 = 期初 80 + 归保户应得 14 − 本年已宣告红利（计入年末准备金的已宣告红利部分）；若本年红利已全额计入「年末准备金计提 400 万」中的红利负债，则以 400 万中所含已宣告客户红利扣减；未宣告部分全额留存 → 期末特储 = 80 + 14 − 已宣告额。判分点在<b>口径链</b>：盈余→扣股东分配→7:3 归保户→扣已宣告→期末特储，且特储不得为负</td></tr>
+          <tr class="note-td"><td colspan="2">本题官方口径以 93 号「特别储备 = 分红账户资产 − 分红账户负债（含已宣告红利负债）」为准；作答时先写口径公式再代数，过程分大于结果分。</td></tr>
+        </table>
+      </div></details>
+    </div>
+    <div class="exam"><span class="yr">2016·4</span>（真题原型，计算/选择）<b>题干：</b>某分红账户资产配置：债券 85%（预期收益率 3%）+ 股票 15%（预期收益率 8%）。在 7:3 分红机制下，该账户可长期支撑的收支平衡利率最可能是以下哪一档？<div class="ans-skel"><b>骨架：</b>组合预期收益率 = 0.85×3% + 0.15×8% = 2.55% + 1.20% = <b>3.75%</b>；收支平衡利率（BEI）须 ≤ 组合可支撑回报 → 五选项中取不超过 3.75% 且最接近的一档。</div>
+      <details class="answer"><summary>完整答题过程</summary><div class="body ans-detail">
+        <table>
+          <tr><th>步骤</th><th>计算</th></tr>
+          <tr><td>①组合预期收益率</td><td>0.85 × 3% + 0.15 × 8% = 2.55% + 1.20% = <b>3.75%</b></td></tr>
+          <tr><td>②收支平衡约束</td><td>长期可持续的红利与结算承诺 ≤ 资产组合可支撑回报 3.75%（还要预留费用与股东回报）</td></tr>
+          <tr><td>③选项判断</td><td>取不超过 3.75% 且最接近的一档；高于 3.75% 的选项均不可持续（利差损陷阱）</td></tr>
+        </table>
+        <div class="src-note">溯源：2016 年真题第 4 题（回忆版）；资产支撑倒推思路与「资产负债匹配法」红利方案同源（§5.7）。</div>
+      </div></details>
+    </div>
+  </section>
+
+  <section id="s8">
+    <h2><span class="sn">§5.8</span>万能险结算与非账户准备金（19号）<span class="star s2">专节</span></h2>
+    <div class="lead">万能险的评估分两半：<b>账户价值</b>本身即负债（按结算利率逐月复利），<b>账户外承诺</b>（风险保额成本、持续奖金、保证利益）则按 <span class="src src-gui">规</span>保监发〔2015〕19号用现金流折现法计提「非账户准备金」。</div>
+
+    <h3>一、结算利率机制</h3>
+    <div class="tbl-scroll"><table>
+      <tr><th>要素</th><th>规定/公式</th><th>说明</th></tr>
+      <tr><td><b>结算利率上限逻辑</b></td><td>结算利率 = 投资回报率 − 利息差额（interest spread）</td><td>教材原式：留给公司的利差就是「利息差额」</td></tr>
+      <tr><td><b>下限</b></td><td>最低保证利率</td><td>定价时即固化，是公司的确定性成本</td></tr>
+      <tr><td><b>平滑机制</b></td><td>丰年多留存、歉年释放（非账户/结算准备金缓冲）</td><td>19号要求结算利率须有实际投资收益支撑、不得恶性竞争抬价</td></tr>
+      <tr><td><b>竞争约束</b></td><td>受同业结算利率竞争限制，不能单向下调</td><td>资产负债分析须多情景测试利率结算政策</td></tr>
+    </table></div>
+    <div class="formula"><div class="fx">结算利率 = 账户投资回报率 − 利息差额；　利差益 = 实际投资收益 − 支付结算利息</div><div class="note">「利息差额」即公司留存部分；最低保证利率与目标利率之间是公司的定价空间。</div></div>
+
+    <h3>二、非账户准备金：现金流折现递推（19号 · 教材 §9.4 原式）</h3>
+    <div class="lead">先预测账户外净现金流（最长一年为一段），再从最远负值点往回递推：</div>
+    <div class="formula"><div class="fx">V<sub>n−1</sub> = −PV<sub>n−1</sub>(CF<sub>n</sub>)；　V<sub>n−t</sub> = max(0, PV<sub>n</sub>(V<sub>n−t+1</sub>) − PV<sub>n−t</sub>(CF<sub>n−t+1</sub>))</div><div class="note">max(0, ·) 保证准备金不为负；折现率用评估利率。用于计提万能账户外所有保证利益的负债。</div></div>
+    <div class="tbl-scroll"><table>
+      <tr><th>现金流构成（+收 / −支）</th><th>方向</th></tr>
+      <tr><td>保单初始费用、风险保费、保单管理费</td><td>+</td></tr>
+      <tr><td>账户价值以外的身故给付、公司管理费用</td><td>−</td></tr>
+      <tr><td>账户投资回报、账户结算利息（非账户口径净影响）</td><td>+/−</td></tr>
+      <tr class="note-td"><td colspan="2">持续奖金 GP×α% 随年限递减（α 随 t 下降）——对非账户现金流与退保率假设双向敏感。</td></tr>
+    </table></div>
+    <div class="calc" id="calc-uls">
+      <h4>万能结算利差演算器</h4>
+      <div class="row"><label>账户年投资回报率（%）</label><input class="calc-in" id="ul_inv" value="4.2"></div>
+      <div class="row"><label>年结算利率（%）</label><input class="calc-in" id="ul_set" value="3.8"></div>
+      <div class="row"><label>账户规模（万元）</label><input class="calc-in" id="ul_amt" value="50000"></div>
+      <button class="calc-run">计算利差与利息差额</button>
+      <div class="verdict" id="ul_out"></div>
+    </div>
+    <script>
+      (function(){
+        var box=document.getElementById('calc-uls');
+        box.__run=function(){
+          var inv=+ul_inv.value,set=+ul_set.value,amt=+ul_amt.value;
+          var spread=inv-set;
+          var gain=amt*spread/100;
+          ul_out.innerHTML='<div class="calc-steps"><b>计算步骤</b><ol>'
+            +'<li>利息差额 = 投资回报率 − 结算利率 = '+inv+'% − '+set+'% = <span class="fin">'+spread.toFixed(2)+'%</span></li>'
+            +'<li>本年利差益 = 账户规模 × 利息差额 = '+amt+' × '+spread.toFixed(2)+'% = <span class="fin">'+gain.toFixed(0)+'</span> 万元</li>'
+            +'<li>约束校验：结算利率 '+set+'% ≥ 最低保证利率（否则触碰公司兜底成本）</li>'
+            +'</ol></div>'
+            +'结论：利息差额 = <span class="out">'+spread.toFixed(2)+'%</span>，本年利差益 ≈ <span class="out">'+gain.toFixed(0)+'</span> 万元。结算利率接近投资回报时利差压缩，需靠非账户费用与死差补利润。';
+        };
+      })();
+    </script>
+    <div class="exam"><span class="yr">2017·5</span>（论述）<b>题干：</b>万能险利源分析与结算利率政策：请结合万能三差（死差/利差/退保差）公式，说明当账户投资收益持续下滑时，公司可采取的对策及其约束条件，并说明非账户准备金应如何同步重估。<div class="ans-skel"><b>骨架：</b>①利差=投资收益−结算利息，收益下滑压缩利差；②对策：下调结算利率（受竞争约束、有最低保证下限）、动用平滑准备金、调整账户资产配置、提高初始/风险保费费用率（受监管上限）；③非账户准备金须同步重估（19号）。</div>
+      <details class="answer"><summary>完整答题过程</summary><div class="body ans-detail">
+        <table>
+          <tr><th>对策</th><th>机制</th><th>约束</th></tr>
+          <tr><td>①下调结算利率</td><td>直接压缩「结算利息」支出，保住利差</td><td>不得低于最低保证利率；受同业竞争与客户流失（退保率上升）约束</td></tr>
+          <tr><td>②动用平滑缓冲</td><td>丰年留存的结算准备金在歉年释放</td><td>缓冲规模有限；19号要求结算须有实际投资收益支撑</td></tr>
+          <tr><td>③调整资产配置</td><td>提高固定收益占比、拉长久期锁定收益</td><td>受偿二代市场风险资本与流动性约束（<a href="ch3.html">CH.03</a>）</td></tr>
+          <tr><td>④费用端补偿</td><td>提高风险保费/初始费用定价空间</td><td>受监管费用上限；伤客户利益与产品竞争力</td></tr>
+          <tr><td>⑤非账户重估</td><td>投资假设下调 → 未来结算承诺缺口扩大 → 非账户准备金按 19 号现金流折现递推重估（通常上升）</td><td>重估结果进精算报告，须总精算师签批</td></tr>
+        </table>
+        <div class="src-note">溯源：2017 年真题第 5 题（回忆版）；三差公式见教材 §12.2、非账户递推见 §9.4。</div>
+      </div></details>
+    </div>
+    <div class="tip"><b>一句话贯通：</b>万能评估 = 账户价值（负债本体） + 非账户准备金（账户外保证的现金流折现） + 结算政策（连接两者的行为变量）。</div>
+  </section>
+
+  <section id="quick">
+    <h2><span class="sn">速查</span>核心答案速查表<span class="star s1">考前</span></h2>
+    <div class="lead">考前 30 秒过一遍本章全部「问 → 答」。</div>
+    <div class="tbl-scroll"><table>
+      <tr><th>考点问题</th><th>核心答案</th></tr>
+      <tr><td>45号精算报告体系包含哪几大编报规则？</td><td>责任准备金评估、偿付能力、利源分析、再保险、分红红利、万能结算（六模块，总精算师签批）</td></tr>
+      <tr><td>精算报告三构成？</td><td>正文（假设变动说明）+ 附表（与财务勾稽）+ 精算声明书（总精算师签批）</td></tr>
+      <tr><td>经验分析八步？</td><td>范围→方法→取数→调数→经验假设→推测未来→审阅→费用控制（落地定价/评估/分红）</td></tr>
+      <tr><td>暴露数两套口径？</td><td>保单年度法（选择效应）vs 日历年度法（报表衔接）；按有效月数/12 折算</td></tr>
+      <tr><td>95%CI 用什么近似？</td><td>二项 p̂±1.96√(p̂(1−p̂)/E) 或 Poisson (d±1.96√d)/E——开根号对象是死亡数</td></tr>
+      <tr><td>A/E 三种形式？</td><td>按保单数、按保额、按年龄（分别综合）</td></tr>
+      <tr><td>保费持续率公式？</td><td>k<sub>t</sub> = 2PP<sub>t</sub> + ½EP<sub>t</sub></td></tr>
+      <tr><td>万能月度退保率？</td><td>当月退保账户价值 / 月初账户价值（账户价值加权，年化 (1−q<sub>m</sub>)<sup>12</sup>）</td></tr>
+      <tr><td>法定四差？</td><td>死差（预期−实际死亡给付）、费差（预期−实际费用）、利差（实际−预期投资收益）、退保差（释放准备金−退保金）</td></tr>
+      <tr><td>万能三差？</td><td>死差=风险保费−账户外给付；利差=投资收益−结算利息；退保差=释放的非账户准备金−退保金</td></tr>
+      <tr><td>分红账户三种设立？</td><td>名义账户 / 完全独立 / 非完全独立（主流，用现金流分摊方法归集）</td></tr>
+      <tr><td>红利演示三档？</td><td>按利差水平：≤0、≤4.5%−预定利率、≤6%−预定利率（93号；24号简化两档）</td></tr>
+      <tr><td>分红特储与 7:3？</td><td>未分配盈余平滑池，不得为负；归保户盈余 = 盈余 − 股东分配，再按 7:3 切分</td></tr>
+      <tr><td>红利分配三方案？</td><td>演示水平基础 / 市场水平基础 / 资产负债匹配法（资产支撑倒推，最审慎）</td></tr>
+      <tr><td>结算利率公式？</td><td>结算利率 = 投资回报率 − 利息差额；下限为最低保证利率</td></tr>
+      <tr><td>非账户准备金递推？</td><td>V<sub>n−1</sub>=−PV(CF<sub>n</sub>)；V<sub>n−t</sub>=max(0, PV(V<sub>n−t+1</sub>)−PV(CF<sub>n−t+1</sub>))——最远负值点回推、不为负</td></tr>
+    </table></div>
+  </section>
+
+  <section id="dig">
+    <h2><span class="sn">深挖</span>教材深挖：经验统计学与平滑机制三处对照</h2>
+    <p class="lead">经验分析与红利分配看似两章，底层共用两套技术：一套「统计学」（A/E 的显著性判断），一套「平滑术」（分红特储、万能结算、会计边际三处同一哲学）。</p>
+    <details class="big">
+      <summary><b>教材深挖：二项 vs Poisson 适用边界 × 信度加权 × 平滑机制三处对照</b> <span class="star s3">★★★</span></summary>
+      <div class="body">
+      <h3>① 二项近似与 Poisson 近似的适用边界</h3>
+      <table>
+        <tr><th>近似</th><th>公式</th><th>适用条件</th><th>典型场景</th></tr>
+        <tr><td>二项</td><td>95%CI ≈ p̂ ± 1.96·√(p̂(1−p̂)/E)</td><td>p̂ 不太小、暴露 E 大</td><td>大样本成熟业务</td></tr>
+        <tr><td>Poisson</td><td>95%CI ≈ (d ± 1.96·√d) / E</td><td>稀有事件（p̂ 小，如 d &lt; 30）</td><td>死亡经验（2014·20：d=10）</td></tr>
+      </table>
+      <div class="warn"><b>深挖要点：</b>两者在大样本下趋同；稀有事件下 Poisson 更稳（二项方差 p̂(1−p̂)≈p̂ 时两者等价）。考试给 d 很小就用 Poisson——「对 d 开根号」是判分点。</div>
+      <h3>② 信度加权：公司经验与行业表怎么「配比」</h3>
+      <ul>
+        <li><b>公式：</b>Z = n / (n + k)，经验假设 = Z × 公司经验 + (1−Z) × 行业表；n 为观察量，k 为信度常数。</li>
+        <li><b>直觉：</b>数据越多（n 大），Z 越接近 1，越相信自己的经验；数据少则向行业表收缩。</li>
+        <li><b>落点：</b>第⑥步「推测未来经验」的标准工具——直接用历史观察值会被小样本噪声带偏。</li>
+      </ul>
+      <h3>③ 平滑机制三处对照（同一哲学的三个马甲）</h3>
+      <table>
+        <tr><th>场景</th><th>载体</th><th>丰年动作</th><th>歉年动作</th><th>约束</th></tr>
+        <tr><td>分红险</td><td>分红特别储备（93号）</td><td>少分红利、留存特储</td><td>释放特储、维持红利</td><td>不得为负；7:3 切分</td></tr>
+        <tr><td>万能险</td><td>结算准备金/利息差额</td><td>结算低于投资回报</td><td>结算高于当期回报</td><td>19号：须有资产支撑</td></tr>
+        <tr><td>会计（2009）</td><td>剩余边际/CSM</td><td>首日利得进边际递延</td><td>边际逐期释放回补</td><td>不得平滑（禁止平滑准备金！）</td></tr>
+      </table>
+      <p><b>辩证点：</b>前两处平滑是<b>监管允许甚至要求</b>的客户利益管理；第三处「不得平滑」禁的是<b>向股东平滑利润</b>——同为平滑，对象不同、性质相反。答题若混淆两者，方向分全失。</p>
+      </div>
+    </details>
+  </section>
+
+  <section id="quiz">
+    <h2><span class="sn">自测</span>真题印证与自测<span class="star s3">考前必做</span></h2>
+    <p class="lead">先遮住答案独立作答，再展开核对——本章权重 15%，自测一道计算（死亡率经验）+ 一道论述（利源勾稽与平滑）。</p>
+    <details>
+      <summary>自测 1（计算，12 分）：死亡率经验分析与显著性判断</summary>
+      <div class="body">
+      <div class="q-item"><div class="q">某公司观察期风险暴露 E = 6,000 保单年，实际死亡 d = 9 人；定价假设死亡率为 2.0‰。<br>求：①点估计经验死亡率；②95% 置信区间（Poisson 近似）；③判断实际经验是否显著低于定价假设，并说明后续动作。</div></div>
+      <div class="solution">
+      ①p̂ = 9 ÷ 6,000 = <b>1.5‰</b>（3 分）；<br>
+      ②√9 = 3，95% 死亡数区间 = 9 ± 1.96×3 = 9 ± 5.88 = [3.12, 14.88] → 区间 = [3.12, 14.88] ÷ 6,000 = <b>[0.52‰, 2.48‰]</b>（4 分）；<br>
+      ③定价 2.0‰ 落在区间 [0.52‰, 2.48‰] <b>之内</b> → 差异不显著，不宜贸然下调定价假设；后续应加长观察期/合并暴露，或用信度加权向行业表收缩后再评估（5 分）。<br>
+      <b>评分要点：</b>点估计 3 分、对 d 开根号与区间计算 4 分、显著性判断 3 分、后续动作 2 分。
+      </div>
+      </div>
+    </details>
+    <details>
+      <summary>自测 2（论述，12 分）：利源分析的勾稽逻辑与平滑的边界</summary>
+      <div class="body">
+      <div class="q-item"><div class="q">请论述利源分析中「四差加总 = 经验利润」的勾稽逻辑，并比较分红特储、万能结算缓冲与会计「不得平滑」三处平滑机制的异同。</div></div>
+      <div class="solution">
+      <b>评分要点：</b><br>
+      ①勾稽：四差（死/费/利/退保）+ 其他 = 税前经验利润；各差独立计量后加总须与利润表勾稽，不勾稽说明口径或假设有误（3 分）；<br>
+      ②拆解方向：每差 = 假设端 − 实际端（或相反），准备金期初期末变动作为桥梁（3 分）；<br>
+      ③三处平滑对照：分红特储与万能结算缓冲是<b>面向客户利益</b>的跨期分配管理（监管允许/要求，有「不得为负」「资产支撑」约束）；会计「不得平滑」禁止的是<b>向股东平滑利润</b>的操纵（3 分）；<br>
+      ④辩证结论：平滑与否的判据是「平滑谁的风险、给谁看结果」——客户利益可以平滑，股东报表必须真实（3 分）。
+      </div>
+      </div>
+    </details>
+    <button class="done-btn" data-id="ch5">○ 标记本章已完成</button>
+  </section>
+
+  <div class="pager">
+    <a href="ch4.html">← CH.04 企业会计准则</a>
+    <a href="topic-solvency.html">专题 A · 偿付能力实务 →</a>
+  </div>
+</main>
+<script src="js/kb.js"></script>
+</body>
+</html>
