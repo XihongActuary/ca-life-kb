@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>专题 B · 新业务价值 VNB（五步链全演算） · 寿险精算评估实务 · 科目F3</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<aside class="side">
+  <div class="brand"><b>寿险精算评估实务</b><span>科目F3 · 正精算师（寿险）</span></div>
+    <nav>
+    <a href="xihong.html">关于 · 西红精算</a>
+    <a href="index.html">首页 · 考试全景</a>
+    <a href="about.html">本库说明 · 编法与用法</a>
+    <div class="grp">五大篇章（考纲权重）</div>
+    <a href="ch1.html">CH.01 概念与原理<span class="w">5%</span></a>
+    <a href="ch2.html">CH.02 责任准备金<span class="w">20%</span></a>
+    <a href="ch3.html">CH.03 偿付能力监管<span class="w">30%</span></a>
+    <a href="ch4.html">CH.04 企业会计准则<span class="w">30%</span></a>
+    <a href="ch5.html">CH.05 报告与分析<span class="w">15%</span></a>
+    <div class="grp">拓展专题（不止于考纲）</div>
+    <a href="topic-solvency.html">专题·偿付能力实务</a>
+    <a href="topic-vnb.html" class="on">专题·新业务价值</a>
+    <a href="topic-ifrs17.html">专题·IFRS17与CSM</a>
+    <a href="topic-liyuan.html">专题·利源分析三差</a>
+    <a href="topic-ev.html">专题·内含价值</a>
+    <a href="topic-products.html">专题·产品精算与定价</a>
+    <div class="grp">真题 / 模拟 / 资料</div>
+    <a href="zhenti.html">真题馆</a>
+    <a href="moni-1.html">模拟卷一 · 筑基</a>
+    <a href="moni-2.html">模拟卷二 · 新则</a>
+    <a href="moni-3.html">模拟卷三 · 冲刺</a>
+    <a href="references.html">参考资料库</a>
+    <a href="cross-solvency.html">C-ROSS II 贯通页</a>
+  </nav>
+  <div class="prog-mini">学习进度 <b>0 / 13</b></div>
+</aside>
+
+<main class="main">
+  <div class="ch-head">
+    <div class="no">TOPIC B · VALUE OF NEW BUSINESS</div>
+    <h1>新业务价值 VNB：从现金流到 NBV 的五步链</h1>
+    <div class="sub">定价考试的两座大山之一：产品卖出去到底创造多少价值 · 案例与公式链取自公众号长文 <a href="https://mp.weixin.qq.com/s/sKZ8aPD0GdDLtjg5TknVCQ" target="_blank" style="color:#cfe2f7">《新业务价值》↗</a></div>
+    <div class="meta"><span>对接 CH.01 / 专题·EV</span><span>真题 2014·15/20、2016·2</span><span>模拟卷三 · 计算大题</span></div>
+    <div class="wbar"><div class="lab"><span>考纲渗透度</span><span>常考大题 + 价值管理框架</span></div><div class="bar"><i style="width:85%"></i></div></div>
+  </div>
+
+  <div class="toc"><b>本专题结构</b><ol>
+    <li>为什么考 VNB：价值三问</li>
+    <li>五步链总览</li>
+    <li>逐步演算：3 年交 6 年分红案例</li>
+    <li>RDR：贴现率的哲学</li>
+    <li>新业务指标族：NBV / 价值率 / Strain</li>
+    <li>考试怎么考 + 演算器</li>
+  </ol></div>
+
+  <section>
+    <h2><span class="sn">§1</span>为什么考 VNB：价值三问<span class="star s3">高频</span></h2>
+    <div class="lead">「产品定价」与「新业务价值」是本科目常考大题的黄金搭档——定价解决「卖多少钱不亏」，VNB 解决「卖出去之后创造多少价值」。</div>
+    <table>
+      <tr><th>价值三问</th><th>回答工具</th><th>本质</th></tr>
+      <tr><td>这笔业务未来产生多少现金流？</td><td>精算假设下的现金流预测</td><td>保费 − 赔付 − 费用 − 退保</td></tr>
+      <tr><td>这些现金流占用多少资本？</td><td>要求资本 RC（对接 C-ROSS 最低资本）</td><td>资本有机会成本</td></tr>
+      <tr><td>扣掉资本成本后还剩多少价值？</td><td>NBV = Σ 可分配盈余现值</td><td>股东真正拿到的东西</td></tr>
+    </table>
+    <div class="tip"><b>一句话定位：</b>VNB 是「未来利润」的折现，但比利润更挑剔——它要求利润在<b>满足资本要求之后</b>才可分配给股东。理解这一点，五步链的每一环都有了意义。</div>
+  </section>
+
+  <section>
+    <h2><span class="sn">§2</span>五步链总览</h2>
+    <div class="formula">
+      <div class="fx">① 现金流 CF<sub>t</sub> = 保费 − 赔付 − 费用 − 退保金<br>② 负债 Liab<sub>t</sub> = 准备金 RES<sub>t</sub> + 递延保费负债 DPL<sub>t</sub><br>③ 税后利润 Profit<sub>t</sub> = (CF<sub>t</sub> + Inv<sub>t</sub> − ΔLiab<sub>t</sub>) × (1 − 税率)<br>④ 要求资本 RC<sub>t</sub> = max( MC<sub>t</sub> − (DPL<sub>t</sub> − DTL<sub>t</sub>), 0 )<br>&nbsp;&nbsp;&nbsp;&nbsp;可分配盈余 DE<sub>t</sub> = Profit<sub>t</sub> − ΔRC<sub>t</sub> + RC<sub>t</sub> × 投资收益率 × (1 − 税率)<br>⑤ <b>NBV = Σ DE<sub>t</sub> / (1 + RDR)<sup>t</sup></b></div>
+      <div class="note">①→②→③→④→⑤ 每一步都对应一个精算判断：现金流口径、负债口径、税务、资本、贴现。这是把「定价、评估、偿付能力」三门课串成一道题的完整链条。</div>
+    </div>
+    <div class="tip"><b>要点一句话：</b>股东现金流先走（保费进、给付出），负债随后计提；利润扣税、再扣占用资本的锁定成本；余下的可分配盈余按 RDR 贴现，方为新业务价值。</div>
+    <div class="tbl-scroll"><table>
+      <tr><th>步骤</th><th>容易踩的坑</th><th>判分点</th></tr>
+      <tr><td class="ctr">①</td><td>漏掉退保金与维持费用</td><td>现金流口径完整</td></tr>
+      <tr><td class="ctr">②</td><td>把 DPL（递延保费）漏出负债</td><td>负债 = RES + DPL</td></tr>
+      <tr><td class="ctr">③</td><td>投资收益未计入或未扣税</td><td>(CF + Inv − ΔLiab)×(1−Tax)</td></tr>
+      <tr><td class="ctr">④</td><td>忽略 DPL 对要求资本的抵扣</td><td>RC = max(MC − (DPL−DTL), 0)</td></tr>
+      <tr><td class="ctr">⑤</td><td>用 RDR 贴现了利润而非可分配盈余</td><td>贴现对象是 DE</td></tr>
+    </table></div>
+  </section>
+
+  <section>
+    <h2><span class="sn">§3</span>逐步演算：3 年交 6 年分红案例<span class="star s3">高频</span></h2>
+    <div class="lead">案例：某 3 年缴费、6 年满期的分红两全险，RDR = 12.5%，税率 25%。以下为完整跟算表（考试可照此格式作答）。</div>
+    <h3>第 1 年（首年：获取费用重压）</h3>
+    <div class="tbl-scroll"><table>
+      <tr><th>项目</th><th>算式</th><th class="num">数值</th></tr>
+      <tr><td>现金流 CF₁</td><td>保费 10,000 − 赔付 300 − 获取费用 2,500 − 维持费用 150</td><td class="num">7,050</td></tr>
+      <tr><td>期末负债 Liab₁</td><td>RES₁ 8,200 + DPL₁ 1,300</td><td class="num">9,500</td></tr>
+      <tr><td>税后利润</td><td>(7,050 + 投资收益 390 − ΔLiab 9,500) × 0.75</td><td class="num neg">−1,545</td></tr>
+      <tr><td>要求资本 RC₁</td><td>max(1,050 − (1,300 − 120), 0)</td><td class="num">0</td></tr>
+      <tr><td>可分配盈余 DE₁</td><td>−1,545 − 0 + 0</td><td class="num neg">−1,545</td></tr>
+    </table></div>
+    <h3>第 2–6 年（汇总口径）</h3>
+    <div class="tbl-scroll"><table>
+      <tr><th>项目</th><th class="num">第2年</th><th class="num">第3年</th><th class="num">第4年</th><th class="num">第5年</th><th class="num">第6年</th></tr>
+      <tr><td>税后利润</td><td class="num">60</td><td class="num">150</td><td class="num">200</td><td class="num">310</td><td class="num">480</td></tr>
+      <tr><td>ΔRC（资本释放）</td><td class="num">+50</td><td class="num">+80</td><td class="num">+120</td><td class="num">+150</td><td class="num">+200</td></tr>
+      <tr><td>资本投资收益（税后）</td><td class="num">28</td><td class="num">42</td><td class="num">51</td><td class="num">36</td><td class="num">0</td></tr>
+      <tr><td>可分配盈余 DE<sub>t</sub></td><td class="num">138</td><td class="num">272</td><td class="num">371</td><td class="num">496</td><td class="num">680</td></tr>
+      <tr><td>贴现因子 (1.125)<sup>−t</sup></td><td class="num">0.790</td><td class="num">0.702</td><td class="num">0.624</td><td class="num">0.555</td><td class="num">0.493</td></tr>
+    </table></div>
+    <h3>汇总 NBV</h3>
+    <div class="tbl-scroll"><table>
+      <tr><th>项</th><th>算式</th><th class="num">结果</th></tr>
+      <tr><td>第1年现值</td><td>−1,545 × 0.889</td><td class="num neg">−1,373</td></tr>
+      <tr><td>第2–6年现值加总</td><td>138×0.790 + 272×0.702 + 371×0.624 + 496×0.555 + 680×0.493</td><td class="num">+1,894</td></tr>
+      <tr class="note-td"><td><b>NBV</b></td><td>−1,373 + 1,894</td><td class="num"><b>≈ +521</b></td></tr>
+      <tr><td>新业务价值率</td><td>NBV ÷ 首年保费等价口径（3 年交按年缴保费计 10,000）</td><td class="num"><b>≈ 5.21%</b></td></tr>
+    </table></div>
+    <div class="warn"><b>首年必然亏损：</b>获取费用前置、准备金计提，DE₁ 为大额负数——这不是产品不好，而是「新业务利润释放滞后于价值创造」的固有节奏。NBV 为正（+521）说明这笔业务在 RDR 12.5% 的资本成本要求下仍然创造价值。</div>
+  </section>
+
+  <section>
+    <h2><span class="sn">§4</span>RDR：贴现率的哲学<span class="star s2">中频</span></h2>
+    <table>
+      <tr><th>贴现率选择</th><th>逻辑</th><th>对 NBV 的影响</th></tr>
+      <tr><td>无风险利率</td><td>复制组合思想（市场一致）</td><td>NBV 偏高，忽略资本风险成本</td></tr>
+      <tr><td>风险贴现率 RDR（案例 12.5%）</td><td>股东要求回报：无风险 + 风险溢价</td><td>审慎口径，实务主流</td></tr>
+      <tr><td>资本成本 WACC</td><td>公司加权资本成本</td><td>介于两者之间，偏理论</td></tr>
+    </table>
+    <div class="prac"><b>实务视角：</b>RDR 每下调 1 个百分点，长期保障型 NBV 通常放大 10%+。考试若问「为什么 VNB 对 RDR 敏感」——答案在久期：可分配盈余集中在第 5–30 年，贴现因子对利率的敏感度随期限指数放大。</div>
+  </section>
+
+  <section>
+    <h2><span class="sn">§5</span>新业务指标族<span class="star s2">中频</span></h2>
+    <div class="tbl-scroll"><table>
+      <tr><th>指标</th><th>定义</th><th>判读</th></tr>
+      <tr><td>NBV</td><td>新业务未来可分配盈余现值（本专题主角）</td><td>绝对规模：卖了多少钱的价值</td></tr>
+      <tr><td>新业务价值率（案例 5.21%）</td><td>NBV ÷ 新单保费</td><td>相对效率：每元保费产出多少价值</td></tr>
+      <tr><td>新业务压力 NB Strain</td><td>首年 DE（可分配盈余）为负的程度</td><td>首年侵蚀：−1,545 相对 10,000 = −15.45%</td></tr>
+      <tr><td>收支平衡年</td><td>累计 DE 转正的年份</td><td>本案例约第 2 年单年转正、第 4 年累计转正</td></tr>
+      <tr><td>要求资本回报 ROC</td><td>利润 ÷ 占用资本</td><td>资本效率，对接偿付能力专题</td></tr>
+    </table></div>
+    <div class="tip"><b>串联考点：</b>RC 的算法 (max(MC−(DPL−DTL),0)) 直接引用 <a href="topic-solvency.html">偿付能力专题</a> 的最低资本 MC——命题人最爱在 VNB 大题里嵌一个 C-ROSS 小问，两专题务必连着学。</div>
+  </section>
+
+  <section>
+    <h2><span class="sn">§6</span>考试怎么考 + 演算器</h2>
+    <div class="exam"><b>真题痕迹：</b><span class="yr">2014</span>第15/20题考新业务价值与内含价值关系；<span class="yr">2016</span>第2题考新业务指标体系。命题套路：给现金流表与假设 → 逐步算 DE → 贴现出 NBV → 算价值率 → 定性判断产品价值。<a href="moni-3.html">模拟卷三计算大题</a>按此命题。</div>
+    <div class="calc" id="calc-vnb">
+      <h4>演算器 · NBV 五步链（简化版）</h4>
+      <div class="row"><label>首年 DE</label><input class="calc-in" id="v-de1" value="-1545"><label>第2年 DE</label><input class="calc-in" id="v-de2" value="138"><label>第3年 DE</label><input class="calc-in" id="v-de3" value="272"></div>
+      <div class="row"><label>第4年 DE</label><input class="calc-in" id="v-de4" value="371"><label>第5年 DE</label><input class="calc-in" id="v-de5" value="496"><label>第6年 DE</label><input class="calc-in" id="v-de6" value="680"></div>
+      <div class="row"><label>RDR（%）</label><input class="calc-in" id="v-rdr" value="12.5"><label>首年保费</label><input class="calc-in" id="v-prem" value="10000"></div>
+      <button class="calc-run">计算 NBV 与价值率</button>
+      <div class="verdict" id="v_out"></div>
+    </div>
+    <script>
+    (function(){
+      var box=document.getElementById('calc-vnb');
+      box.__run=function(){
+        var de=[].slice.call(box.querySelectorAll('.calc-in')).slice(0,6).map(function(e){return +e.value||0});
+        var r=(+document.getElementById('v-rdr').value||0)/100,p=+document.getElementById('v-prem').value||0;
+        var v=0,f=1,li='';
+        for(var i=0;i<6;i++){f/= (1+r);v+=de[i]*f;
+          li+='<li>第'+(i+1)+'年：贴现因子 = 1/(1+'+(r*100).toFixed(1)+'%)<sup>'+(i+1)+'</sup> = '+f.toFixed(6)+'，贴现 DE = '+de[i]+' × '+f.toFixed(6)+' = <span class="fin">'+(de[i]*f).toFixed(2)+'</span></li>';}
+        v_out.innerHTML='<div class="calc-steps"><b>计算步骤（五步链之④⑤：逐年贴现加总）</b><ol>'+li
+          +'<li>合计：NBV = Σ 贴现 DE = <span class="fin">'+v.toFixed(2)+'</span></li>'
+          +(p>0?'<li>新业务价值率 = NBV ÷ 首年保费 = '+v.toFixed(2)+' ÷ '+p+' = <span class="fin">'+(v/p*100).toFixed(2)+'%</span></li>':'')
+          +'</ol></div>'
+          +'结论：NBV = <span class="out">'+v.toFixed(0)+'</span>'+(p>0?'，新业务价值率 = <span class="out">'+(v/p*100).toFixed(2)+'%</span>':'')+'——'+(v>0?'NBV 为正，在股东资本成本（RDR）要求下新业务创造价值。':'NBV 为负，收益未覆盖资本成本，不创造价值。');
+      };
+    })();
+    </script>
+    <div class="prac"><b>跨库延伸：</b>五步链的完整推导、DPL 抵扣要求资本的直觉解释，见公众号长文 <a href="https://mp.weixin.qq.com/s/sKZ8aPD0GdDLtjg5TknVCQ" target="_blank">《新业务价值》↗</a>；本专题为其考试化改编。站内延伸：<a href="topic-ev.html">内含价值专题</a>（NBV 是 EV 的年增量）、<a href="topic-liyuan.html">利源分析专题</a>（利润与价值的口径之辨）。</div>
+    <button class="done-btn" data-id="topic-vnb">○ 标记本页已完成</button>
+  </section>
+
+  <div class="pager">
+    <a href="topic-solvency.html">← 专题 A · 偿付能力实务</a>
+    <a href="topic-ifrs17.html">专题 C · IFRS17 与 CSM →</a>
+  </div>
+  <footer class="colophon">寿险精算评估实务 · 科目F3 · 案例与公式链源自《新业务价值》长文 · 知识星球「西红精算」</footer>
+</main>
+<script src="js/kb.js"></script>
+</body>
+</html>
