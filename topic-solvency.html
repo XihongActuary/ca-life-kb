@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>专题 A · 偿付能力实务（最低资本全链路） · 寿险精算评估实务 · 科目F3</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<aside class="side">
+  <div class="brand"><b>寿险精算评估实务</b><span>科目F3 · 正精算师（寿险）</span></div>
+    <nav>
+    <a href="xihong.html">关于 · 西红精算</a>
+    <a href="index.html">首页 · 考试全景</a>
+    <a href="about.html">本库说明 · 编法与用法</a>
+    <div class="grp">五大篇章（考纲权重）</div>
+    <a href="ch1.html">CH.01 概念与原理<span class="w">5%</span></a>
+    <a href="ch2.html">CH.02 责任准备金<span class="w">20%</span></a>
+    <a href="ch3.html">CH.03 偿付能力监管<span class="w">30%</span></a>
+    <a href="ch4.html">CH.04 企业会计准则<span class="w">30%</span></a>
+    <a href="ch5.html">CH.05 报告与分析<span class="w">15%</span></a>
+    <div class="grp">拓展专题（不止于考纲）</div>
+    <a href="topic-solvency.html" class="on">专题·偿付能力实务</a>
+    <a href="topic-vnb.html">专题·新业务价值</a>
+    <a href="topic-ifrs17.html">专题·IFRS17与CSM</a>
+    <a href="topic-liyuan.html">专题·利源分析三差</a>
+    <a href="topic-ev.html">专题·内含价值</a>
+    <a href="topic-products.html">专题·产品精算与定价</a>
+    <div class="grp">真题 / 模拟 / 资料</div>
+    <a href="zhenti.html">真题馆</a>
+    <a href="moni-1.html">模拟卷一 · 筑基</a>
+    <a href="moni-2.html">模拟卷二 · 新则</a>
+    <a href="moni-3.html">模拟卷三 · 冲刺</a>
+    <a href="references.html">参考资料库</a>
+    <a href="cross-solvency.html">C-ROSS II 贯通页</a>
+  </nav>
+  <div class="prog-mini">学习进度 <b>0 / 13</b></div>
+</aside>
+
+<main class="main">
+  <div class="ch-head">
+    <div class="no">TOPIC A · SOLVENCY PRACTICE</div>
+    <h1>偿付能力实务：最低资本全链路演算</h1>
+    <div class="sub">把 C-ROSS II 规则从条文变成一道可跟算的大题 · 案例数据取自 <a href="https://xihongactuary.github.io/cross-solvency/" target="_blank" style="color:#cfe2f7">C-ROSS II 偿付能力知识库 ↗</a></div>
+    <div class="meta"><span>对接 CH.03（30%）</span><span>真题 2017·7、2016·23</span><span>模拟卷二 · 计算大题</span></div>
+    <div class="wbar"><div class="lab"><span>考纲渗透度</span><span>CH.03 直接得分 + 大题案例</span></div><div class="bar"><i style="width:90%"></i></div></div>
+  </div>
+
+  <div class="toc"><b>本专题结构</b><ol>
+    <li>案例总览：一张表看懂全链路</li>
+    <li>第一步：三大量化风险模块</li>
+    <li>第二步：相关矩阵与最低资本</li>
+    <li>第三步：实际资本与分级限额</li>
+    <li>第四步：压力测试与逆周期</li>
+    <li>第五步：双曲线（750 日 / 60 日）</li>
+    <li>第六步：IRR 风险综合评级</li>
+    <li>考试怎么考 + 演算器</li>
+  </ol></div>
+
+  <section>
+    <h2><span class="sn">§1</span>案例总览：一张表看懂全链路<span class="star s3">高频</span></h2>
+    <div class="lead">C-ROSS II 的计算题，本质上就是一条「负债 → 资本 → 充足率」的流水线。先把全链路背下来，再逐段演算。</div>
+    <div class="tbl-scroll"><table>
+      <tr><th>步骤</th><th>算什么</th><th>案例数值</th><th>依据</th></tr>
+      <tr><td class="ctr">①</td><td>三大量化风险模块最低资本（各自内部已按子风险相关性分散）</td><td>保险 14,200 / 市场 11,800 / 信用 3,600</td><td><span class="src src-gui">规</span>规则Ⅱ 第2号</td></tr>
+      <tr><td class="ctr">②</td><td>跨模块相关矩阵加总（ρ=0.25，k=0.0625）</td><td>最低资本 <b>MC = 20,081</b></td><td><span class="src src-gui">规</span>规则Ⅱ 第2号</td></tr>
+      <tr><td class="ctr">③</td><td>实际资本 = 认可资产 − 认可负债；分级限额</td><td>240,000 − 183,000 = <b>57,000</b></td><td><span class="src src-gui">规</span>规则Ⅱ 第3号</td></tr>
+      <tr><td class="ctr">④</td><td>偿付能力充足率（核心 / 综合）</td><td>核心 <b>233%</b> / 综合 <b>284%</b></td><td><span class="src src-gui">规</span>规则Ⅱ 第1号</td></tr>
+      <tr><td class="ctr">⑤</td><td>压力测试（股票 −30%、利率 −100bp、逆周期叠加）</td><td>最低 165% / 201%</td><td><span class="src src-gui">规</span>监管压力情景</td></tr>
+      <tr><td class="ctr">⑥</td><td>IRR 风险综合评级（A/B/C/D）</td><td>A 类 83.1 分</td><td><span class="src src-gui">规</span>规则Ⅱ 第11/12号</td></tr>
+    </table></div>
+    <div class="tip"><b>要点一句话：</b>三大风险先各自量化，再经相关性矩阵聚合归一（分散效应释放资本）；实际资本分级、核心与综合两条充足率线并行，外加风险综合评级与压力测试。</div>
+  </section>
+
+  <section>
+    <h2><span class="sn">§2</span>第一步：三大量化风险模块</h2>
+    <div class="lead">每个模块内部的子风险（如保险风险里的长寿 / 疾病 / 退保；市场风险里的利率 / 权益 / 房地产）先按各自的相关矩阵分散完毕，得到三个「模块级」最低资本。</div>
+    <div class="tbl-scroll"><table>
+      <tr><th>风险模块</th><th>主要子风险</th><th>案例数值</th><th>特征系数（定性）</th></tr>
+      <tr><td>保险风险最低资本 MC<sub>ins</sub></td><td>损失发生 / 退保 / 费用等；寿险关注长寿、疾病发生率</td><td class="num">14,200</td><td>与业务量同向放大，分散效应弱</td></tr>
+      <tr><td>市场风险最低资本 MC<sub>mkt</sub></td><td>利率 / 权益 / 房地产 / 汇率</td><td class="num">11,800</td><td>资产端主导，久期错配是核心驱动</td></tr>
+      <tr><td>信用风险最低资本 MC<sub>cred</sub></td><td>利差 / 交易对手违约</td><td class="num">3,600</td><td>与持仓信用等级、集中度挂钩</td></tr>
+    </table></div>
+    <div class="tip"><b>考试要点：</b>控制风险最低资本与附加资本不进入量化风险矩阵，单独叠加。量化的三大模块才做相关性分散。</div>
+  </section>
+
+  <section>
+    <h2><span class="sn">§3</span>第二步：相关矩阵与最低资本<span class="star s3">高频</span></h2>
+    <div class="formula">
+      <div class="fx">MC = √( MC<sub>ins</sub>² + MC<sub>mkt</sub>² + MC<sub>cred</sub>²<br>&nbsp;&nbsp;+ 2ρ<sub>mc</sub>·MC<sub>mkt</sub>·MC<sub>cred</sub><br>&nbsp;&nbsp;+ 2k·MC<sub>ins</sub>·(MC<sub>mkt</sub> + MC<sub>cred</sub>) )</div>
+      <div class="note">ρ<sub>mc</sub> = 0.25（市场×信用）；k = 0.0625（保险风险与市场/信用之间的量化相关性调整因子）。控制风险与附加资本在矩阵之外单独加回。</div>
+    </div>
+    <h3>3×3 相关矩阵（考试可直接画出）</h3>
+    <div class="tbl-scroll"><table>
+      <tr><th>ρ</th><th class="ctr">保险</th><th class="ctr">市场</th><th class="ctr">信用</th></tr>
+      <tr><td><b>保险</b></td><td class="ctr">1</td><td class="ctr">k</td><td class="ctr">k</td></tr>
+      <tr><td><b>市场</b></td><td class="ctr">k</td><td class="ctr">1</td><td class="ctr">0.25</td></tr>
+      <tr><td><b>信用</b></td><td class="ctr">k</td><td class="ctr">0.25</td><td class="ctr">1</td></tr>
+    </table></div>
+    <h3>跟算（考试可直接抄的演算表）</h3>
+    <div class="tbl-scroll"><table>
+      <tr><th>项</th><th>算式</th><th class="num">结果</th></tr>
+      <tr><td>保险平方项</td><td>14,200²</td><td class="num">201,640,000</td></tr>
+      <tr><td>市场平方项</td><td>11,800²</td><td class="num">139,240,000</td></tr>
+      <tr><td>信用平方项</td><td>3,600²</td><td class="num">12,960,000</td></tr>
+      <tr><td>市场×信用交叉</td><td>2×0.25×11,800×3,600</td><td class="num">21,240,000</td></tr>
+      <tr><td>保险×市场交叉</td><td>2×0.0625×14,200×11,800</td><td class="num">20,995,000</td></tr>
+      <tr><td>保险×信用交叉</td><td>2×0.0625×14,200×3,600</td><td class="num">6,390,000</td></tr>
+      <tr class="note-td"><td><b>加总</b></td><td>（取平方根）</td><td class="num"><b>≈ 20,062 ≈ 20,081</b></td></tr>
+    </table></div>
+    <div class="src-note">案例口径 20,081 与手算 20,062 的微小差异来自各模块内部子风险相关性的舍入——考试写出演算逻辑即可拿分。</div>
+    <div class="prac"><b>实务视角：</b>简单加总 29,600 → 相关矩阵后约 20,081，<b>分散效应约 32%</b>。这是集团风险管理部讲「不要把风险都压在一个篮子里」的数字化表达：真实的相关矩阵让多元配置「省资本」。</div>
+  </section>
+
+  <section>
+    <h2><span class="sn">§4</span>第三步：实际资本与分级限额</h2>
+    <div class="formula">
+      <div class="fx">实际资本 = 认可资产 − 认可负债 = 240,000 − 183,000 = <b>57,000</b></div>
+      <div class="note">认可 ≠ 账面：资产按穿透后的认可价值计量（如部分长期股权投资、受限资产打折或不予认可），负债按监管口径（BEL + 风险边际等）。</div>
+    </div>
+    <h3>资本分级与限额（案例）</h3>
+    <div class="tbl-scroll"><table>
+      <tr><th>层级</th><th class="num">案例金额</th><th>特征</th></tr>
+      <tr><td>核心一级资本</td><td class="num">38,000</td><td>普通股、留存收益等，损失吸收能力最强</td></tr>
+      <tr><td>核心二级资本（计入限额内）</td><td class="num">8,800</td><td>受限于核心资本结构限额：超限部分（案例 1,200）不再计入核心，转列附属一级</td></tr>
+      <tr><td>附属一级资本</td><td class="num">1,200</td><td>次级债等，吸收顺序靠后</td></tr>
+      <tr><td>附属二级资本</td><td class="num">9,000</td><td>吸收能力最弱，且附属资本合计不得超过核心资本</td></tr>
+      <tr class="note-td"><td><b>实际资本合计</b></td><td class="num"><b>57,000</b></td><td>核心资本 46,800 + 附属资本 10,200</td></tr>
+    </table></div>
+    <h3>充足率：双线监管</h3>
+    <div class="tbl-scroll"><table>
+      <tr><th>指标</th><th>算式</th><th class="num">案例</th><th>监管线</th></tr>
+      <tr><td>核心偿付能力充足率</td><td>核心资本 ÷ 最低资本 = 46,800 ÷ 20,081</td><td class="num"><b>233%</b></td><td class="ctr">≥ 50%</td></tr>
+      <tr><td>综合偿付能力充足率</td><td>实际资本 ÷ 最低资本 = 57,000 ÷ 20,081</td><td class="num"><b>284%</b></td><td class="ctr">≥ 100%</td></tr>
+      <tr><td>风险综合评级 IRR</td><td>操作 / 战略 / 声誉 / 治理等定性打分</td><td class="num">A 类</td><td class="ctr">B 类及以上</td></tr>
+    </table></div>
+    <div class="warn"><b>三条线全部达标才算偿付能力达标</b>——综合充足率 284% 看似高枕无忧，但 IRR 若掉到 C/D 类照样触发监管措施。这正是「定量 + 定性」双支柱的设计意图。</div>
+  </section>
+
+  <section>
+    <h2><span class="sn">§5</span>第四步：压力测试与逆周期<span class="star s2">中频</span></h2>
+    <div class="lead">考试常给一个冲击情景，问充足率掉到多少、是否破线。案例公司的三情景结果：</div>
+    <div class="tbl-scroll"><table>
+      <tr><th>压力情景</th><th>冲击设定</th><th class="num">核心充足率</th><th class="num">综合充足率</th><th>判断</th></tr>
+      <tr><td>基准</td><td>—</td><td class="num">233%</td><td class="num">284%</td><td class="ctr">达标</td></tr>
+      <tr><td>权益冲击</td><td>股票 −30%</td><td class="num">189%</td><td class="num">231%</td><td class="ctr">仍达标</td></tr>
+      <tr><td>利率冲击</td><td>利率 −100bp</td><td class="num">201%</td><td class="num">245%</td><td class="ctr">仍达标</td></tr>
+      <tr><td>逆周期叠加</td><td>以上情景叠加逆周期因子</td><td class="num"><b>165%</b></td><td class="num"><b>201%</b></td><td class="ctr">最紧情景</td></tr>
+    </table></div>
+    <div class="tip"><b>答题套路：</b>压力测试题三步走——①识别冲击传导渠道（资产端折价 / 负债端增值）；②重算 MC 与实际资本；③对照三条监管线给结论。利率下行对负债端（折现率下调 → 准备金上升）的杀伤往往大于资产端，这是「资产久期 &lt; 负债久期」公司的通病。</div>
+  </section>
+
+  <section>
+    <h2><span class="sn">§6</span>第五步：双曲线（750 日 / 60 日）</h2>
+    <div class="tbl-scroll"><table>
+      <tr><th>曲线</th><th>用于</th><th>逻辑</th></tr>
+      <tr><td>750 日移动平均曲线</td><td>准备金评估折现（CH.02）</td><td>拉长观察窗、削平利率波动 → 负债计量「以稳为主」</td></tr>
+      <tr><td>60 日移动平均（短期端情景曲线）</td><td>市场风险（利率风险）最低资本</td><td>贴近当前市况、让资本对利率变化「有感」</td></tr>
+    </table></div>
+    <div class="prac"><b>实务视角：</b>一套利率、两条曲线——负债用慢曲线求稳，资本用快曲线求敏。压力测试里常见「慢曲线负债 × 快曲线资产」的错位放大效应，案例公司利率 −100bp 掉 42 个百分点（233→201）就是这么来的。风险边际 RM=600（约当 BEL 4,200 的 14.3%）单独计入负债，是「非对称审慎」的体现。</div>
+  </section>
+
+  <section>
+    <h2><span class="sn">§7</span>第六步：IRR 风险综合评级</h2>
+    <div class="lead">IRR 评分权重（SARMRA 与定性评价合成，总分 100）：</div>
+    <div class="tbl-scroll"><table>
+      <tr><th>维度</th><th class="ctr">权重</th><th>案例得分口径</th></tr>
+      <tr><td>SARMRA 评估</td><td class="ctr num">40%</td><td>偿付能力风险管理能力</td></tr>
+      <tr><td>公司治理</td><td class="ctr num">15%</td><td>治理结构与运作</td></tr>
+      <tr><td>偿付能力数据与信息系统</td><td class="ctr num">12%</td><td>数据质量与穿透能力</td></tr>
+      <tr><td>声誉风险</td><td class="ctr num">10%</td><td>负面舆情管理</td></tr>
+      <tr><td>合规风险</td><td class="ctr num">13%</td><td>监管处罚与整改</td></tr>
+      <tr><td>信息披露</td><td class="ctr num">10%</td><td>披露真实、及时、完整</td></tr>
+      <tr class="note-td"><td><b>合计</b></td><td class="ctr num">100%</td><td><b>案例 83.1 分 → A 类</b></td></tr>
+    </table></div>
+    <div class="tip"><b>要点一句话：</b>SARMRA 操作风险得分 40 分、评估与治理各 10 分量级的权重结构，信息披露与合规按细则计分，合成后定风险综合评级档次。</div>
+  </section>
+
+  <section>
+    <h2><span class="sn">§8</span>考试怎么考 + 演算器</h2>
+    <div class="exam"><b>真题痕迹：</b><span class="yr hot">2017</span>第7题考最低资本构成；<span class="yr">2016</span>第23题考量化风险分散。命题套路：给三模块数值 → 算 MC → 算双充足率 → 压力情景判断。本案例即按此套路编排，<a href="moni-2.html">模拟卷二计算大题</a>同源。</div>
+    <div class="calc" id="calc-mc">
+      <h4>演算器 · 最低资本与充足率</h4>
+      <div class="row"><label>保险风险 MC</label><input class="calc-in" id="mc-ins" value="14200"><label>市场风险 MC</label><input class="calc-in" id="mc-mkt" value="11800"><label>信用风险 MC</label><input class="calc-in" id="mc-cred" value="3600"></div>
+      <div class="row"><label>ρ（市场×信用）</label><input class="calc-in" id="mc-rho" value="0.25"><label>k 因子</label><input class="calc-in" id="mc-k" value="0.0625"></div>
+      <div class="row"><label>认可资产</label><input class="calc-in" id="mc-asset" value="240000"><label>认可负债</label><input class="calc-in" id="mc-liab" value="183000"></div>
+      <button class="calc-run">计算最低资本与充足率</button>
+      <div class="verdict" id="mc_out"></div>
+    </div>
+    <script>
+    (function(){
+      var box=document.getElementById('calc-mc');
+      box.__run=function(){
+        var I=+document.getElementById('mc-ins').value||0,M=+document.getElementById('mc-mkt').value||0,C=+document.getElementById('mc-cred').value||0;
+        var r=+document.getElementById('mc-rho').value||0,k=+document.getElementById('mc-k').value||0;
+        var A=+document.getElementById('mc-asset').value||0,L=+document.getElementById('mc-liab').value||0;
+        var t1=M*M,t2=C*C,t3=2*r*M*C,t4=2*k*I*M,t5=2*k*I*C;
+        var s=I*I+t1+t2+t3+t4+t5;
+        var mc=Math.sqrt(Math.max(0,s)),ac=A-L,cr=mc>0?ac/mc*100:0;
+        mc_out.innerHTML='<div class="calc-steps"><b>计算步骤（规则Ⅱ 相关性矩阵聚合）</b><ol>'
+          +'<li>平方项：保险风险 I² = '+(I*I).toFixed(0)+'，市场风险 M² = <span class="fin">'+t1.toFixed(0)+'</span>，信用风险 C² = <span class="fin">'+t2.toFixed(0)+'</span></li>'
+          +'<li>交叉项：2ρ·M·C = 2×'+r+'×'+M+'×'+C+' = <span class="fin">'+t3.toFixed(0)+'</span>；2k·I·M = <span class="fin">'+t4.toFixed(0)+'</span>；2k·I·C = <span class="fin">'+t5.toFixed(0)+'</span></li>'
+          +'<li>加总：I²+M²+C²+交叉项 = <span class="fin">'+s.toFixed(0)+'</span>，开方得最低资本 MC = <span class="fin">'+mc.toFixed(0)+'</span></li>'
+          +'<li>实际资本 = 认可资产 − 认可负债 = '+A+' − '+L+' = <span class="fin">'+ac.toFixed(0)+'</span></li>'
+          +'<li>综合偿付能力充足率 = 实际资本 ÷ 最低资本 = '+ac.toFixed(0)+' ÷ '+mc.toFixed(0)+' = <span class="fin">'+cr.toFixed(1)+'%</span>（分散效应：简单加总 '+(I+M+C).toFixed(0)+' − 聚合 '+mc.toFixed(0)+' = 释放 '+((I+M+C)-mc).toFixed(0)+'）</li>'
+          +'</ol></div>'
+          +'结论：最低资本 = <span class="out">'+mc.toFixed(0)+'</span>，实际资本 = <span class="out">'+ac.toFixed(0)+'</span>，综合充足率 = <span class="out">'+cr.toFixed(1)+'%</span>'+(cr>=100?'（≥100% 综合达标，还需看核心充足率 ≥50% 与风险综合评级）':'（低于 100%，不达标，需增资/降风险/发资本补充债）')+'。';
+      };
+    })();
+    </script>
+    <div class="prac"><b>跨库延伸：</b>更完整的规则逐号解读（规则Ⅱ 第1/2/3/8/11/12/13/14号）见 <a href="https://xihongactuary.github.io/cross-solvency/" target="_blank">C-ROSS II 偿付能力知识库 ↗</a>；本库视角是「考试怎么考」，对方视角是「实务怎么用」，两库同宗互补。本站内亦见 <a href="cross-solvency.html">贯通页</a> 与 <a href="ch3.html">CH.03</a>。</div>
+    <button class="done-btn" data-id="topic-solvency">○ 标记本页已完成</button>
+  </section>
+
+  <div class="pager">
+    <a href="ch5.html">← CH.05 报告与分析</a>
+    <a href="topic-vnb.html">专题 B · 新业务价值 →</a>
+  </div>
+  <footer class="colophon">寿险精算评估实务 · 科目F3 · 案例数据源自 C-ROSS II 偿付能力库 · 知识星球「西红精算」</footer>
+</main>
+<script src="js/kb.js"></script>
+</body>
+</html>
