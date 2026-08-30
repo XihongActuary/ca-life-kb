@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CH.01 基本概念与原理 · 寿险精算评估实务 · 科目F3</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<aside class="side">
+  <div class="brand"><b>寿险精算评估实务</b><span>科目F3 · 正精算师（寿险）</span></div>
+    <nav>
+    <a href="xihong.html">关于 · 西红精算</a>
+    <a href="index.html">首页 · 考试全景</a>
+    <a href="about.html">本库说明 · 编法与用法</a>
+    <div class="grp">五大篇章（考纲权重）</div>
+    <a href="ch1.html" class="on">CH.01 概念与原理<span class="w">5%</span></a>
+    <a href="ch2.html">CH.02 责任准备金<span class="w">20%</span></a>
+    <a href="ch3.html">CH.03 偿付能力监管<span class="w">30%</span></a>
+    <a href="ch4.html">CH.04 企业会计准则<span class="w">30%</span></a>
+    <a href="ch5.html">CH.05 报告与分析<span class="w">15%</span></a>
+    <div class="grp">拓展专题（不止于考纲）</div>
+    <a href="topic-solvency.html">专题·偿付能力实务</a>
+    <a href="topic-vnb.html">专题·新业务价值</a>
+    <a href="topic-ifrs17.html">专题·IFRS17与CSM</a>
+    <a href="topic-liyuan.html">专题·利源分析三差</a>
+    <a href="topic-ev.html">专题·内含价值</a>
+    <a href="topic-products.html">专题·产品精算与定价</a>
+    <div class="grp">真题 / 模拟 / 资料</div>
+    <a href="zhenti.html">真题馆</a>
+    <a href="moni-1.html">模拟卷一 · 筑基</a>
+    <a href="moni-2.html">模拟卷二 · 新则</a>
+    <a href="moni-3.html">模拟卷三 · 冲刺</a>
+    <a href="references.html">参考资料库</a>
+    <a href="cross-solvency.html">C-ROSS II 贯通页</a>
+  </nav>
+  <div class="prog-mini">学习进度 <b>0 / 13</b></div>
+</aside>
+
+<main class="main">
+  <div class="ch-head">
+    <div class="no">CHAPTER 01</div>
+    <h1>基本概念与原理</h1>
+    <div class="sub">精算评估的原理与方法 · 过去法与未来法 · 三大评估体系 · 各类评估特点</div>
+    <div class="meta"><span>考纲权重 5%</span><span>地基篇</span><span>章内知识图谱 + 核心答案速查</span></div>
+    <div class="wbar"><div class="lab"><span>考纲投入比</span><span>5%</span></div><div class="bar"><i style="width:5%"></i></div></div>
+  </div>
+  <div class="src-note">本章来源：<span class="src src-jiao">教</span>林红《个人寿险与年金精算实务》§9.1（准备金评估的原理）——考纲一「精算评估的原理与方法、分类依据与结果、各类评估特点」的直接出处；<span class="src src-gui">规</span>评估体系的监管属性贯穿 90/67/8/335/118/121 号文；<span class="src src-ti">题</span>2014·16（定价三原则，原理桥接）。旧 F3 的产品开发/渠道/ERM 内容已移驻 <a href="topic-products.html">专题·产品精算与定价</a>，本章专注评估本身。</div>
+
+  <div class="toc"><b>本页导览</b>
+    <ol><li>章内知识图谱</li><li>评估的定义与三大基本问题</li><li>基本方法一：未来法</li><li>基本方法二：过去法（双算互证）</li><li>评估的分类：三大体系对照</li><li>各类评估的特点与相互关系</li><li>评估流程与假设体系</li><li>演算器 · 双法互证</li><li>核心答案速查表</li><li>教材深挖：预定利率与生命表的监管变迁</li><li>真题印证与自测</li></ol>
+  </div>
+
+  <section id="arch">
+    <h2><span class="sn">图谱</span>章内知识图谱<span class="star s1">导航</span></h2>
+    <div class="arch">
+      <div class="arch-top"><b>CH.01 · 基本概念与原理</b><div class="meta"><span>考纲权重 5%</span><span>全库地基</span><span>教材 §9.1</span></div></div>
+      <div class="arch-flow"><i>原理 → 方法 → 分类 → 特点</i><span>——— 四步即考纲一的四个考点 ———</span></div>
+      <div class="arch-grid">
+        <a class="arch-card" href="#s1"><div class="ac-top"><span class="ac-no">A1</span><span class="ac-wt">概念</span></div><h4>评估的定义与三大问题</h4><p>欠多少（负债）· 够不够（资本）· 值多少（价值）——一切评估都是这三问的规则化回答。</p></a>
+        <a class="arch-card" href="#s2"><div class="ac-top"><span class="ac-no">A2</span><span class="ac-wt hot">高频</span></div><h4>未来法 Prospective</h4><p>V = PV(未来流出) − PV(未来流入)；实务主流，假设敏感。</p></a>
+        <a class="arch-card" href="#s3"><div class="ac-top"><span class="ac-no">A3</span><span class="ac-wt">互证</span></div><h4>过去法 Retrospective</h4><p>V = 净保费累积 − 给付累积；例 9-3/9-4 双法同得 315.3 元。</p></a>
+        <a class="arch-card key" href="#s4"><div class="ac-top"><span class="ac-no">A4</span><span class="ac-wt hot">必背</span></div><h4>三大评估体系（表9-1）</h4><p>法定 / 财务报告 / 税收——目的、关注方、假设、方法六行对照。</p></a>
+        <a class="arch-card" href="#s5"><div class="ac-top"><span class="ac-no">A5</span><span class="ac-wt">特点</span></div><h4>各类评估特点</h4><p>法定三特点：简单易懂 · 相对公平 · 相对保守。</p></a>
+        <a class="arch-card spec" href="#s6"><div class="ac-top"><span class="ac-no">A6</span><span class="ac-wt">底座</span></div><h4>流程与假设体系</h4><p>六步流程 + 三类假设（经济/经验/行为），是 CH.02–05 共用底座。</p></a>
+      </div>
+      <div class="arch-hint">往下走向：原理 → <a href="ch2.html">CH.02 责任准备金（法定逐险种）</a> → <a href="ch3.html">CH.03 偿付能力</a> → <a href="ch4.html">CH.04 会计准则</a> → <a href="ch5.html">CH.05 报告与分析</a></div>
+    </div>
+  </section>
+
+  <section id="s1">
+    <h2><span class="sn">§1.1</span>评估的定义与三大基本问题<span class="star s1">概念</span></h2>
+    <div class="lead">精算评估，是保险公司在特定<b>目的</b>与<b>规则</b>约束下，对未来现金流进行量化计量，从而回答「负债多少、资本够不够、公司值多少」的过程。</div>
+    <p>同一个存量业务，在不同目的下会得出不同数字——这不是矛盾，而是评估的<b>多口径属性</b>：目的决定规则，规则决定假设，假设决定结果。理解这一点是全科目第一块地基。</p>
+    <div class="tbl-scroll"><table>
+      <tr><th>基本问题</th><th>评估对象</th><th>核心输出</th><th>主要规则来源</th><th>本库章节</th></tr>
+      <tr><td><b>欠多少</b>（负债计量）</td><td>有效保单未来给付义务</td><td>责任准备金 / 保险合同负债</td><td>精算规定 90·67·8·335·121 号；CAS25</td><td><a href="ch2.html">CH.02</a> / <a href="ch4.html">CH.04</a></td></tr>
+      <tr><td><b>够不够</b>（资本充足）</td><td>认可资产 − 认可负债</td><td>核心/综合偿付能力充足率</td><td>偿二代规则（偿付能力监管规则Ⅱ）</td><td><a href="ch3.html">CH.03</a></td></tr>
+      <tr><td><b>值多少</b>（价值衡量）</td><td>调整净资产 + 有效业务价值</td><td>内含价值 EV / 新业务价值 VNB</td><td>精算实务指引（EV 自由裁量）</td><td><a href="topic-ev.html">专题·内含价值</a></td></tr>
+    </table></div>
+    <div class="tip"><b>评估与定价的分野：</b>定价面向「尚未卖出的未来」，用最优估计+风险边际+利润附加，追求充分、公平、合理；评估面向「已经生效的存量」，服从法定/会计/税收等外部规则。二者的假设可以不同——这正是利源分析（<a href="ch5.html">CH.05</a>）产生「三差」的根源。</div>
+  </section>
+
+  <section id="s2">
+    <h2><span class="sn">§1.2</span>基本方法一：未来法<span class="star s3">高频</span></h2>
+    <div class="lead">未来法从「评估日往后看」：准备金等于未来所有给付与费用的现值，减去未来所有净保费的现值。</div>
+    <div class="formula"><div class="fx">未来法：V<sub>t</sub> = PV(未来保险给付 + 未来维持费用) − PV(未来净保费)</div><div class="note">流入与流出都取精算现值（考虑生存、死亡、退保概率），贴现用评估利率。教材 §9.1 原式。</div></div>
+    <h3>未来法的特点</h3>
+    <div class="tbl-scroll"><table>
+      <tr><th>维度</th><th>说明</th></tr>
+      <tr><td><b>实务地位</b></td><td>法定准备金评估的主流方法，几乎所有长期险种评估均以未来法为基础（教材明确：未来法在实务中的应用更广泛）</td></tr>
+      <tr><td><b>信息需求</b></td><td>只需评估日之后的现金流假设：死亡率、退保率、费用率、评估利率</td></tr>
+      <tr><td><b>敏感方向</b></td><td>对贴现率与发生率假设高度敏感——利率下行 50bp，长期年金准备金可能上升数个百分点</td></tr>
+      <tr><td><b>天然适配</b></td><td>GPV 充足性测试（121号）、CAS25 负债计量、内含价值 VIF，全部建立在未来法框架上</td></tr>
+    </table></div>
+    <div class="prac"><b>实务提示：</b>万能险的「保单账户价值」本身是逐期递推结算出来的，属于过去法思想的产物；但万能<b>非账户</b>部分的评估（未来结算利益承诺）仍靠未来法兜底——两类方法在同一个产品里各司其职。</div>
+  </section>
+
+  <section id="s3">
+    <h2><span class="sn">§1.3</span>基本方法二：过去法（双算互证）<span class="star s2">常考</span></h2>
+    <div class="lead">过去法从「评估日往回看」：准备金等于已缴净保费按评估利率的累积值，减去已付保险金的累积值。</div>
+    <div class="formula"><div class="fx">过去法：V<sub>t</sub> = [净保费累积至 t 时点] − [已发生给付累积至 t 时点] ＝ 净保费终值 − 给付终值</div><div class="note">理论上与未来法结果恒等（现金流的会计恒等式），实务中因假设与计算路径不同而互为校验。</div></div>
+    <h3>教材例 9-3 / 9-4：同一张两全保单，双法互证</h3>
+    <div class="tbl-scroll"><table>
+      <tr><th>项目</th><th>取值</th><th>说明</th></tr>
+      <tr><td>保单形态</td><td>两全保险</td><td>死亡给付与生存给付双重义务</td></tr>
+      <tr><td>年缴保费</td><td>304.2 元</td><td>题目给定毛保费口径下演算</td></tr>
+      <tr><td>评估利率</td><td>5%</td><td>用于现值/终值换算</td></tr>
+      <tr><td>死亡率</td><td>q 随年龄 0.6% → 0.65% → 0.75%</td><td>逐年递增，体现经验生命表特征</td></tr>
+      <tr><td><b>未来法结果</b></td><td><b>315.3 元</b></td><td>例 9-3：PV(未来给付) − PV(未来净保费)</td></tr>
+      <tr><td><b>过去法结果</b></td><td><b>315.3 元</b></td><td>例 9-4：净保费累积 − 给付累积，与未来法完全一致</td></tr>
+      <tr class="note-td"><td colspan="3"><b>判分要点：</b>双法同值不是巧合，而是「准备金 = 已积累未了责任」的两种记账方向。答题时先写公式、再列现金流、最后两法并列对照，是最稳妥的展示结构。</td></tr>
+    </table></div>
+    <div class="tip"><b>双法关系一句话：</b>未来法与过去法在理论上恒等——两法是同一条现金流的两种记账方向，实务中互为校验手段（见 §1.7 演算器）。</div>
+  </section>
+
+  <section id="s4">
+    <h2><span class="sn">§1.4</span>评估的分类：三大体系对照<span class="star s3">必背</span></h2>
+    <div class="lead">按<b>评估目的</b>划分，准备金评估形成三大体系——法定、财务报告（会计）、税收。教材表 9-1 六行对照，是考纲「分类依据与结果」的直接考点。</div>
+    <div class="tbl-scroll"><table>
+      <tr><th>对照维度</th><th>法定评估</th><th>财务报告评估（会计）</th><th>税收评估</th></tr>
+      <tr><td><b>评估目的</b></td><td>偿付能力监管，保护保单持有人</td><td>公允反映经营成果与财务状况</td><td>确定应纳税所得，税收公平</td></tr>
+      <tr><td><b>主要关注方</b></td><td>监管机构（金融监管总局）</td><td>投资者、债权人、分析师</td><td>税务机关</td></tr>
+      <tr><td><b>准备金数额</b></td><td>偏保守，通常不低于其他口径</td><td>最佳估计 + 边际，相对中性</td><td>依税法规则，防止利润操纵</td></tr>
+      <tr><td><b>假设取向</b></td><td>监管统一规定（评估利率、生命表、修正方法）</td><td>公司自定 + 准则约束（当前信息、不锁定折现率）</td><td>税法法定，较少调整空间</td></tr>
+      <tr><td><b>评估方法</b></td><td>净保费法 / 修正净保费法（FPT、Zillmer），统一性强</td><td>现金流贴现 + 边际（剩余边际、风险边际），模型化程度高</td><td>多在法定或会计口径上调整</td></tr>
+      <tr><td><b>复杂程度</b></td><td>简单、统一、可复核</td><td>最复杂（分组、锁定与解锁、摊销因子）</td><td>相对简单，跟随性强</td></tr>
+    </table></div>
+    <div class="tip"><b>一图记忆：</b>法定评估「稳」——规则统一，保守为先；会计评估「真」——反映真实经营，允许多空波动；税收评估「平」——削峰填谷，反避税。三体系回答三拨人：监管、投资者、税务机关。</div>
+  </section>
+
+  <section id="s5">
+    <h2><span class="sn">§1.5</span>各类评估的特点与相互关系<span class="star s2">特点</span></h2>
+    <div class="lead">考纲一第三个考点「各类评估特点」——重点背法定评估三特点，再掌握各体系的衔接关系。</div>
+    <h3>法定评估的三大特点（教材 §9.1）</h3>
+    <div class="tbl-scroll"><table>
+      <tr><th>特点</th><th>含义</th><th>为什么</th></tr>
+      <tr><td><b>简单易懂</b></td><td>方法与假设全国统一，任何人可复核</td><td>监管需要大规模可比：千家公司一把尺</td></tr>
+      <tr><td><b>相对公平</b></td><td>不同公司、不同产品适用同一规则</td><td>避免「挑规则」套利，保证同台竞技</td></tr>
+      <tr><td><b>相对保守</b></td><td>评估利率、生命表均从审慎角度选取</td><td>为极端不利情景预留安全垫，保护保单持有人</td></tr>
+    </table></div>
+    <h3>三体系的衔接关系（向下兼容，各有增量）</h3>
+    <ul>
+      <li><b>法定 → 偿付能力</b>：偿二代直接使用法定口径基础上的认可负债，叠加最低资本要求（<a href="ch3.html">CH.03</a>）。</li>
+      <li><b>会计 → 法定</b>：CAS25 引入最佳估计+剩余边际+风险边际后，会计准备金与法定准备金差异显性化，差异本身就是监管「逆周期校准」的观察点。</li>
+      <li><b>税收 → 会计/法定</b>：税收口径通常以会计或法定结果为起点做纳税调整，不另起炉灶。</li>
+      <li><b>数额差异的成因</b>：折现率（法定锁定 vs 会计不锁定）、边际（法定含内含保守边际 vs 会计显性两边际）、假设更新频率（法定慢 vs 会计每年重估）。</li>
+    </ul>
+    <div class="exam"><span class="yr">真题 2014·16</span>（论述，桥接题）<b>题干：</b>人身保险产品定价应遵循哪些基本原则？请分别阐述各原则的内涵，并说明定价原则与法定准备金评估的保守性要求之间的内在联系。<div class="ans-skel"><b>骨架：</b>①定价三原则（充足性/公平性/合理性）管「未来收多少」；②评估体系（保守性/统一性/可复核性）管「存量欠多少」；③定价不足终将表现为评估口径下的准备金缺口与资本侵蚀——两个环节共用同一套发生率与利率假设。</div>
+      <details class="answer"><summary>完整答题过程</summary><div class="body ans-detail">
+        <h3>第一部分：定价三原则（6 分）</h3>
+        <table>
+          <tr><th>原则</th><th>内涵</th><th>失衡的后果</th></tr>
+          <tr><td><b>充足性</b></td><td>保费收入须足以覆盖未来给付、费用与合理利润——预定发生率、利率、费用率的估计不失真</td><td>定价不足 → 准备金缺口 → 偿付能力侵蚀</td></tr>
+          <tr><td><b>公平性</b></td><td>不同风险等级的投保人按各自风险缴对应保费，同质同价、异质异价</td><td>逆选择：优质体流失、次标准体集中</td></tr>
+          <tr><td><b>合理性</b></td><td>保费与给付责任、经营成本之间保持合理对应，不虚高牟利</td><td>损害投保人利益、产品竞争力丧失</td></tr>
+        </table>
+        <h3>第二部分：与评估保守性的内在联系（6 分）</h3>
+        <table>
+          <tr><th>环节</th><th>把关原则</th><th>失衡后果</th></tr>
+          <tr><td>定价（事前）</td><td>充足性 / 公平性 / 合理性</td><td>费差损、利差损、逆选择</td></tr>
+          <tr><td>评估（事中）</td><td>保守性 / 统一性 / 可复核性</td><td>准备金缺口 → 偿付能力下降</td></tr>
+          <tr><td>偿付能力（事后）</td><td>资本充足率红线</td><td>监管介入、增资或停售</td></tr>
+          <tr class="note-td"><td colspan="3">三环节闭环：定价假设失真 → 经验分析（<a href="ch5.html">CH.05</a>）发现 → 评估假设更新 → 资本与产品策略调整。</td></tr>
+        </table>
+        <p><b>结论句（背诵）：</b>定价管「未来收多少」，评估管「存量欠多少」；定价的充足性对应评估的保守性——同源假设、互为镜像，定价失真终将在评估口径显形。</p>
+        <div class="src-note">溯源：2014 年真题第 16 题（回忆版）；定价三原则见教材产品开发章节，评估保守性见 §9.1。</div>
+      </div></details>
+    </div>
+  </section>
+
+  <section id="s6">
+    <h2><span class="sn">§1.6</span>评估流程与假设体系<span class="star s2">底座</span></h2>
+    <div class="lead">无论哪套体系，一次完整的精算评估都遵循同一套流程骨架，并共用三类假设。</div>
+    <h3>六步流程（教材 §6.6 经验分析框架的推广）</h3>
+    <ol>
+      <li><b>确定观察期与范围</b>：哪些保单、哪个评估日、哪个口径。</li>
+      <li><b>数据采集与筛选</b>：剔除无效记录（如生效日晚于观察期末、日期非法）——2017 真题经验率分析题的核心步骤。</li>
+      <li><b>方法选择</b>：未来法/过去法、逐单/分组、均衡净保费/修正法。</li>
+      <li><b>假设设定</b>：经济、经验、行为三类假设，注意一致性（死亡率假设与核保规则、费用假设与费用分摊口径互相咬合）。</li>
+      <li><b>计算与校验</b>：双法互证、上期滚动衔接、A/E 检验。</li>
+      <li><b>结果运用与报告</b>：进入精算报告（45号编报规则，<a href="ch5.html">CH.05</a>）。</li>
+    </ol>
+    <h3>三类假设（全科目通用的分类框架）</h3>
+    <div class="tbl-scroll"><table>
+      <tr><th>假设类别</th><th>内容</th><th>谁定</th><th>更新频率</th></tr>
+      <tr><td><b>经济假设</b></td><td>评估利率 / 投资收益率 / 通胀</td><td>监管公布或市场基准（国债曲线+溢价）</td><td>每年（会计）/ 锁定（法定）</td></tr>
+      <tr><td><b>经验假设</b></td><td>死亡率 / 退保率 / 费用率 / 疾病发生率</td><td>公司经验分析 + 行业生命表</td><td>经验积累驱动</td></tr>
+      <tr><td><b>行为假设</b></td><td>缴费弹性 / 部分领取 / 情景选择</td><td>公司判断 + 历史行为</td><td>定期复核</td></tr>
+    </table></div>
+    <div class="tip"><b>假设一致性三问</b>（教材 §6.5「其他考虑」）：①死亡率假设与核保宽严是否匹配？②费用假设与费用分摊口径是否同源？③投资收益假设与资产配置是否对应？三问对不上，评估结果必然失真。</div>
+  </section>
+
+  <section id="calc">
+    <h2><span class="sn">§1.7</span>演算器 · 过去法 / 未来法双算互证</h2>
+    <div class="lead">输入同一时点的两法数据，验证「双法同值」——教材例 9-3/9-4 的互动版。差值应接近 0，否则说明假设口径不一致。</div>
+    <div class="calc" id="calc-2way">
+      <h4>双法互证计算器</h4>
+      <div class="row"><label>未来给付现值 PV(B)</label><input class="calc-in" id="w_b" value="1260" type="number"><span>元</span></div>
+      <div class="row"><label>未来净保费现值 PV(P)</label><input class="calc-in" id="w_p" value="944.7" type="number"><span>元</span></div>
+      <div class="row"><label>过去净保费累积 AV(P)</label><input class="calc-in" id="a_p" value="1000" type="number"><span>元</span></div>
+      <div class="row"><label>过去给付累积 AV(C)</label><input class="calc-in" id="a_c" value="684.7" type="number"><span>元</span></div>
+      <button class="calc-run">计算两法准备金</button>
+      <div class="verdict" id="w_out"></div>
+    </div>
+    <script>
+      (function(){
+        var box=document.getElementById('calc-2way');
+        box.__run=function(){
+          var wb=+w_b.value,wp=+w_p.value,ap=+a_p.value,ac=+a_c.value;
+          var vf=wb-wp, va=ap-ac, d=vf-va;
+          w_out.innerHTML='<div class="calc-steps"><b>计算步骤</b><ol>'
+            +'<li>未来法：V<sub>f</sub> = PV(B) − PV(P) = '+wb.toFixed(1)+' − '+wp.toFixed(1)+' = <span class="fin">'+vf.toFixed(1)+'</span> 元</li>'
+            +'<li>过去法：V<sub>r</sub> = AV(P) − AV(C) = '+ap.toFixed(1)+' − '+ac.toFixed(1)+' = <span class="fin">'+va.toFixed(1)+'</span> 元</li>'
+            +'<li>互证校验：d = '+vf.toFixed(1)+' − '+va.toFixed(1)+' = <span class="fin">'+d.toFixed(2)+'</span> 元（判定阈值 |d| &lt; 0.5 元）</li>'
+            +'</ol></div>'
+            +(Math.abs(d)<0.5?'<b>✔ 双法互证通过</b>：两法差值仅 '+d.toFixed(2)+' 元，准备金口径一致。'
+            :'⚠ 两法差值 '+d.toFixed(2)+' 元——检查贴现率、发生率与累积口径是否同源。');
+        };
+      })();
+    </script>
+    <div class="note" style="font-size:12.8px;color:var(--ink-2)">公式：<span class="formula" style="margin:8px 0"><span class="fx">未来法 V = PV(B) − PV(P)　；　过去法 V = AV(P) − AV(C)</span><span class="note">默认值即例 9-3/9-4 量级（结果 315.3 元）：PV(B)=1260 − PV(P)=944.7 = 315.3。</span></span></div>
+  </section>
+
+  <section id="quick">
+    <h2><span class="sn">速查</span>核心答案速查表<span class="star s1">考前</span></h2>
+    <div class="lead">考前 30 秒过一遍本章全部「问 → 答」。</div>
+    <div class="tbl-scroll"><table>
+      <tr><th>考点问题</th><th>核心答案</th></tr>
+      <tr><td>精算评估回答哪三大问题？</td><td>欠多少（负债）、够不够（资本）、值多少（价值）</td></tr>
+      <tr><td>未来法公式？</td><td>V = PV(未来给付+费用) − PV(未来净保费)；实务主流</td></tr>
+      <tr><td>过去法公式？</td><td>V = 净保费累积值 − 已付给付累积值；与未来法恒等</td></tr>
+      <tr><td>双法互证的教材案例？</td><td>例 9-3/9-4 两全保单（保费 304.2、利率 5%、q 0.6%~0.75%），双法均得 315.3 元</td></tr>
+      <tr><td>按目的分三大评估体系？</td><td>法定（监管）、财务报告（投资者）、税收（税务机关）</td></tr>
+      <tr><td>法定评估三特点？</td><td>简单易懂、相对公平、相对保守</td></tr>
+      <tr><td>三体系数额差异成因？</td><td>折现率锁定与否、边际处理（内含 vs 显性）、假设更新频率</td></tr>
+      <tr><td>评估假设三分类？</td><td>经济（利率/通胀）、经验（死亡/退保/费用）、行为（缴费弹性）</td></tr>
+      <tr><td>评估六步流程？</td><td>定范围 → 采数据 → 选方法 → 设假设 → 算与验 → 报与用</td></tr>
+      <tr><td>评估与定价的分野？</td><td>定价管未来产品（最优估计+利润），评估管存量负债（服从规则）</td></tr>
+    </table></div>
+  </section>
+
+  <section id="dig">
+    <h2><span class="sn">深挖</span>教材深挖：预定利率与生命表的监管变迁</h2>
+    <p class="lead">为什么三套评估体系会得出三个不同的数字？根源在<b>监管参数的迭代史</b>——预定利率与生命表每变一次，法定口径就与会计口径拉开一段距离。</p>
+    <details class="big">
+      <summary><b>教材深挖：预定利率上限变迁 × 生命表迭代 × 三口径数值方向</b> <span class="star s3">★★★</span></summary>
+      <div class="body">
+      <h3>① 预定利率上限的四次下调（读懂利差损的监管逻辑）</h3>
+      <table>
+        <tr><th>时间</th><th>规则</th><th>普通型预定利率上限</th><th>监管意图</th></tr>
+        <tr><td>1999 年</td><td>保监会紧急降息窗口</td><td>2.5%（一刀切）</td><td>遏制高预定利率存量利差损（彼时银行利率快速下行）</td></tr>
+        <tr><td>2013 年</td><td>保监发〔2013〕62 号（费率市场化改革）</td><td>3.5%（特定产品可上浮 1.15 倍 ≈ 4.025%）</td><td>还定价权于公司，激活产品创新</td></tr>
+        <tr><td>2019—2023 年</td><td>窗口指导 + 银保监办发〔2019〕182 号延伸</td><td>4.025% 叫停 → 3.5% 收紧</td><td>低利率环境下防止新一轮利差损</td></tr>
+        <tr><td>2024 年起</td><td>金发〔2024〕18 号：预定利率动态调整机制</td><td>挂钩研究值（3.0%→2.5% 逐季联动）</td><td>从「静态上限」走向「市场化联动」</td></tr>
+      </table>
+      <div class="warn"><b>深挖要点：</b>预定利率每降一档，<b>存量</b>高预定利率保单的法定准备金不动（锁定），而<b>新增</b>资产收益率随行就市——利差损由此固化。这是理解 CH.03 利率风险资本与 CH.05 利源分析的历史底座。</div>
+      <h3>② 生命表迭代（死亡率的「监管默认假设」）</h3>
+      <table>
+        <tr><th>生命表</th><th>发布/启用</th><th>特点</th><th>对评估的影响</th></tr>
+        <tr><td>CL(2000—2003)</td><td>2005 年发布</td><td>第一张全行业经验生命表细分到年龄别</td><td>存量长险曾长期沿用</td></tr>
+        <tr><td>CL(2010—2013)</td><td>2016 年发布启用</td><td>死亡率较上代表着寿命延长改善；分非养老/养老两表</td><td>年金类准备金上升（生存更久），定期寿险准备金下降</td></tr>
+        <tr><td>公司经验表</td><td>经验积累充分后</td><td>监管允许在行业表基础上结合公司经验调整（需论证）</td><td>评估假设从「统一」走向「个性化」——与法定评估「简单统一」特性形成张力</td></tr>
+      </table>
+      <h3>③ 三口径数值方向的直觉（论述题素材）</h3>
+      <table>
+        <tr><th>情景</th><th>法定口径</th><th>会计口径（CAS25）</th><th>税收口径</th></tr>
+        <tr><td>折现率下行</td><td>锁定评估利率 → 准备金<b>不变</b>（滞后）</td><td>当前市场利率重折 → 负债<b>上升</b>（即时）</td><td>跟随会计/法定，调整幅度受限</td></tr>
+        <tr><td>死亡率改善</td><td>锁定生命表 → 不变</td><td>假设更新 → 年金负债上升、定寿下降</td><td>滞后跟随</td></tr>
+        <tr><td>利润显形时点</td><td>最保守 → 利润后移</td><td>最佳估计+显性边际 → 利润更平滑前移</td><td>削峰填谷</td></tr>
+      </table>
+      <p><b>教材落点：</b>§9.1「评估的原理」全文是本节的骨架；预定利率与生命表演变可延伸阅读《个人寿险与年金精算实务》第 3 章（定价假设）与监管文号（见 <a href="references.html">参考资料库</a> R.2/R.8/R.13）。</p>
+      </div>
+    </details>
+  </section>
+
+  <section id="quiz">
+    <h2><span class="sn">自测</span>真题印证与自测<span class="star s3">考前必做</span></h2>
+    <p class="lead">先遮住答案独立作答，再展开核对——本章真题以概念论述为主，自测以计算+论述各一道闭环。</p>
+    <details>
+      <summary>自测 1（计算，12 分）：双法互证——未来法 / 过去法各算准备金并判断口径一致性</summary>
+      <div class="body">
+      <div class="q-item"><div class="q">某两全保单，评估日有关数据如下：未来给付与费用现值 2,860 元；未来净保费现值 1,735 元；已缴净保费按评估利率累积至评估日 2,180 元；已付给付累积至评估日 1,055 元。<br>求：①未来法准备金；②过去法准备金；③判断两法口径是否一致并说明理由。</div></div>
+      <div class="solution">
+      ①未来法：V = PV(给付+费用) − PV(净保费) = 2,860 − 1,735 = <b>1,125 元</b>（3 分）；<br>
+      ②过去法：V = 净保费累积 − 给付累积 = 2,180 − 1,055 = <b>1,125 元</b>（3 分）；<br>
+      ③两法差值 0 元，口径一致（2 分）；理由：两法是同一现金流的两种记账方向，理论上恒等，差值非零说明贴现率或发生率口径不同源（4 分）。<br>
+      <b>评分要点：</b>公式书写 3 分、两法各 3 分、一致性判断与理由 4 分、结论表述 2 分。
+      </div>
+      </div>
+    </details>
+    <details>
+      <summary>自测 2（论述，12 分）：三大评估体系的差异、成因与衔接</summary>
+      <div class="body">
+      <div class="solution">
+      <b>评分要点：</b>①按目的划分：法定（偿付能力监管，保护保单持有人）、财务报告（公允反映经营成果）、税收（确定应纳税所得）（4 分）；②至少四个维度的对照：目的 / 关注方 / 假设取向（锁定 vs 每年重估）/ 数额倾向（保守 vs 中性 vs 反避税）（4 分）；③成因：三套规则服务三拨人，规则决定假设、假设决定结果（2 分）；④衔接：偿二代以法定口径认可负债叠加最低资本；CAS25 引入两边际后与法定差异显性化，差异本身成为监管观察点；税收以会计或法定为起点做纳税调整（2 分）。<br>
+      <b>结论句：</b>同一存量业务、三个数字，不是矛盾，而是「多口径属性」——目的决定规则，规则决定假设，假设决定结果。
+      </div>
+      </div>
+    </details>
+    <button class="done-btn" data-id="ch1">○ 标记本章已完成</button>
+  </section>
+
+  <div class="pager">
+    <a href="about.html">← 本库说明</a>
+    <a href="ch2.html">CH.02 责任准备金 →</a>
+  </div>
+</main>
+<script src="js/kb.js"></script>
+</body>
+</html>
