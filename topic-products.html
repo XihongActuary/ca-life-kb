@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>专题·产品精算与新型产品规定 · 寿险精算评估实务 · 科目F3</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<aside class="side">
+  <div class="brand"><b>寿险精算评估实务</b><span>科目F3 · 正精算师（寿险）</span></div>
+    <nav>
+    <a href="xihong.html">关于 · 西红精算</a>
+    <a href="index.html">首页 · 考试全景</a>
+    <a href="about.html">本库说明 · 编法与用法</a>
+    <div class="grp">五大篇章（考纲权重）</div>
+    <a href="ch1.html">CH.01 概念与原理<span class="w">5%</span></a>
+    <a href="ch2.html">CH.02 责任准备金<span class="w">20%</span></a>
+    <a href="ch3.html">CH.03 偿付能力监管<span class="w">30%</span></a>
+    <a href="ch4.html">CH.04 企业会计准则<span class="w">30%</span></a>
+    <a href="ch5.html">CH.05 报告与分析<span class="w">15%</span></a>
+    <div class="grp">拓展专题（不止于考纲）</div>
+    <a href="topic-solvency.html">专题·偿付能力实务</a>
+    <a href="topic-vnb.html">专题·新业务价值</a>
+    <a href="topic-ifrs17.html">专题·IFRS17与CSM</a>
+    <a href="topic-liyuan.html">专题·利源分析三差</a>
+    <a href="topic-ev.html">专题·内含价值</a>
+    <a href="topic-products.html" class="on">专题·产品精算与定价</a>
+    <div class="grp">真题 / 模拟 / 资料</div>
+    <a href="zhenti.html">真题馆</a>
+    <a href="moni-1.html">模拟卷一 · 筑基</a>
+    <a href="moni-2.html">模拟卷二 · 新则</a>
+    <a href="moni-3.html">模拟卷三 · 冲刺</a>
+    <a href="references.html">参考资料库</a>
+    <a href="cross-solvency.html">C-ROSS II 贯通页</a>
+  </nav>
+  <div class="prog-mini">学习进度 <b>0 / 13</b></div>
+</aside>
+
+<main class="main">
+  <div class="ch-head">
+    <div class="no">TOPIC · 产品精算</div>
+    <h1>产品精算与新型产品规定</h1>
+    <div class="sub">投连 / 万能 / 分红 / 变额年金 + 费率改革脉络 · 考纲之外但实务必备</div>
+    <div class="meta">
+      <span>来源：<span class="src src-gui">规</span>保监寿险〔2007〕335号、保监发〔2015〕19号、保监发〔2015〕93号、保监发〔2011〕25号、银保监办发〔2020〕7号</span>
+      <span><span class="src src-ti">题</span>2014·7/10/13、2015秋·6/17/19/22/23、2016·22/24</span>
+    </div>
+  </div>
+
+  <div class="src-note">本专题为五大篇章（CH.02 准备金、CH.03 偿付能力）的实务补充：新型产品定价与评估的「监管规则」散见于各产品精算规定。每条结论均标出来源文号，便于回查原文与真题馆互链。</div>
+
+  <button class="done-btn" data-id="topic-products">○ 标记本页已完成</button>
+
+  <div class="toc"><b>本章导览</b>
+    <ol>
+      <li>投连险（投资连结）</li>
+      <li>万能险（含非账户准备金）</li>
+      <li>分红险（含分红特储）</li>
+      <li>变额年金（CD/双轨/MVA）</li>
+      <li>普通型精算规定</li>
+      <li>费率政策改革脉络</li>
+    </ol>
+  </div>
+
+  <!-- ===================== 1 投连险 ===================== -->
+  <section id="sec-tl">
+    <h2><span class="sn">1</span>投资连结保险 <span class="star s2">中频</span></h2>
+    <div class="lead">独立账户运作，投资风险由保单持有人承担；精算核心是「继续率」与「账户价值」。</div>
+    <p><span class="src src-gui">规</span><b>保监寿险〔2007〕335号《投资连结保险精算规定》</b>要点：</p>
+    <div class="tbl-scroll"><table>
+      <tr><th>项目</th><th>规定要点</th></tr>
+      <tr><td>独立账户</td><td>投资资产单独管理、独立核算；单位价格 = 账户资产净值 ÷ 账户单位数</td></tr>
+      <tr><td>费用结构</td><td>初始费用、买卖差价、死亡风险保费、保单/账户管理费、手续费、退保费用（前高后低、限期收取）</td></tr>
+      <tr><td>死亡给付</td><td>身故给付 ≥ 账户价值的 105%（保证最低利益）</td></tr>
+      <tr><td>继续率</td><td>以「保费持续率 / 部分账户价值退保率」监测业务质量，是定价关键假设之一</td></tr>
+    </table></div>
+
+    <h3>定价因素</h3>
+    <p>投连险定价需同时考虑费用假设、继续率（退保/部分领取）、死亡率、投资收益率与费用率上限。其中<b>继续率</b>直接决定费用能否在前期收回。</p>
+    <div class="formula">
+      <div class="fx"><b>保费持续率(第n月)</b> = 第n月实际缴付续期保费 ÷ 第n月应缴续期保费 × 100%</div>
+      <div class="fx"><b>部分账户价值退保率</b> = 部分领取 + 退保账户价值 ÷ 期初账户价值 × 100%</div>
+      <div class="note"><span class="src src-gui">规</span>335号；常见监测口径为 13 个月 / 25 个月继续率。继续率越低 → 前期费用摊不回 → 利润下降。</div>
+    </div>
+
+    <div class="exam"><span class="yr">2014</span><b>·13</b> 投连险定价中的「继续率」如何定义？若某产品 13 个月继续率 85%、25 个月 78%，对费用假设与利润检验意味着什么？<span class="src src-ti">题</span></div>
+    <div class="ans-skel"><b>骨架答案：</b>①继续率=续期保费实收/应收到期保费（或账户价值存续比例）；②继续率偏低说明退保/部分领取高，前期费用难回收、利润检验压力增大，需提高费用率或调低假设。</div>
+    <details class="answer"><summary>展开详尽答案（含条文号）</summary><div class="body ans-detail">继续率衡量保单持续缴费与账户价值存续程度（<span class="src src-gui">规</span>保监寿险〔2007〕335号）。13 个月继续率关注首年续保、25 个月关注中期黏性。若 85%/78% 偏低，则定价所用的费用摊回假设偏乐观：投连险首年费用（初始费用、佣金）高，依赖续期保费持续流入摊回；继续率下行 → 实际费用率上升、资产份额法下利润现值下降。实务中需重做利润检验并可能触发万能/投连产品停售或费用表重定价。</div></details>
+
+    <div class="exam"><span class="yr">2016</span><b>·24</b> 列举投连险定价须考虑的主要因素（≥5 项），并说明投资账户的市场风险由谁承担、是否计量最低资本。<span class="src src-ti">题</span></div>
+    <div class="ans-skel"><b>骨架答案：</b>①因素：费用率、继续率、死亡率、投资收益率、买卖差价、退保/部分领取假设；②独立账户投资风险由<b>保单持有人</b>承担；③投连独立账户负债按单位价格计量，<b>不承担</b>市场风险最低资本（权益价格风险等由客户自担）。</div>
+    <details class="answer"><summary>展开详尽答案</summary><div class="body ans-detail">定价因素涵盖获取/维持费用、退保与部分领取（继续率）、死亡发生率、投资收益率假设、买卖差价与各项管理费上限（<span class="src src-gui">规</span>335号）。投连险本质「保障+投资单位」，独立账户单位价格随投资表现波动，<b>损益归客户</b>；因此保险公司对该独立账户部分不计量权益价格风险最低资本（C-ROSS 规则Ⅱ将其风险转移给保单持有人），仅对保证利益（如身故 ≥105% 账户价值）部分计提准备金与对应最低资本。</div></details>
+
+    <div class="tip"><b>要点一句话：</b>投连险独立账户的市场风险由客户承担；继续率决定费用能否摊回（首年费用重、续年轻），是利润的生命线。</div>
+  </section>
+
+  <!-- ===================== 2 万能险 ===================== -->
+  <section id="sec-wn">
+    <h2><span class="sn">2</span>万能保险（含非账户准备金） <span class="star s3">高频</span></h2>
+    <div class="lead">万能险 = 账户价值 + 非账户准备金；精算核心是「风险保额」与「保证利率」。</div>
+    <p><span class="src src-gui">规</span><b>保监发〔2015〕19号《万能保险精算规定》</b>（万能费率改革）要点：</p>
+    <div class="tbl-scroll"><table>
+      <tr><th>项目</th><th>规定要点</th></tr>
+      <tr><td>账户价值</td><td>进入账户的资金按结算利率计息；结算利率 ≥ 最低保证利率，且不得高于评估利率上限</td></tr>
+      <tr><td>非账户准备金</td><td>为「保证利益」（保证利率、保证死亡给付超出账户价值部分）额外计提，万能险准备金 = 账户价值 + 非账户准备金</td></tr>
+      <tr><td>风险保额</td><td>风险保额 = 死亡给付 − 账户价值；分 A 式（平准）/ B 式（变额）两种死亡给付方式</td></tr>
+      <tr><td>评估利率</td><td>万能账户综合溢价 ≤ 100bp（与普通型预定利率上限并行）</td></tr>
+    </table></div>
+
+    <h3>非账户准备金与风险保额</h3>
+    <div class="formula">
+      <div class="fx"><b>万能险准备金</b> = 账户价值 AV + <b>非账户准备金</b> NAR</div>
+      <div class="fx"><b>风险保额</b> = 死亡给付 − 账户价值　（A式：风险保额固定；B式：随账户价值变）</div>
+      <div class="fx"><b>NAR</b> = max( 0 , 保证利益现金流精算现值 − AV )</div>
+      <div class="note"><span class="src src-gui">规</span>19号；当保证利率 &gt; 评估利率时 NAR 为正，体现「保证利息缺口」；当保证利率 &lt; 评估利率时该项通常为 0。</div>
+    </div>
+
+    <div class="prac"><b>计算示例：</b>账户价值 AV = 50 万元，保证利率 g = 3.5%，评估利率 i = 3.0%，剩余期限 10 年，无保证死亡给付溢价。则利息保证缺口现值：
+      <div class="fx" style="margin-top:8px">NAR = 50 × [ (1+3.5%)¹⁰ − (1+3.0%)¹⁰ ] ≈ 50 × (1.4106 − 1.3439) ≈ <b>3.34 万元</b></div>
+      即非账户准备金约 3.34 万元，万能险准备金合计约 53.34 万元。</div>
+
+    <div class="exam"><span class="yr hot">2015秋</span><b>·22</b> 给出账户价值、保证利率、评估利率与剩余期限，计算万能险「非账户准备金」。<span class="src src-ti">题</span></div>
+    <div class="ans-skel"><b>骨架答案：</b>①万能险准备金=账户价值+非账户准备金；②非账户准备金=保证利益精算现值−账户价值（&lt;0 取 0）；③当保证利率高于评估利率时产生正缺口，否则为 0。</div>
+    <details class="answer"><summary>展开详尽答案</summary><div class="body ans-detail">按 <span class="src src-gui">规</span>保监发〔2015〕19号，非账户准备金用于吸收保证利率与市场评估利率之差及保证死亡给付超出账户价值部分。计算时以评估利率对「保证给付现金流」折现得保证利益精算现值，减去当前账户价值 AV，结果取 max(0,·)。上例 50万×(1.035¹⁰−1.03¹⁰)=3.34万 即保证利息缺口。若保证利率低于评估利率，则保险公司无保证给付缺口，NAR=0。</div></details>
+
+    <div class="exam"><span class="yr hot">2015秋</span><b>·6</b> 万能险账户价值与结算利率的关系？最低保证利率对准备金与资本有何影响？<span class="src src-ti">题</span></div>
+    <div class="ans-skel"><b>骨架答案：</b>①账户价值按结算利率累积，结算利率≥最低保证；②保证利率越高→非账户准备金越大→负债越厚、利率风险最低资本越高。</div>
+    <details class="answer"><summary>展开详尽答案</summary><div class="body ans-detail">结算利率是保险公司每月公布并计入账户价值的收益率，不得低于保单约定的最低保证利率（<span class="src src-gui">规</span>19号）。最低保证利率是「后端」负债成本上限：保证利率越高，当市场利率下行时保证利息缺口（NAR）越大，万能险准备金与利率风险最低资本同步上升。这正是费率改革「放开前端、管住后端」中后端约束的体现。</div></details>
+
+    <div class="exam"><span class="yr hot">2015秋</span><b>·17</b> 为何万能险的资产负债管理（ALM）尤为重要？<span class="src src-ti">题</span></div>
+    <div class="ans-skel"><b>骨架答案：</b>①账户价值随结算利率波动、客户可随时部分领取/退保；②保证利率形成刚性负债，需资产端久期与收益匹配，防范利差损与流动性风险。</div>
+    <details class="answer"><summary>展开详尽答案</summary><div class="body ans-detail">万能险负债具「透明+灵活」特征：账户价值每日/每月计价、客户有高频领取权，而保证利率构成刚性成本。若资产端收益下行或久期错配，极易出现利差损与兑付流动性压力。故 ALM 须确保资产收益覆盖保证利率、久期匹配负债现金流，并预留非账户准备金缓冲（ALM 考点已并入 <a href="ch3.html">CH.03 偿付能力监管</a>与<a href="moni-3.html">模拟卷三</a>）。</div></details>
+
+    <div class="exam"><span class="yr hot">2015秋</span><b>·23</b> 对一款 5 年期万能险做 ALM 建模，须考虑哪些因素？<span class="src src-ti">题</span></div>
+    <div class="ans-skel"><b>骨架答案：</b>①负债端：账户价值增长、保证利率、退保/部分领取；②资产端：组合收益率、久期、流动性；③情景：利率上行/下行、费用、死亡率；④目标：覆盖保证利益且资本充足。</div>
+    <details class="answer"><summary>展开详尽答案</summary><div class="body ans-detail">5 年期万能 ALM 建模要素：负债侧（结算利率路径、保证利率、退保率/部分领取率、费用假设）、资产侧（再投资收益、久期与凸性、信用与流动性）、风险情景（利率双向冲击、股市波动）、约束（非账户准备金 ≥0、利率风险最低资本、偿付能力充足率）。模型用于验证在产品生命周期内保证利益可被资产现金流覆盖。</div></details>
+
+    <div class="warn"><b>易错：</b>风险保额 = 死亡给付 − 账户价值，<b>不是</b>「保额 − 账户价值」。A 式死亡给付 = 账户价值 + 固定风险保额；B 式死亡给付 = max(账户价值, 保额)，风险保额随账户价值反向变动。</div>
+
+    <div class="tip"><b>要点一句话：</b>万能险 = 账户 + 非账户两本账；风险保额 = 死亡给付 − 账户价值（A 式平准、B 式变额）。</div>
+  </section>
+
+  <!-- ===================== 3 分红险 ===================== -->
+  <section id="sec-fh">
+    <h2><span class="sn">3</span>分红保险（含分红特储） <span class="star s3">高频</span></h2>
+    <div class="lead">盈余 7:3 分给客户与股东；分红特储是「平滑红利」的蓄水池。</div>
+    <p><span class="src src-gui">规</span><b>保监发〔2015〕93号《分红保险精算规定》</b>（分红费率改革）要点：</p>
+    <div class="tbl-scroll"><table>
+      <tr><th>项目</th><th>规定要点</th></tr>
+      <tr><td>红利演示</td><td>低、中、高三档，对应<b>利差水平</b>分别不得高于 0、4.5%−预定利率、6%−预定利率（是利差而非名义利率，中高档须扣预定利率）；银保监规〔2022〕24号已简化为<b>两档</b>（0 与 4.5%−预定利率），详见<a href="https://xihongactuary.github.io/product-actuary-kb/" target="_blank">保险产品精算AI助手 ↗</a>与<a href="zhenti.html">真题馆 Z.6</a></td></tr>
+      <tr><td>盈余分配</td><td>可分配盈余中 <b>≥70%</b> 归保单持有人，&lt;30% 归股东（7:3 原则）</td></tr>
+      <tr><td>分红特储</td><td>分红保险特别储备：年度盈余多时多提、少时释放，平滑客户红利；余额有上下限</td></tr>
+      <tr><td>评估利率</td><td>分红账户综合溢价 ≤ 100bp</td></tr>
+    </table></div>
+
+    <h3>分红特储计提</h3>
+    <div class="formula">
+      <div class="fx"><b>期末特储</b> = 期初特储 + 本年盈余 × 70% − 本年实际分配给保单持有人的红利</div>
+      <div class="fx">或（按实际分配口径）　期末特储 = 期初特储 + 本年盈余 − 本年实际分配红利(客+股)</div>
+      <div class="note"><span class="src src-gui">规</span>93号；特储属于客户利益的「蓄水池」，用于跨年度平滑红利，余额须 ≥0 且不超监管上限。</div>
+    </div>
+
+    <div class="prac"><b>计算示例（2016·22 型）：</b>年初分红特储 80 万、本年分红账户盈余 300 万、本年实际分配红利合计 280 万（按 7:3 ⇒ 客户 196 万 / 股东 84 万）、年末法定准备金 400 万。
+      <div class="fx" style="margin-top:8px">期末特储 = 80 + 300 − 280 = <b>100 万</b></div>
+      特储占年末准备金的 100/400 = 25%，处于合理区间。</div>
+
+    <div class="exam"><span class="yr">2016</span><b>·22</b> 已知年初分红特储 80 万、本年盈余 300 万、本年实际分配红利 280 万（其中股东分红按非保单持有者口径列示）、年末准备金 400 万，按 7:3 客户/股东分配，求年末分红特别储备。<span class="src src-ti">题</span></div>
+    <div class="ans-skel"><b>骨架答案：</b>①客户应得 70%、股东 30%；②期末特储=期初+盈余−实际分配=80+300−280=100 万；③特储是客户红利平滑池，不归股东。</div>
+    <details class="answer"><summary>展开详尽答案（含条文号）</summary><div class="body ans-detail">依 <span class="src src-gui">规</span>保监发〔2015〕93号，分红账户可分配盈余至少 70% 归属保单持有人。本题本年实际分配红利合计 280 万，按 7:3 即客户 196 万、股东 84 万（股东分红即「非保单持有者分红」）。期末特别储备 = 期初 80 + 本年盈余 300 − 实际分配 280 = <b>100 万</b>。特储作为客户利益的蓄水池，盈余多（&gt;当年应分）时沉淀、盈余少时释放，使客户红利平滑；其余额含于年末准备金（400 万）之内，占比 25%。</div></details>
+
+    <div class="exam"><span class="yr">2014</span><b>·7</b> 分红险红利的常见领取方式有哪些？<span class="src src-ti">题</span></div>
+    <div class="ans-skel"><b>骨架答案：</b>①现金领取；②累积生息；③增额交清（交清增额保额）；④抵交保费。共四种主流方式。</div>
+    <details class="answer"><summary>展开详尽答案</summary><div class="body ans-detail">红利领取方式（<span class="src src-gui">规</span>93号及行业惯例）：现金领取、累积生息（留存公司计息）、增额交清（以红利作为趸交净保费购买交清保额，提升保障）、抵交续期保费。不同方式影响客户利益与保险公司负债结构，精算评估时需分别处理。</div></details>
+
+    <div class="exam"><span class="yr">2014</span><b>·10</b> 分红险红利演示的合规要求是什么？<span class="src src-ti">题</span></div>
+    <div class="ans-skel"><b>骨架答案（修正口径）：</b>①93号规定低、中、高<b>三档利差水平</b>：分别不得高于 0、4.5%−预定利率、6%−预定利率（非名义利率）；②银保监规〔2022〕24号简化为两档（0 与 4.5%−预定利率）；③不得承诺、不得与其他产品收益比较，须标注「演示≠实际」。</div>
+    <details class="answer"><summary>展开详尽答案（修正版，含条文号）</summary><div class="body ans-detail">依 <span class="src src-gui">规</span>保监发〔2015〕93号，红利演示按<b>利差水平</b>（投资收益率假设 − 预定利率）设定低、中、高三档，上限分别为 0、4.5%−预定利率、6%−预定利率——<b>不是名义利率 0%/4.5%/6%</b>，中高档必须扣除预定利率。银保监规〔2022〕24号进一步将演示简化为两档（利差水平 0 与 4.5%−预定利率）。演示仅为假设，实际红利取决于公司实际经营，须显著提示不确定性，防范销售误导。可延伸：红利分配下限为可分配盈余 70%，红利上限 = (V₀+P)×利差水平×70%（如 V₀=0、P=20,000、利差 1.75% ⇒ 245 元）。完整口径与算例见<a href="https://xihongactuary.github.io/product-actuary-kb/" target="_blank">保险产品精算AI助手 ↗</a>与<a href="zhenti.html">真题馆 Z.6</a>。</div></details>
+
+    <div class="tip"><b>要点一句话：</b>分红按可分配盈余 7:3 分给客户与股东，特储负责跨年平滑；红利演示三档指的是<b>利差水平</b>（0 / 4.5%−ir / 6%−ir），24号后简化为两档。</div>
+  </section>
+
+  <!-- ===================== 4 变额年金 ===================== -->
+  <section id="sec-bva">
+    <h2><span class="sn">4</span>变额年金保险 <span class="star s2">中频</span></h2>
+    <div class="lead">投资账户 + 最低保证（GMxB）；CD / 双轨 / MVA 三类结构各具特点。</div>
+    <p><span class="src src-gui">规</span><b>保监发〔2011〕25号《变额年金保险管理暂行办法》</b>要点：变额年金 = 投资账户（单位计价）+ 最低保证利益，保证部分按期权/情景法评估准备金。</p>
+    <div class="tbl-scroll"><table>
+      <tr><th>类型</th><th>特点</th><th>计算/关注点</th></tr>
+      <tr><td>CD 年金（组合递延）</td><td>投资账户（浮动）与固定账户组合，期满转年金</td><td>账户间配置比例影响保证成本</td></tr>
+      <tr><td>双轨年金（Dual）</td><td>一部分买变额年金（增值）、一部分买固定年金（保证），兼顾增值与保证</td><td>两轨利益拆分计量</td></tr>
+      <tr><td>市值调整年金（MVA）</td><td>提前领取/退保时按市场利率调整给付，保护资产负债匹配</td><td>调整系数 = 贴现函数比</td></tr>
+    </table></div>
+
+    <h3>市值调整年金（MVA）计算</h3>
+    <div class="formula">
+      <div class="fx"><b>提前领取额</b> = 账户价值 × g(i<sub>m</sub>, n) ÷ g(i<sub>0</sub>, n)</div>
+      <div class="fx">g(i,n) = Σ<sub>t</sub> v(i)<sup>t</sup>·CF<sub>t</sub>　（贴现函数；i<sub>0</sub>=定价利率，i<sub>m</sub>=市场利率）</div>
+      <div class="note"><span class="src src-gui">规</span>25号；市场利率↑ ⇒ 调整系数&lt;1 ⇒ 领取减少（保护保险公司）；利率↓ ⇒ 系数&gt;1 ⇒ 领取增加。单笔简化：系数≈(1+i<sub>0</sub>)ⁿ/(1+i<sub>m</sub>)ⁿ。</div>
+    </div>
+
+    <div class="prac"><b>MVA 计算示例：</b>账户价值 100 万，定价利率 i₀=3.5%，市场利率 iₘ=4.5%，剩余 n=10 年，单笔近似：
+      <div class="fx" style="margin-top:8px">调整系数 = (1.035)¹⁰/(1.045)¹⁰ ≈ 1.4106/1.5529 ≈ 0.9083　⇒ 提前领取额 ≈ 100 × 0.9083 = <b>90.83 万</b></div>
+      市场利率上行，客户提前领取被「打折」，保险公司资产负债匹配得保护。</div>
+
+    <div class="exam"><span class="yr hot">2015秋</span><b>·19</b> 简述变额年金中 CD 年金、双轨年金、市值调整年金（MVA）的特点，并指出 MVA 的设计目的。<span class="src src-ti">题</span></div>
+    <div class="ans-skel"><b>骨架答案：</b>①CD：投资+固定账户组合递延；②双轨：增值轨+保证轨并行；③MVA：提前领取按市场利率调整给付；④MVA 目的=将利率风险转移给客户、保护公司 ALM。</div>
+    <details class="answer"><summary>展开详尽答案</summary><div class="body ans-detail">三类结构（<span class="src src-gui">规</span>保监发〔2011〕25号）：<b>CD 年金</b>以投资账户为主、辅以固定账户，期满转领年金；<b>双轨年金</b>将保费分为「变额增值轨」与「固定保证轨」，兼顾收益与底线；<b>MVA</b>在客户提前领取时按当前市场利率相对定价利率调整给付额，利率上行则领取缩水、下行则增加，从而把利率变动风险部分转移给客户，缓解保险公司资产负债错配与利差损。最低保证利益（GMAB/GMDB/GMIB/GMWB）须以情景法或期权法计量准备金。</div></details>
+
+    <div class="warn"><b>易错：</b>变额年金「最低保证」是保险公司负债（须计提准备金），而投资账户单位价格波动风险归客户；MVA 仅调整「提前领取」部分，不影响到期满期按保证给付。</div>
+
+    <div class="tip"><b>要点一句话：</b>变额年金三类结构：CD 组合递延、双轨分立、MVA 调市值；最低保证是保险公司负债、投资风险归客户。</div>
+  </section>
+
+  <!-- ===================== 5 普通型精算规定 ===================== -->
+  <section id="sec-pt">
+    <h2><span class="sn">5</span>普通型人身保险精算规定 <span class="star s2">中频</span></h2>
+    <div class="lead">费率改革「后端」约束：预定利率上限是普通型产品的定价天花板。</div>
+    <p><span class="src src-gui">规</span><b>银保监办发〔2020〕7号《普通型人身保险精算规定》</b>要点：</p>
+    <div class="tbl-scroll"><table>
+      <tr><th>产品</th><th>预定利率上限</th><th>说明</th></tr>
+      <tr><td>普通型寿险（非年金）</td><td>≤ 3.5%</td><td>传统保障型产品定价天花板</td></tr>
+      <tr><td>普通型年金险</td><td>≤ 4.025%（历史窗口，存量产品）</td><td>长期年金可上浮，现行普遍回归 3.5%</td></tr>
+      <tr><td>现金价值 / 准备金</td><td>按评估利率曲线</td><td>与 CH.02 评估利率（23号）衔接</td></tr>
+    </table></div>
+    <div class="prac"><b>实务衔接：</b>普通型产品无独立账户，全部利益为保障/储蓄性质，准备金按 CH.02 的净均衡保费法或修正法评估，评估利率受保监发〔2017〕23号曲线约束（综合溢价 150bp），与普通型预定利率上限（3.5%）共同构成「前端放开、后端管住」。</div>
+    <div class="tip"><b>要点一句话：</b>普通型的定价天花板：非年金寿险预定利率 ≤ 3.5%、（存量）年金 4.025%；评估利率曲线（23号）管住后端。</div>
+  </section>
+
+  <!-- ===================== 6 费率改革脉络 ===================== -->
+  <section id="sec-reform">
+    <h2><span class="sn">6</span>费率政策改革脉络 <span class="star s1">低频</span></h2>
+    <div class="lead">从「管费率」到「管准备金/偿付能力」：放开前端、管住后端。</div>
+    <div class="tbl-scroll"><table>
+      <tr><th>文号</th><th>产品</th><th>改革动作</th></tr>
+      <tr><td>保监寿险〔2007〕335号</td><td>投连险</td><td>独立账户与费用/继续率规范</td></tr>
+      <tr><td>保监发〔2011〕25号</td><td>变额年金</td><td>试点办法，最低保证+GMxB</td></tr>
+      <tr><td>保监发〔2015〕19号</td><td>万能险</td><td>万能费率改革：账户化、非账户准备金</td></tr>
+      <tr><td>保监发〔2015〕93号</td><td>分红险</td><td>分红费率改革：红利演示+特储</td></tr>
+      <tr><td>银保监办发〔2020〕7号</td><td>普通型</td><td>普通型精算规定：预定利率上限</td></tr>
+    </table></div>
+    <div class="tip"><b>进阶：</b>费率改革主线是「前端放开定价（万能/分红费率市场化）+ 后端管住准备金与偿付能力（评估利率曲线、综合溢价、偿二代最低资本）」，新型产品的精算评估因此高度依赖 CH.02 与 CH.03 的框架。</div>
+  </section>
+
+  <div class="pager">
+    <a href="topic-ev.html">← 专题·内含价值</a>
+    <a href="zhenti.html">真题馆 →</a>
+  </div>
+</main>
+<script src="js/kb.js"></script>
+</body>
+</html>
